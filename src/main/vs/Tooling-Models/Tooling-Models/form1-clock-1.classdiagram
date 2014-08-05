@@ -94,7 +94,7 @@
           <property Id="64e9030c-2a24-4a43-85a4-90ce9fc09df4" name="time" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="a074edbf-34cd-4b20-ac9e-312ebed071ed" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="96ada0b0-92ae-4aef-bc1e-0883812a1663" LastKnownName="int" />
+              <referencedTypeMoniker Id="3a930a70-53f6-41ee-9df6-70a132659098" LastKnownName="Integer" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
@@ -121,8 +121,8 @@
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <referencedType Id="96ada0b0-92ae-4aef-bc1e-0883812a1663" name="int" isAbstract="false" isLeaf="false" cachedFullName="int">
-        <elementDefinition Id="524ef3db-8795-4fe4-bea1-6980726c733e" />
+      <referencedType Id="3a930a70-53f6-41ee-9df6-70a132659098" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
       </referencedType>
     </packageHasNamedElement>
   </packagedElements>

@@ -223,9 +223,9 @@ while i != count
             aggregation="None"
             isComposite="false">
             <type_NamedElement>
-              <undefinedTypeMoniker
-                Id="524ef3db-8795-4fe4-bea1-6980726c733e"
-                LastKnownName="int"
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
                 LastKnownLocation="Tooling-Models.uml" />
             </type_NamedElement>
           </property>
