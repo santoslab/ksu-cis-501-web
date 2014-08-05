@@ -1139,15 +1139,15 @@ http://www.csci.csusb.edu/dick/cs201/uml.html.
 
 The complete notation is overwhelming. We will use these parts:
 
-1. components: class (name in normal font)), abstract class (italic font), 
-   interface (italic font)
+1. components: class (name in normal font), abstract class (italic font), 
+   interface (italic font, green background)
 
 2. fields and methods (typed inside the component): public (+), private (-),
    abstract (italicized) or static (underlined).
 
 3. associations: these will be solid lines and dotted lines, as explained below.
    We annotate an end of a line with two (optional items):
-   beneath the line, a (field)name, and above the line, a multiplicity.
+   above the line, a (field) name, and beneath the line, a multiplicity.
    Sometimes a line has a kind of arrowhead.
    See below for examples.
 
@@ -1183,10 +1183,12 @@ We will use these forms of associations (but there are many more!):
   
   Within ``Form1``, the handle to the ``Clock`` is named by the private field 
   var, ``cl``.
-  (The tiny "lock" means **private**.)
+  (The tiny ``-`` sign means **private**.)
   ``Form1`` has a reference to exactly one clock, and for this reason,
-  the arrow to ``Clock`` is labelled by a ``1``, called a multiplicity 
-  ("how-many-multiples").
+  the arrow to ``Clock`` is labeled by a ``1`` at the head, 
+  called a multiplicity ("how-many-multiples"); ``*`` means zero or more.
+  that is, we allow ``Clock`` to be referred by multiple ``Form1`` objects or 
+  none.
   Notice that ``Form1`` did not create the Clock, it does not own it; 
   if ``Form1`` dies, ``Clock`` remains. "Form1 refers to the Clock."
   
@@ -1195,7 +1197,7 @@ We will use these forms of associations (but there are many more!):
   
   .. image:: class-diagram-form1-clock-2.png
   
-  A private variable is labelled by a minus sign, ``-``.
+  As stated previously, a private variable is labeled by a minus sign, ``-``.
   You will see labelled arrows used a lot in practice --- remember that the
   label is actually a fieldname!
   
@@ -1210,7 +1212,7 @@ We will use these forms of associations (but there are many more!):
   IMPORTANT: Say that ``Form1`` does not remember the reference to ``Clock``
   within its own field.
   (Maybe it gets the handle to ``Clock`` through a parameter to a method call,
-  e.g. ``onClick(c: Clock)`` is used in the above picture).
+  e.g. ``onClick(c: Clock)`` is used in the diagram below).
   Clearly, ``Form1`` still needs ``Clock`` to compile.
   We use a dashed arrow, like this:
   
@@ -1226,7 +1228,7 @@ We will use these forms of associations (but there are many more!):
   .. image:: class-diagram-bank-1.png
   
   The diamond should be *solid black*.
-  Here is the same relationship, but where the fieldnames are placed as labels
+  Here is the same relationship, but the fieldnames are placed as labels
   on the arrow:
   
   .. image:: class-diagram-bank-2.png
@@ -1234,7 +1236,7 @@ We will use these forms of associations (but there are many more!):
   You can draw it as you wish.
   
   The multiplicities can be 1, 2, ..., n..m (n upto m), * (zero or more).
-  To indicate that the fieldname label is an array, put it in braces:
+  To indicate that the fieldname label is an array/collection, put it in braces:
   
   .. image:: class-diagram-bank-3.png
   
@@ -1267,10 +1269,10 @@ We will use these forms of associations (but there are many more!):
 
   .. image:: class-diagram-boss-worker-1.png
 
-  Here, both Boss and Worker are subclasses of class Person.
+  Here, both ``Boss`` and ``Worker``` are subclasses of class ``Person``.
   
 * Implement an interface ("realization"): use a big "white" arrowhead with
-  a dashed line, say when Person is an interface, not a class:
+  a dashed line, say when ``Person`` is an interface, not a class:
   
   .. image:: class-diagram-boss-worker-2.png
   
