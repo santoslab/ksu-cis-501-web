@@ -28,8 +28,8 @@ Note that if you are accessing ``remote.win.cis.ksu.edu`` from off-campus,
 you will need to use K-State VPN software
 (http://www.k-state.edu/its/security/vpn/) before connecting to it. 
 
-Online C#/Visual Studio References
-==================================
+Online References
+=================
 
 Use the web site www.dotnetperls.com as your "reference text" when you use 
 Visual Studio to develop C# programs.
@@ -748,3 +748,545 @@ Compiling A Project into Binary
 Use the BUILD SOLUTION menu item (listed under either BUILD or DEBUG) to do this.
 *Always do this when finishing a new Class Library (dll) project.*
 
+The C# compiler can be used standalone, from a command window, 
+to compile and test programs and library components. 
+The details can be found in Dave Schmidt's 
+`CIS200 notes from 2008 <http://people.cis.ksu.edu/~schmidt/200s08/>`__ --- 
+see the last four links on that page.
+
+If you want a GUI for your C# program, then you are stuck using VS; 
+it's too much work to build a GUI by hand in C#.
+In contrast, other languages (e.g., Python) make GUI-building not so hard.
+(See the previous link.)
+
+
+Unit Testing
+************
+
+The components (classes) of a system should be tested individually
+(or in an order where the class to be tested depends only on classes that are
+already tested). This is called unit testing.
+
+To unit-test a class, you should write code to construct it and call all its
+methods.
+The tests should make full use of the methods, fields, and their interactions.
+Place the tests in static methods and call them from **Main**.
+Here's an example:
+
+.. code-block:: c#
+
+   public class Clock {
+     private int t = 0;
+
+     public void tick() { t = t + 1; }
+
+     public int getTime() { return t; }
+   }
+   
+Here is a unit test:
+
+.. code-block:: c#
+
+   public static void Main() {
+     // place unit tests here:
+     testClock();
+   }
+
+   public static void testClock() {
+     Clock c = new Clock();
+     for (int i = 0; i <= 20; i++) {
+       Console.WriteLine(c.getTime());
+       c.tick();
+     }
+   }
+   
+Now, if class ``Clock`` is already part of a Console Application, 
+we revise the ``Main`` procedure to test it. 
+But ``Clock`` might be coded in a Class Library (``.dll``) 
+or a Form Application, which cannot be started by ``Main``.
+In Java, we can insert ``Main`` into class ``Clock`` and execute ``Clock`` 
+as an application! But C# won't let us do this trick.
+So, we must generate a new project to hold ``Main``.
+
+The Visual Studio has a Test menu that can generate a project containing the 
+test code.
+But the format of tests is not so easy to work with (it's like a whole separate
+programming language). So here's a simple way to unit-test:
+
+1. Open your project, say it's named ``CCC``, where class ``Clock`` lives.
+
+2. Select ``File`` then ``Add`` then ``New Project``. 
+   Make a Console Application, name it ``UnitTest``, and *save it in ``CCC``'s 
+   folder*.
+   This makes a second, separate folder, and in the Solution Explorer window,
+   you will see both ``CCC`` and ``UnitTest`` listed.
+  
+3. In the ``Program.cs`` file in project ``UnitTest``, insert your test methods 
+   and call them from ``Main``.
+   At the top, remember to type ``using CCC;`` and remember to select ``Project``
+   then ``Add Reference`` then select ``CCC``.
+   This links the test code to the class.
+
+4. To run your ``Main`` method, you must set it as the "start up":
+   Go to the Solution Explorer window and click on the name, ``UnitTest``.
+   Then, select ``Project`` then ``Set as StartUp project``.
+   (Or, right-click on ``UnitTest`` and select ``Set as StartUp project``.)
+
+5. Now you can Debug as usual.
+
+When you are finished testing, leave ``UnitTest`` where it is.
+It can be used in the future to test any modifications to the project.
+
+
+Useful C# Concepts
+******************
+
+You will find additional helpful material at www.dotnetperls.com.
+
+Below are three data structures that are hugely useful in practice.
+
+Lists (Dynamic Arrays)
+======================
+
+Most of the time, the arrays you use will need to grow and shrink. 
+That is, you want a list, not an array.
+Lists are faked in C# by a library class, List.
+Here are two links for reference:
+
+* http://msdn.microsoft.com/en-us/library/6sh2ey19.aspx
+
+* http://www.dotnetperls.com/list
+
+Here are the basic ideas:
+
+.. code-block:: c#
+
+   using System;
+   using System.Collections.Generic;
+
+   class Program {
+     static void Main() {
+       List<int> list = new List<int>();
+       list.Add(2);
+       list.Add(3);
+       list.Add(7);
+       Console.WriteLine(list.Count);  // prints 3
+       Console.WriteLine(list[2]);  // OK to index like an array
+
+       foreach (int i in list) {
+         Console.WriteLine(i);
+       }
+
+       // Can add elements at any position and can remove them:
+       list.Insert(0, 2);  // places the  2  at index 0 and shifts the rest
+       list.RemoveAt(list.Count - 1); // removed rightmost element
+     }
+   }
+   
+There are also operations for finding elements, slicing, etc.; 
+see the first reference listed just above.
+
+C# lists work well with the ListBox widget; 
+see http://www.dotnetperls.com/listbox
+
+Enumerations
+============
+
+When you want a data type that is a set of named values, e.g., 
+the days of the week, or the suits of a deck of cards, 
+you can define it with an enumeration type, which is a macro for a static class.
+Here is a decent reference:
+
+http://www.dotnetperls.com/enum
+
+The example shows what you need to know:
+
+.. code-block:: c#
+
+   using System;
+
+   class Program {
+     enum Suit {Spades, Hearts, Diamonds, Clubs};
+
+     static void Main() {
+       Suit mycard = Suit.Hearts;
+       Console.WriteLine(mycard);       // prints  Hearts
+       Console.WriteLine((int)mycard);  // prints 1
+       
+       if (mycard == Suit.Hearts) {Console.WriteLine("ok");}
+       
+       foreach (var suit in Enum.GetValues(typeof(Suit)))
+       { Console.WriteLine(suit); };
+
+       Console.ReadLine();
+     }
+   }
+
+Dictionaries
+============
+
+A dictionary is the your secret weapon for quick table building. 
+(Think of a dictionary as a hash table that is indexed like an array.)
+Thankfully, dictionaries are "almost built-into" C#. Try these:
+
+.. code-block:: c#
+
+   static void Main(string[] args) {
+     // a dictionary mapping string keys to int values:
+
+     Dictionary<string, int> d = new Dictionary<string, int>();
+
+     d["flea"] = 1000;
+     d.Add("cat", 3);
+     d.Add("dog", 1);
+     Console.WriteLine(d["cat"]);
+     d["cat"] = d["cat"] - 1;;
+     Console.WriteLine(d["cat"]);
+
+     if (d.ContainsKey("cat")) { Console.WriteLine(d["cat"]); }
+     
+     // how to traverse a dictionary:
+     foreach (var pair in d) {
+       Console.WriteLine("{0}, {1}", pair.Key, pair.Value);
+     }
+
+     // Store the keys in a List:
+     List list = new List(d.Keys);
+     // Loop through list:
+     foreach (string k in list) { 
+       Console.WriteLine("{0}, {1}", k, d[k]); 
+     }
+            
+     Console.ReadLine();
+   }
+
+Delegates
+=========
+
+Sometimes a method must call another method without knowing its name.
+Here is an example, a queue object that holds a list of tasks that must be
+completed once some signal occurs.
+The names of the tasks don't matter --- what matters is that each task is called.
+The code uses the C# *delegate* type and looks like this:
+
+.. code-block:: c#
+
+   // defines a datatype,  Task,  which is the type of methods 
+   //   that take zero arguments and return no answer:
+   delegate void Task();
+
+   class TaskQueue {  // holds a list of tasks to do
+     private List<Task> queue;
+
+     public TaskQueue() { 
+       queue = new List<Task>();  // empty list
+     }
+
+     public void addTask(Task t) { queue.Add(t); }
+
+     // executes all queued tasks (methods) when signalled:
+     public void signal() {
+       foreach(Task t in queue) { t(); }  // execute all the tasks
+       queue.Clear();   // empty  queue  all at once
+     }
+   }
+
+The system can use a TaskQueue like this:
+
+.. code-block:: c#
+
+   TaskQueue q = new TaskQueue();
+   Clock c = new Clock();
+   Clock d = new Clock();
+   q.addTask(c.tick);
+   q.addTask(d.tick);
+   q.addTask(c.tick);
+   // ... later ... :
+   q.signal();  // executes the queued ticks
+   
+where:
+
+.. code-block:: c#
+
+   public class Clock {
+     private int t = 0;
+     public void tick() { t = t + 1; }
+     public int getTime() { return t; }
+   }
+   
+This technique is standard to operating-systems coding.
+It can also be used to save multiple event-handlers that are called when
+a single event is signalled:
+
+.. code-block:: c#
+
+   delegate void ButtonClickHandler(object sender, EventArgs e);
+
+   public class Controller {
+     private List<ButtonClickHandler> handlers = new List<ButtonClickHandler>();
+
+     public void register(ButtonClickHandler h) { handlers.add(h); }
+
+     public void signal(object sender, EventArgs e) {
+       foreach (ButtonClickHandler h in handlers) { h(sender, e); }
+     }
+   }
+
+Say we have a Form with a button, *button1*. We construct:
+
+.. code-block:: c#
+
+   Controller c = new Controller();
+
+*and we tell Visual Studio to call ``c.signal`` when ``button1`` is clicked.*
+Then, when the button is pressed, ``c.signal(..,..)`` executes and itself 
+executes all methods saved in ``c``'s ``handlers`` list.
+
+Textfile I/O and String Manipulation
+====================================
+
+A disk file is found with its path, which is usually written as a string, e.g, 
+``C:\Users\Me\Documents\file.txt``.
+You can also use a "relative path", e.g., ``file.txt``, which means find 
+``file.txt`` in the same folder where the program's exe code lives.
+Another example: ``..\..\..\file.txt`` which means find the file 3 folder-levels
+higher than where the program's exe code lives.
+This is an OK path for data files for your VS Solution,
+because it is located at the top-level folder of the Solution.
+(Try the examples below with VS to see what I mean.)
+
+Here are some examples that read and write text files:
+
+.. code-block:: c#
+
+   // Write a string array to a file:
+   string[] stringArray = new string[] {"cat","dog","arrow"};
+   File.WriteAllLines("..\\..\\..\\file0.txt", stringArray);
+
+   // Write a long string to a file (note the  \r\n  to end each line):
+   File.WriteAllText("..\\..\\..\\file1.txt", "a \"cat\"\r\na dog\r\n");
+
+   // Read a text file into one long string:
+   string contents = File.ReadAllText("..\\..\\..\\file0.txt");
+
+   // Read lines of a text file into a string array:
+   string[] lines = File.ReadAllLines("..\\..\\..\\file0.txt");
+
+   // Read file's lines one by one:
+   StreamReader reader = new StreamReader("..\\..\\..\\file1.txt"));
+   string line = reader.ReadLine();
+   while ((line != null) {
+     Console.WriteLine(line);
+     line = reader.ReadLine();
+   }
+   reader.Close();  reader.Dispose();
+
+   // A more terse way of doing the previous loop:
+   StreamReader reader = new StreamReader("..\\..\\..\\file1.txt"));
+   string line;
+   while ((line = reader.ReadLine()) != null) {
+     Console.WriteLine(line);
+   }
+   reader.Close();  reader.Dispose();
+
+   // Write file's lines one by one:
+   StreamWriter writer = new StreamWriter("..\\..\\..\\file2.txt"));
+   foreach(string line in lines) {
+     writer.WriteLine(line);
+   }
+   writer.Close();  writer.Dispose();
+   
+Here are examples for disassembling a string into its parts:
+
+.. code-block:: c#
+
+   string s = " <folder \"A.B.C\">  ";  // string is   <folder "A.B.C">
+
+   if (s.Contains("<folder")) {   // ask if substring is found in  s
+     Console.WriteLine("folder");
+     int start = s.IndexOf('\"');          // find  "  starting from index 0 in  s
+     int end = s.IndexOf('\"', start+1);   // find  "  starting from index  start+1
+     Console.WriteLine(start + " " + end); // writes  9 15
+
+     // extract substring:   Substring(startIndex, LengthToExtract) :
+     string path = s.Substring(start + 1, (end - start) - 1); 
+     Console.WriteLine(path);  // writes  A.B.C
+
+     // split a string into pieces, where  '.'  is the separator char:
+     string[] names = path.Split('.');
+     foreach (string n in names) { Console.WriteLine(n); }
+   }
+   
+Here are references that might help:
+
+* http://www.csharp-station.com/HowTo/ReadWriteTextFile.aspx
+
+* http://www.dotnetperls.com/file
+
+
+Using UML Class Notation
+************************
+
+Before you do much work with VS or any editor,
+you should draw a blueprint of the system you will build.
+Use the class-diagram language from UML to draft your components.
+
+There is a reasonable introduction to the class-diagram language at
+http://www.cs.sjsu.edu/~pearce/modules/lectures/uml/class/index.htm.
+
+Here is a link with some useful tips:
+http://www.csci.csusb.edu/dick/cs201/uml.html.
+
+The complete notation is overwhelming. We will use these parts:
+
+1. components: class (name in normal font)), abstract class (italic font), 
+   interface (italic font)
+
+2. fields and methods (typed inside the component): public (+), private (-),
+   abstract (italicized) or static (underlined).
+
+3. associations: these will be solid lines and dotted lines, as explained below.
+   We annotate an end of a line with two (optional items):
+   beneath the line, a (field)name, and above the line, a multiplicity.
+   Sometimes a line has a kind of arrowhead.
+   See below for examples.
+
+We will use these forms of associations (but there are many more!):
+
+* Dependency (coupling): "A refers to B", or "A needs B to compile correctly".
+  Say we write a ``class Form1``, and it depends on a ``class Clock``, which
+  we also coded.
+  (Perhaps, when its button is pressed, the ``Form1`` asks ``Clock`` for
+  the time.)
+  The coding might be this:
+  
+  .. code-block:: c#
+  
+     public class Clock {
+       // ...
+       private int time;
+       public int getTime() { ... }
+     }
+
+     public class Form1 {
+       private Button button1;  private Label label1;
+       private Clock cl;
+
+       public Form1(Clock c) { cl = c; ... }
+       // ...
+       public void onClick() { ... cl.getTime() ...}
+     }
+     
+  A class diagram summarizes the design of what we coded. It looks like this:
+  
+  .. image:: class-diagram-form1-clock-1.png
+  
+  Within ``Form1``, the handle to the ``Clock`` is named by the private field 
+  var, ``cl``.
+  (The tiny "lock" means **private**.)
+  ``Form1`` has a reference to exactly one clock, and for this reason,
+  the arrow to ``Clock`` is labelled by a ``1``, called a multiplicity 
+  ("how-many-multiples").
+  Notice that ``Form1`` did not create the Clock, it does not own it; 
+  if ``Form1`` dies, ``Clock`` remains. "Form1 refers to the Clock."
+  
+  There is a small variation on the above diagram, where the private fieldname, 
+  ``cl``, is moved to the arrow as a label, like this: 
+  
+  .. image:: class-diagram-form1-clock-2.png
+  
+  A private variable is labelled by a minus sign, ``-``.
+  You will see labelled arrows used a lot in practice --- remember that the
+  label is actually a fieldname!
+  
+  Notice that ``Form1`` also holds fields ``button1: Button`` and
+  ``label1: Label``. 
+  Now, ``Button`` and ``Label`` are classes, too, and if we truly wanted,
+  we could draw class boxes for them.
+  But since we did not write those classes, and since we do not need to show how
+  class ``Button`` or ``Label`` connect to other classes, we just leave the 
+  ``Button`` and ``Label`` inside ``Form1``.
+  
+  IMPORTANT: Say that ``Form1`` does not remember the reference to ``Clock``
+  within its own field.
+  (Maybe it gets the handle to ``Clock`` through a parameter to a method call,
+  e.g. ``onClick(c: Clock)`` is used in the above picture).
+  Clearly, ``Form1`` still needs ``Clock`` to compile.
+  We use a dashed arrow, like this:
+  
+  .. image:: class-diagram-form1-clock-3.png
+  
+  The fieldname is gone.
+  
+* Composition: "A owns B" or "B is part of A" or "if A dies, so does B".
+  This is a stronger form of dependency and can occur when A constructs B or
+  when B was constructed and given to A to own.
+  Say that a customer might own an account in a bank's data base:
+  
+  .. image:: class-diagram-bank-1.png
+  
+  The diamond should be *solid black*.
+  Here is the same relationship, but where the fieldnames are placed as labels
+  on the arrow:
+  
+  .. image:: class-diagram-bank-2.png
+  
+  You can draw it as you wish.
+  
+  The multiplicities can be 1, 2, ..., n..m (n upto m), * (zero or more).
+  To indicate that the fieldname label is an array, put it in braces:
+  
+  .. image:: class-diagram-bank-3.png
+  
+  The code for the above design might look like this:
+  
+  .. code-block:: c#
+  
+     public class Account {
+       private int balance;
+       private int idnumber;
+       // ...
+     }
+
+     public class Customer {
+       private string name;  private string address;
+       private Account[] accts;
+       // ...
+       public void deposit(int acct_id, int amount) { ... }
+     }
+     
+* Aggregation: There is also a "white diamond" that is used when there is an 
+  array (aggregate) field but there is only dependency and not ownership.
+  For example, a "hand" object holds handles to some card objects,
+  but the "hand" doesn't own the cards.
+  (Maybe a "card deck" object owns the cards):
+  
+  .. image:: class-diagram-cards.png
+  
+* Subclass ("generalization"): use a big "white" arrowhead with a solid line:
+
+  .. image:: class-diagram-boss-worker-1.png
+
+  Here, both Boss and Worker are subclasses of class Person.
+  
+* Implement an interface ("realization"): use a big "white" arrowhead with
+  a dashed line, say when Person is an interface, not a class:
+  
+  .. image:: class-diagram-boss-worker-2.png
+  
+* Static methods and variables are underlined, and code snippets and related
+  information can be attached as comments:
+  
+  .. image:: class-diagram-program.png
+  
+When we construct "use-case realizations", we will use Collaboration Diagrams,
+which show the objects constructed from class diagrams and the order in which
+they call one another.
+
+Using Visual Studio
+===================
+
+Visual Studio 2013 Ultimate supports creating and editing UML diagrams.
+Here is a good reference:
+
+http://msdn.microsoft.com/en-us/library/dd409445.aspx 
