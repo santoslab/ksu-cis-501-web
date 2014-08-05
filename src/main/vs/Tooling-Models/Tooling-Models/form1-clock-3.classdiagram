@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="b92ef762-fafd-4d5c-9274-1ee3b4b1cedd" name="form1-clock-3" linkedPackageId="0f74f70c-5998-4467-ac60-5b8edb95f08d" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="f601614d-a8ef-43f9-8677-2dd1ac597f0a">
+      <profileInstance Id="d7ffd50d-d7ef-4d33-8fa7-eaacd67d192d" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="93c37571-85ba-4e3d-ae48-7c9755ccc25f">
+      <profileInstance Id="fc12dad2-9692-4fa3-8735-1c0285a4bb7d" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <referencedType Id="fe6f8c60-46ce-4c4c-a758-711d34332c48" name="Button" isAbstract="false" isLeaf="false" cachedFullName="Button">
+        <elementDefinition Id="88cb1b29-7231-444e-a0eb-78d26c113c25" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="6addd460-edf1-443b-8c83-9d1a60dac8de" name="Label" isAbstract="false" isLeaf="false" cachedFullName="Label">
+        <elementDefinition Id="0676aeb1-ff1e-46f4-a308-c170c0574a5e" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="488971d2-e83b-400c-a9ed-3a17d4cc6e35" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="e146d2b8-2c23-4e25-8cf9-273319cea175" name="Form1" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="859b4531-8927-4d71-b691-cce123d00492" />
+        <suppliersInternal>
+          <dependency Id="0bfcce90-da61-47ee-8946-c79d42ea3645">
+            <classMoniker Id="8c8cde1f-1f5d-4110-8637-818f76e47f9b" LastKnownName="Clock" />
+            <elementDefinition Id="96610461-3d44-423e-a8e0-e04fc164c0c6" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property Id="7704cb1f-2d1c-43d1-af27-ce99ba21c458" name="button" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="38e87d5b-3d64-421b-b8c5-baff6af7fe09" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="fe6f8c60-46ce-4c4c-a758-711d34332c48" LastKnownName="Button" />
+            </type_NamedElement>
+          </property>
+          <property Id="d4cbd0c0-5ea1-446c-a842-f68e0da1177a" name="label" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="4d6c8253-7098-41f4-8594-e7eded7f835c" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="6addd460-edf1-443b-8c83-9d1a60dac8de" LastKnownName="Label" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="b03b2c3c-f9a3-4ff6-b6f9-90124c6d86c1" name="on_Click" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="600bc86f-8dd2-4dbb-b329-65e248fdae0a" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="ba7b8208-004c-48b6-bf2c-c7939fc8bb06" name="c" direction="In" isUnique="false">
+                  <elementDefinition Id="6b0d980e-8f1c-4124-aeb5-ffd38537536e" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ef3b5ab6-3787-4df3-8987-250ed57e1a93" LastKnownName="Clock" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="8c8cde1f-1f5d-4110-8637-818f76e47f9b" name="Clock" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="8dc3e19a-fb47-46c3-9114-3f1e9087067c" />
+        <ownedAttributesInternal>
+          <property Id="8f815668-2b13-46f4-9bab-e573fba4c7c7" name="time" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="bfb49a51-6a24-4ae2-b65b-9505ed187b89" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="488971d2-e83b-400c-a9ed-3a17d4cc6e35" LastKnownName="Integer" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="7031156c-6974-4bbc-86e6-bba5d559d58e" name="getTime" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="8f4345f7-0f1b-4300-9fd9-ee301284a425" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="2f6bd1e9-889c-4478-a2a9-e5cbebd1d549" direction="Return" isUnique="false">
+                  <elementDefinition Id="574218bf-f72d-4462-a1b1-c12a26e82850" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="488971d2-e83b-400c-a9ed-3a17d4cc6e35" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="ef3b5ab6-3787-4df3-8987-250ed57e1a93" name="Clock" isAbstract="false" isLeaf="false" cachedFullName="Tooling-Models::Clock">
+        <elementDefinition Id="ec9c94dd-634e-4e31-8893-808da781b11a" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="0f74f70c-5998-4467-ac60-5b8edb95f08d" name="Tooling-Models">
+    <elementDefinition Id="7a463e4a-f7b1-4a40-9241-67f84f13f17f" />
+  </package>
+</logicalClassDesignerModel>

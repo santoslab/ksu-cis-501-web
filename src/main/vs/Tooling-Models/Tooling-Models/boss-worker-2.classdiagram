@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="95427dce-3ca3-4cc9-bf20-5611e74bfeca" name="boss-worker-2" linkedPackageId="98d73dc5-3a71-4a62-a449-9c210dca8770" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="28e611b7-46df-4f10-a4b2-e650c09cf418">
+      <profileInstance Id="de3958a2-9c02-43ea-96e5-c5183c5d2811" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="71c441c8-5b1a-49e6-b2d9-630311cce00e">
+      <profileInstance Id="33c03757-d6a6-408d-a89f-27abe53b40c8" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <referencedType Id="7ab455da-0ef3-47d9-ab91-5636ac49ed8e" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="5897aa67-d868-4e0b-8cb2-3a1ebc36de06" name="Boss" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="243d0c6f-b112-4fc9-92fd-5cde2a738a1e" />
+        <suppliersInternal>
+          <interfaceRealization Id="e1a68b39-c8d7-42d2-8ab7-a3d132b88e9b">
+            <interfaceMoniker Id="a90f19e7-fc43-4cea-b057-1316dae8c8ae" LastKnownName="Person" />
+            <elementDefinition Id="311ccd39-b16a-40b7-9848-d3eaadd8406c" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property Id="f071c042-8f21-44a3-98fb-bd3f2c723638" name="status" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="4088a0de-2de6-4196-8077-7ce49a6a9142" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="7ab455da-0ef3-47d9-ab91-5636ac49ed8e" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="1f4ec28c-8c1b-4d22-9d59-aa59d0ee36aa" name="getBossInfo" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="4fdee327-4257-4244-88be-f02887fd87d4" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="ead24f6d-be11-49a7-b5b0-9754ebcfe37c" direction="Return" isUnique="false">
+                  <elementDefinition Id="6207b608-b958-465a-81e7-078960369e16" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7ab455da-0ef3-47d9-ab91-5636ac49ed8e" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="bb3ca221-83e9-4949-b6f0-9c7d81d2ea34" name="getInfo" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b7212000-9080-49bb-a104-c365dddd102d" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="8c865f52-4609-4adb-828d-1941d2983fe5" direction="Return" isUnique="false">
+                  <elementDefinition Id="6d661e02-a088-4c8e-a315-c14c25ed0fb4" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7ab455da-0ef3-47d9-ab91-5636ac49ed8e" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="a4374b04-9180-42da-88b2-f9a64bf182c4" name="Worker" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="ff5a60b4-b99b-491e-b97b-d1f4c550c435" />
+        <suppliersInternal>
+          <interfaceRealization Id="7c6f66fd-21ab-4e52-b9d6-c25e499eb4a6">
+            <interfaceMoniker Id="a90f19e7-fc43-4cea-b057-1316dae8c8ae" LastKnownName="Person" />
+            <elementDefinition Id="5096fe7b-c657-40f5-989e-74f56d510dc2" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="b41b5189-944b-4ca6-b3de-4f523a4be3ee" name="getInfo" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d89d687a-e058-462b-9a6f-e482a2583fb3" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="cdea32a8-55bb-4ea6-8538-b7c0ca45a628" direction="Return" isUnique="false">
+                  <elementDefinition Id="efb9909b-f1bd-44b5-8fe0-ecc33d0477b8" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7ab455da-0ef3-47d9-ab91-5636ac49ed8e" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="a90f19e7-fc43-4cea-b057-1316dae8c8ae" name="Person" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="544df6ab-72eb-4d6e-99b3-1e18bbc04d41" />
+        <ownedOperations>
+          <operation Id="e51eec20-9a6a-4a0d-b01a-0b3cd15df198" name="getInfo" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="8b976ffb-dcdb-4663-af5a-de92e93d4147" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="2b7ae474-2cce-41a0-a490-51ae75814c7a" direction="Return" isUnique="false">
+                  <elementDefinition Id="936536b1-d0d0-4b76-b926-5df9b785dbc7" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7ab455da-0ef3-47d9-ab91-5636ac49ed8e" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="98d73dc5-3a71-4a62-a449-9c210dca8770" name="Tooling-Models">
+    <elementDefinition Id="7a463e4a-f7b1-4a40-9241-67f84f13f17f" />
+  </package>
+</logicalClassDesignerModel>

@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="56224a9c-3116-41c8-aa66-700a9eb03816" name="program" linkedPackageId="a063c27f-51b9-4912-bd84-a687362659f8" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="1485ae35-c937-4bef-b818-93e887768841">
+      <elementDefinition Id="3457b657-0fa7-4bc6-8d5f-a062c4e41d6e" />
+      <body>int i = Console.ReadLine();
+while i != count
+  Console.WriteLine(...);</body>
+      <annotatedElements>
+        <classMoniker Id="910c90ec-d4eb-4e23-bb99-db5b066bce17" LastKnownName="Program" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="be31ae34-dd46-4c32-b829-c37b0d9247e2">
+      <profileInstance Id="efb4994e-d821-4d0b-a808-56137af7ed9e" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="377307bf-fbd1-4f38-bb1a-aa9ec7436342">
+      <profileInstance Id="a2daa530-f0cc-477f-b20e-01ee6ab9b4a7" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="910c90ec-d4eb-4e23-bb99-db5b066bce17" name="Program" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d61fa3dc-e955-4513-8ce7-08647575dc74" />
+        <suppliersInternal>
+          <dependency Id="97bf5b36-a01d-4e25-943f-23d636035803">
+            <classMoniker Id="fa436c48-daf9-4bd6-9f69-333871068838" LastKnownName="Console" />
+            <elementDefinition Id="7dedcf2a-139a-4d59-a8fe-4da46105d262" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property Id="33106c00-58e2-48f3-a918-556f8bdc2ce6" name="count" visibility="Private" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="9f2fb17b-b695-4c46-9f9b-e6570b580031" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="9fe6ac58-f664-437a-8deb-ce31a32899d0" LastKnownName="Integer" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="cbbeb08a-6adf-48e4-9037-82de165e2359" name="Main" isLeaf="false" isStatic="true" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="055dc22b-4c66-4a76-99d0-b859bc340a38" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="fa436c48-daf9-4bd6-9f69-333871068838" name="Console" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="084c5e7f-c697-45bf-93f0-01526f0d8b51" />
+        <ownedOperationsInternal>
+          <operation Id="4f904780-80c2-4ee4-847b-fc8455f31909" name="ReadLine" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c1041b82-0a63-4846-a9b4-592af28ecc3d" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="9e66d8a4-d177-4274-8408-68eb4c01bbae" direction="Return" isUnique="false">
+                  <elementDefinition Id="4c4fa15f-5bc0-4789-bd72-f699ce79e8eb" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="0021c69f-428d-4c34-8f71-5762359ebae2" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="50ea3561-3ead-43d8-821a-3af7f885780a" name="WriteLine" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="781c686b-3293-4a74-a7ee-c702bb11561c" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="f06733c6-4643-4ab9-b18f-5293d1006d07" name="s" direction="In" isUnique="false">
+                  <elementDefinition Id="8413a8d9-3a87-49ec-be06-e6d70b2bf3ea" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="0021c69f-428d-4c34-8f71-5762359ebae2" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="9fe6ac58-f664-437a-8deb-ce31a32899d0" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="0021c69f-428d-4c34-8f71-5762359ebae2" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="a063c27f-51b9-4912-bd84-a687362659f8" name="Tooling-Models">
+    <elementDefinition Id="7a463e4a-f7b1-4a40-9241-67f84f13f17f" />
+  </package>
+</logicalClassDesignerModel>
