@@ -5,6 +5,12 @@ Course Notes
 
 .. include:: def.rst
 
+.. admonition:: Acknowledgement
+
+   This course notes are adapted from David Schmidt's 
+   `CIS 501, Spring 2014 <http://people.cis.ksu.edu/~schmidt/501s14/>`__
+   course notes.
+   
 Contents:
 
 .. toctree::
@@ -12,3 +18,4 @@ Contents:
    :numbered: 3
 
    tooling/index.rst
+   
