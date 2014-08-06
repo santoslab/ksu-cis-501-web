@@ -28,18 +28,20 @@ Note that if you are accessing ``remote.win.cis.ksu.edu`` from off-campus,
 you will need to use K-State VPN software
 (http://www.k-state.edu/its/security/vpn/) before connecting to it. 
 
-Online References
-=================
+Online Resources
+================
 
 Use the web site www.dotnetperls.com as your "reference text" when you use 
 Visual Studio to develop C# programs.
 It is an easy-to-consume, example-driven introduction to the useful parts of
-C#. Any details I omit here you will find in www.dotnetperls.com.
+C#.
 
 Microsoft Developer Network (MSDN, http://msdn.microsoft.com) also has a lot of 
 information regarding C# and Visual Studio (e.g., see MSDN's
-`Getting Started with Visual C# <http://msdn.microsoft.com/en-us/library/a72418yk.aspx>`__,
-`Using the Visual C# Development Environment <http://msdn.microsoft.com/en-us/library/ms173063.aspx>`__, or 
+`Getting Started with Visual C# <http://msdn.microsoft.com/en-us/library/a72418yk.aspx>`__ 
+article,
+`Using the Visual C# Development Environment <http://msdn.microsoft.com/en-us/library/ms173063.aspx>`__
+article, or 
 you can use the search box to look
 for other information on a specific topic).
 Note that there are two GUI frameworks for C#/.Net: 
@@ -130,7 +132,8 @@ window and selecting "View Code", or you can double click on the GUI itself to
 see its code.
 
 For more information, see MSDN's 
-`Visual C# Tutorials <http://msdn.microsoft.com/en-us/library/dd492171.aspx>`__.
+`Visual C# Tutorials <http://msdn.microsoft.com/en-us/library/dd492171.aspx>`__
+article.
 
 
 Widgets
@@ -252,7 +255,8 @@ You can use the IMMEDIATE window as an expression interpreter that uses the
 current context at the current breakpoint.
 
 For more information, see MSDN's 
-`Debugging Managed Code <http://msdn.microsoft.com/en-us/library/awtaffxb.aspx>`__.
+`Debugging Managed Code <http://msdn.microsoft.com/en-us/library/awtaffxb.aspx>`__
+article.
 
 
 Inserting Multiple Classes in A Namespace
@@ -767,7 +771,7 @@ The components (classes) of a system should be tested individually
 (or in an order where the class to be tested depends only on classes that are
 already tested). This is called unit testing.
 
-To unit-test a class, you should write code to construct it and call all its
+To unit-test a class, you can write code to construct it and call all its
 methods.
 The tests should make full use of the methods, fields, and their interactions.
 Place the tests in static methods and call them from **Main**.
@@ -808,35 +812,78 @@ In Java, we can insert ``Main`` into class ``Clock`` and execute ``Clock``
 as an application! But C# won't let us do this trick.
 So, we must generate a new project to hold ``Main``.
 
-The Visual Studio has a Test menu that can generate a project containing the 
-test code.
-But the format of tests is not so easy to work with (it's like a whole separate
-programming language). So here's a simple way to unit-test:
+A better way to do unit testing is to leverage VS testing framework.
+To do this, you need to create a ``Unit Test Project`` as follows:
 
-1. Open your project, say it's named ``CCC``, where class ``Clock`` lives.
+1. Right-click on your solution in the ``Solution Explorer``, select
+   ``Add`` and then ``New Project...``.
+   It opens the ``Add New Project`` dialog window. 
+   
+2. Under ``Visual C#``, select ``Test`` and ``Unit Test Project``, and then
+   name your project, e.g., ``ClockUnitTest``.
 
-2. Select ``File`` then ``Add`` then ``New Project``. 
-   Make a Console Application, name it ``UnitTest``, and *save it in ``CCC``'s 
-   folder*.
-   This makes a second, separate folder, and in the Solution Explorer window,
-   you will see both ``CCC`` and ``UnitTest`` listed.
-  
-3. In the ``Program.cs`` file in project ``UnitTest``, insert your test methods 
-   and call them from ``Main``.
-   At the top, remember to type ``using CCC;`` and remember to select ``Project``
-   then ``Add Reference`` then select ``CCC``.
-   This links the test code to the class.
+3. It should generate a test file:
 
-4. To run your ``Main`` method, you must set it as the "start up":
-   Go to the Solution Explorer window and click on the name, ``UnitTest``.
-   Then, select ``Project`` then ``Set as StartUp project``.
-   (Or, right-click on ``UnitTest`` and select ``Set as StartUp project``.)
+   .. code-block:: c#
+   
+      using System;
+      using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-5. Now you can Debug as usual.
+      namespace ClockUnitTest {
+        
+        [TestClass]
+        public class UnitTest1 {
+        
+          [TestMethod]
+          public void TestMethod1() {
+          }
+        }
+      }
 
-When you are finished testing, leave ``UnitTest`` where it is.
-It can be used in the future to test any modifications to the project.
+4. The ``[TestClass]`` attribute indicates that the class is part of the unit
+   test suite of the project. Similarly, ``[TestMethod]`` indicates the method
+   is a test method. You can have multiple test classes and test methods.
+   
+5. Add a reference to the project containing ``Clock`` by right-clicking the
+   test project and selecting ``Add`` and ``Reference...``. It opens the
+   ``Reference Manager`` dialog window. Select the project containing ``Clock``
+   under ``Solution`` and ``Projects``, then click ``OK``.
+   
+6. Modify the test method to insert the test code, for example:
 
+   .. code-block:: c#
+   
+      [TestMethod]
+      public void TestMethod1() {
+        Clock c = new Clock();
+        for (int i = 0; i <= 20; i++) {
+          Console.WriteLine(c.getTime());
+          c.tick();
+        }
+      }
+      
+7. To run or debug your tests, open the ``TEST`` menu and then either select
+   ``Run`` or ``Debug``, then ``All Tests``. It opens ``Test Explorer`` that
+   contains the status of each test methods (passing or failing).
+   
+For more information, see MSDN's 
+`Verifying Code by Using Unit Tests <http://msdn.microsoft.com/en-us/library/dd264975.aspx>`__ 
+article.
+
+Code Coverage
+=============
+
+It is considered best practice if your test suite exercises all 
+(non-test) code in your solution.
+Visual Studio has a code coverage analysis tool that can tell you if you are
+missing exercising certain parts of your code. 
+You can run the code coverage analysis by selecting ``Analyze Code Coverage`` 
+and ``All Tests`` under the ``TEST`` menu. 
+
+For more information, see MSDN's
+`Using Code Coverage to Determine How Much Code is being Tested <http://msdn.microsoft.com/en-us/library/dd537628.aspx>`__
+article.
+ 
 
 Useful C# Concepts
 ******************
