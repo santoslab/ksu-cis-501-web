@@ -1,6 +1,22 @@
+.. raw:: html
+
+   <br/>
+   <font color="darkgray">
+   <big><big><b>
+   
+Course Notes --- CIS 501: Software Architecture and Design, Fall 2014
+
+.. raw:: html
+
+   </b></big></big>
+   </font>
+
+
 Using C# with Visual Studio and Git/GitHub
 ##########################################
 
+
+.. _tooling-vs:
 
 Visual Studio and C#
 ********************
@@ -110,7 +126,7 @@ Console application
 If you construct a new project that is a console application,
 you will receive a class that contains a ``Main`` method. 
 From this point, you can code vanilla C#, say, like the examples in 
-Dave Schmidt's `CIS200 notes from 2008 <http://people.cis.ksu.edu/~schmidt/200s08/>`__. 
+David Schmidt's `CIS200 notes from 2008 <http://people.cis.ksu.edu/~schmidt/200s08/>`__. 
 (Scroll to the bottom of the page for the relevant links.)
 
 
@@ -754,7 +770,7 @@ Use the BUILD SOLUTION menu item (listed under either BUILD or DEBUG) to do this
 
 The C# compiler can be used standalone, from a command window, 
 to compile and test programs and library components. 
-The details can be found in Dave Schmidt's 
+The details can be found in David Schmidt's 
 `CIS200 notes from 2008 <http://people.cis.ksu.edu/~schmidt/200s08/>`__ --- 
 see the last four links on that page.
 
@@ -1316,7 +1332,7 @@ We will use these forms of associations (but there are many more!):
 
   .. image:: class-diagram-boss-worker-1.png
 
-  Here, both ``Boss`` and ``Worker``` are subclasses of class ``Person``.
+  Here, both ``Boss`` and ``Worker`` are subclasses of class ``Person``.
   
 * Implement an interface ("realization"): use a big "white" arrowhead with
   a dashed line, say when ``Person`` is an interface, not a class:
