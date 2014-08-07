@@ -16,14 +16,14 @@ Using C# with Visual Studio and Git/GitHub
 ##########################################
 
 
-.. _tooling-vs:
-
 Visual Studio and C#
 ********************
 
 Visual Studio ("VS") helps you construct a C# project that you can test and 
 later compile into an **.exe** or **.dll** file.
 In this course, we will use Visual Studio 2013 Ultimate edition.
+
+.. _tooling-vs:
 
 Accessing Visual Studio
 =======================
@@ -86,6 +86,11 @@ We will be using
 with a very simple and specific Git workflow to sync your private repository with 
 the instructor's GitHub repository; in-class exercise and assignment submissions
 will be done by simply committing/pushing your changes to your private repository.
+
+Git Workflow
+============
+
+TBA.
 
 
 Creating A New Project
@@ -713,6 +718,7 @@ object, that is, fake a Brinch-Hansen-style monitor. )-:
    }
 
 .. code-block:: c#
+
    // ...
    namespace Test {
      public partial class Form2 : Form {
@@ -1355,3 +1361,13 @@ Visual Studio 2013 Ultimate supports creating and editing UML diagrams.
 Here is a good reference:
 
 http://msdn.microsoft.com/en-us/library/dd409445.aspx 
+
+----
+
+.. raw:: html
+
+   <p align=right><small><em>
+   These lecture notes were adapted from David Schmidt's CIS 501, Spring 2014, 
+   <a href="http://people.cis.ksu.edu/~schmidt/501s14/Lectures/VSnotesS.html">Lecture 0</a>
+   course notes.
+   </em></small></p>
