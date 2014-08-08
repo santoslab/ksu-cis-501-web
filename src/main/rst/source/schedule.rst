@@ -30,7 +30,7 @@ Schedule
      - :ref:`classes-vr`
      - **Homework 1, due on: Sep 8**
    * - 2. U: Sep 4
-     - TBA
+     - :ref:`storage-object-diagrams`
      - 
    * - 3. T: Sep 9
      - TBA

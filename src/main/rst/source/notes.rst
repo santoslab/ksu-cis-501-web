@@ -18,5 +18,6 @@ Course Notes
    01-tooling/index.rst
    02-intro-softwarearch/index.rst
    03-classes-vr/index.rst
+   04-storage-object-diagram/index.rst
    
 ----   
