@@ -21,8 +21,8 @@ Schedule
      - Lecture
      - Note
    * - 1. T: Aug 26
-     - Course Administration
-     -
+     - Course Administration & :ref:`notes` 
+     - 
    * - 1. U: Aug 28
      - :ref:`intro-softwarearch`
      - 

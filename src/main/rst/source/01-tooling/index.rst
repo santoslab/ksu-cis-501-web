@@ -12,6 +12,8 @@ Course Notes --- CIS 501: Software Architecture and Design, Fall 2014
    </font>
 
 
+.. _notes:
+
 Using C# with Visual Studio and Git/GitHub
 ##########################################
 
