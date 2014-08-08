@@ -16,5 +16,6 @@ Course Notes
    :numbered: 3
 
    tooling/index.rst
+   intro-softwarearch/index.rst
 
 ----   

@@ -24,7 +24,7 @@ Schedule
      - Course Administration
      -
    * - 1. U: Aug 28
-     - TBA
+     - :ref:`intro-softwarearch`
      - 
    * - 2. T: Sep 2
      - TBA
