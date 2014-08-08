@@ -27,8 +27,8 @@ Schedule
      - :ref:`intro-softwarearch`
      - 
    * - 2. T: Sep 2
-     - TBA
-     -
+     - :ref:`classes-vr`
+     - **Homework 1, due on: Sep 8**
    * - 2. U: Sep 4
      - TBA
      - 

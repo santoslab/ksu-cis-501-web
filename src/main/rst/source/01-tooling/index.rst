@@ -785,6 +785,7 @@ it's too much work to build a GUI by hand in C#.
 In contrast, other languages (e.g., Python) make GUI-building not so hard.
 (See the previous link.)
 
+.. _unit-testing:
 
 Unit Testing
 ************

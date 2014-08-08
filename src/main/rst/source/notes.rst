@@ -15,7 +15,8 @@ Course Notes
    :maxdepth: 2
    :numbered: 3
 
-   tooling/index.rst
-   intro-softwarearch/index.rst
-
+   01-tooling/index.rst
+   02-intro-softwarearch/index.rst
+   03-classes-vr/index.rst
+   
 ----   
