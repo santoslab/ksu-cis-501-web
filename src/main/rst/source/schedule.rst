@@ -19,7 +19,7 @@ Schedule
    
    * - Week. Day: Date
      - Lecture
-     - Note
+     - Remarks
    * - 1. T: Aug 26
      - Course Administration & :ref:`notes` 
      - 
@@ -28,76 +28,76 @@ Schedule
      - 
    * - 2. T: Sep 2
      - :ref:`classes-vr`
-     - **Homework 1, due on: Sep 8**
+     - **Assignment 1: due on Sep 8**
    * - 2. U: Sep 4
      - :ref:`storage-object-diagrams`
      - 
    * - 3. T: Sep 9
-     - TBA
-     -
+     - :ref:`class-diagrams`
+     -  
    * - 3. U: Sep 11
-     - TBA
-     - 
+     - :ref:`interfaces`
+     - **Assignment 2: due on Sep 22**
    * - 4. T: Sep 16
-     - TBA
+     - :ref:`interfaces`
      -
    * - 4. U: Sep 18
-     - TBA
+     - :ref:`coupling-mvc`
      - 
    * - 5. T: Sep 23
-     - TBA
-     -
+     - :ref:`coupling-mvc`
+     - **Assignment 3: due on Oct 6**
    * - 5. U: Sep 25
-     - TBA
+     - :ref:`coupling-mvc`
      - 
    * - 6. T: Sep 30
-     - TBA
-     -
+     - *No Lecture*
+     - 1-on-1 meeting, *Instructor Travel*
    * - 6. U: Oct 2
-     - TBA
-     - 
+     - *No Lecture*
+     - 1-on-1 meeting, *Instructor Travel*
    * - 7. T: Oct 7
-     - TBA
-     -
+     - VII
+     - **Assignment 4: due on Oct 14**, *Instructor Travel*
    * - 7. U: Oct 9
-     - TBA
-     - 
+     - VII, VIII
+     - *Instructor Travel*
    * - 8. T: Oct 14
-     - TBA
-     -
+     - VIII
+     - 
    * - 8. U: Oct 16
-     - TBA
-     - 
+     - IX
+     - 1-on-1 meeting
    * - 9. T: Oct 21
-     - TBA
-     -
+     - *No Lecture*
+     - 1-on-1 meeting
    * - 9. U: Oct 23
-     - TBA
-     - 
+     - **Mid-term Exam**
+     - **Assignment 5: due on: Nov 5**
    * - 10. T: Oct 28
-     - TBA
-     -
+     - IX
+     - 
    * - 10. U: Oct 30
-     - TBA
+     - D0
      - 
    * - 11. T: Nov 4
-     - TBA
+     - D1
      -
    * - 11. U: Nov 6
-     - TBA
-     - 
+     - D2
+     - **Project: design due on Nov 16, implementation due on Dec 5**
    * - 12. T: Nov 11
-     - TBA
-     -
+     - D2
+     - 
    * - 12. U: Nov 13
-     - TBA
+     - D4
      - 
    * - 13. T: Nov 18
-     - TBA
-     -
+     - *No Lecture*
+     - 1-on-1 meeting
    * - 13. U: Nov 20
-     - TBA
-     - 
+     - *No Lecture*
+     - 1-on-1 meeting
    * - A. T: Nov 25
      - *No Lecture*
      - **Thanksgiving Break**
@@ -105,16 +105,16 @@ Schedule
      - *No Lecture*
      - **Thanksgiving Break**
    * - 14. T: Dec 2
-     - TBA
+     - D3
      -
    * - 14. U: Dec 4
-     - TBA
+     - *No Lecture*
      - 
    * - 15. T: Dec 9
-     - TBA
+     - FinishDP
      -
    * - 15. U: Dec 11
-     - TBA
+     - SA
      - 
    * - 16. T: Dec 16
      - Final Exam

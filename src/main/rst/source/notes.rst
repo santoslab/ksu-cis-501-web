@@ -18,6 +18,9 @@ Course Notes
    01-tooling/index.rst
    02-intro-softwarearch/index.rst
    03-classes-vr/index.rst
-   04-storage-object-diagram/index.rst
-   
-----   
+   04-storage-object-diagrams/index.rst
+   05-class-diagrams/index.rst
+   06-interfaces/index.rst
+   07-coupling-mvc/index.rst
+      
+---- 
