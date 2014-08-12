@@ -214,7 +214,7 @@ quality of the class code.
 Unit Testing in Visual Studio
 =============================
 
-The details are found course notes on :ref:`unit-testing`.
+The details are found in the :ref:`unit-testing` course note.
 For our card example, say we coded ``class Card`` in Visual Studio in solution
 ``CardConcepts``.
 If you look in VS's Solution Explorer window, you see that solution 
@@ -252,7 +252,7 @@ article.
 .. raw:: html
 
    <p align=right><small><em>
-   These lecture notes were adapted from David Schmidt's CIS 501, Spring 2014, 
+   This note was adapted from David Schmidt's CIS 501, Spring 2014, 
    <a href="http://people.cis.ksu.edu/~schmidt/501s14/Lectures/Lecture02S.html">Lecture 2</a>
-   course notes.
+   course note.
    </em></small></p>

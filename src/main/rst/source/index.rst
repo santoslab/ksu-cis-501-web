@@ -30,4 +30,4 @@ using blueprints and architectural design patterns.
 
 * :ref:`course-notes`
 
-* Software: Visual Studio 2013 Ultimate (see course notes on :ref:`tooling-vs`)
+* Software: Visual Studio 2013 Ultimate (see :ref:`tooling-vs`)

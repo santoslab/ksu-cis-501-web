@@ -16,13 +16,13 @@ software system --- it is the "floor plan" of the software system.
 It is the most important blueprint form that we learn in this course.
 
 UML class notation is used to draw a class diagram. We use the variant that is
-supported by Visual Studio, which is documented in the lecture notes on 
+supported by Visual Studio, which is documented in the lecture note on 
 :ref:`uml-notation`. 
 
 Example: Bank Database
 **********************
 
-At the end of the previous lecture notes (:ref:`storage-object-diagrams`), 
+At the end of the previous lecture note (:ref:`storage-object-diagrams`), 
 there were examples of object diagrams.
 One was of a banking database. Here's a repeat of part of that system:
 
@@ -48,7 +48,7 @@ life the database:
 Additional detail --- field names, methods --- are added to indicate what must
 be coded to implement the database.
 
-The meanings of boxes and arrows are documented in the lecture notes on
+The meanings of boxes and arrows are documented in the lecture note on
 :ref:`uml-notation`.
 Here is a quick summary:
 
@@ -121,8 +121,8 @@ Here is a class diagram that could generate the above object diagram:
 .. raw:: html
 
    <p align=right><small><em>
-   These lecture notes were adapted from David Schmidt's CIS 501, Spring 2014, 
+   This note was adapted from David Schmidt's CIS 501, Spring 2014, 
    <a href="http://people.cis.ksu.edu/~schmidt/501s14/Lectures/Lecture04S.html">Lecture 4</a>
-   course notes.
+   course note.
    </em></small></p>
     

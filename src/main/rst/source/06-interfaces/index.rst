@@ -14,7 +14,7 @@ Both delegates and interfaces are hugely useful in practice for defining
 "plug-in" connection points between code assemblies.
 
 
-Interfaces: specifications for connection
+Interfaces: Specifications for Connection
 *****************************************
 
 An *interface* is a listing of the public methods an object must have to connect
@@ -466,8 +466,8 @@ A delegate object is also called a *closure object*, which is older terminology.
 We leave it at that; take CIS505 to learn more....)
 
 Soon, we will use delegate declarations and delegate objects in our own coding.
-See the notes :ref:`delegates` to see how delegates are commonly used in systems
-coding.
+See the note on :ref:`delegates` to see how delegates are commonly used in
+systems coding.
 
 
 Models and Controllers in Reactive Systems
@@ -515,8 +515,8 @@ We must learn how to do this properly.
 .. raw:: html
 
    <p align=right><small><em>
-   These lecture notes were adapted from David Schmidt's CIS 501, Spring 2014, 
+   This note was adapted from David Schmidt's CIS 501, Spring 2014, 
    <a href="http://people.cis.ksu.edu/~schmidt/501s14/Lectures/Lecture05S.html">Lecture 5</a>
-   course notes.
+   course note.
    </em></small></p>
     
