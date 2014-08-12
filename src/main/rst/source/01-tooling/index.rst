@@ -1032,6 +1032,8 @@ Thankfully, dictionaries are "almost built-into" C#. Try these:
      Console.ReadLine();
    }
 
+.. _delegates:
+
 Delegates
 =========
 
@@ -1195,6 +1197,7 @@ Here are references that might help:
 
 * http://www.dotnetperls.com/file
 
+.. _uml-notation:
 
 Using UML Class Notation
 ************************
