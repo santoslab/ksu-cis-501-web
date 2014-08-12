@@ -28,7 +28,7 @@ Course Notes
 .. raw:: html
 
    <p align=right><small><em>
-   Thes notes were adapted from 
+   These notes were adapted from 
    <a href="http://people.cis.ksu.edu/~schmidt/501s14/">David Schmidt's CIS 501, 
    Spring 2014</a> lecture notes.
    </em></small></p>
