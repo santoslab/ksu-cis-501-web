@@ -589,6 +589,7 @@ It is also OK for a Forms App to start a "main form", which itself constructs
 more forms.
 All the buttons on all the forms will be active.
 
+.. _multiple-gui-threads:
 
 Multiple GUI Threads
 ********************
@@ -635,6 +636,8 @@ each with its own thread of execution. Here's how to rewrite ``Program.cs``:
 The code generates two threads of execution (activation stacks,
 instruction counters); then it finishes the main thread and shows the message
 box.
+
+.. _using-lock:
 
 Using ``lock`` on An Object Shared by Multiple Threads
 ======================================================
