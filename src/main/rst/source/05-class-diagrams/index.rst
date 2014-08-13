@@ -43,7 +43,7 @@ A class diagram shows the classes that must be written and the dependencies.
 Here is a class diagram that defines the classes that must be coded to bring to
 life the database:
 
-.. image:: dbclass.jpg
+.. image:: dbclass.png
 
 Additional detail --- field names, methods --- are added to indicate what must
 be coded to implement the database.
@@ -86,7 +86,7 @@ But some people find the labels on the arrows confusing.
 When you use the Visual Studio to draw the diagrams, you can omit the labels if
 you declare the correct fields, like this:
 
-.. image:: dbclass2.jpg
+.. image:: dbclass2.png
 
 One advantage of this alternate approach is that *Visual Studio can generate your
 C# code for you from the class diagram you draw* (see MSDN's 
@@ -114,7 +114,7 @@ The object diagram gives big clues about what classes must be written for the
 simulation.
 Here is a class diagram that could generate the above object diagram:
 
-.. image:: class.jpg
+.. image:: class.png
 
 ----
 
