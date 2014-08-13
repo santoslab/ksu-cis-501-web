@@ -123,6 +123,6 @@ Here is a class diagram that could generate the above object diagram:
    <p align=right><small><em>
    This note was adapted from David Schmidt's CIS 501, Spring 2014, 
    <a href="http://people.cis.ksu.edu/~schmidt/501s14/Lectures/Lecture04S.html">Lecture 4</a>
-   course note.
+   course note. © Copyright 2014, David Schmidt.
    </em></small></p>
     

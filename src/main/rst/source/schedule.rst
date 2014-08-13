@@ -57,16 +57,16 @@ Schedule
      - *No Lecture*
      - 1-on-1 meeting, *Instructor Travel*
    * - 7. T: Oct 7
-     - VII
+     - :ref:`use-cases`
      - **Assignment 4: due on Oct 14**, *Instructor Travel*
    * - 7. U: Oct 9
-     - VII, VIII
+     - :ref:`use-cases` & :ref:`state-diagrams`
      - *Instructor Travel*
    * - 8. T: Oct 14
-     - VIII
+     - :ref:`state-diagrams`
      - 
    * - 8. U: Oct 16
-     - IX
+     - :ref:`multi-threaded`
      - 1-on-1 meeting
    * - 9. T: Oct 21
      - *No Lecture*
@@ -75,22 +75,22 @@ Schedule
      - **Mid-term Exam**
      - **Assignment 5: due on: Nov 5**
    * - 10. T: Oct 28
-     - IX
+     - :ref:`multi-threaded`
      - 
    * - 10. U: Oct 30
-     - D0
+     - TBA
      - 
    * - 11. T: Nov 4
-     - D1
+     - TBA
      -
    * - 11. U: Nov 6
-     - D2
+     - TBA
      - **Project: design due on Nov 16, implementation due on Dec 5**
    * - 12. T: Nov 11
-     - D2
+     - TBA
      - 
    * - 12. U: Nov 13
-     - D4
+     - TBA
      - 
    * - 13. T: Nov 18
      - *No Lecture*
@@ -105,16 +105,16 @@ Schedule
      - *No Lecture*
      - **Thanksgiving Break**
    * - 14. T: Dec 2
-     - D3
+     - TBA
      -
    * - 14. U: Dec 4
      - *No Lecture*
      - 
    * - 15. T: Dec 9
-     - FinishDP
+     - TBA
      -
    * - 15. U: Dec 11
-     - SA
+     - TBA
      - 
    * - 16. T: Dec 16
      - Final Exam
