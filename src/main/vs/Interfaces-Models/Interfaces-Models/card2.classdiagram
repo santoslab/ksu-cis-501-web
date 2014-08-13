@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="bace701e-aa06-4523-a5f6-95a871332eb6" name="card2" linkedPackageId="30c7fc98-bf38-4ce0-b4cd-2da8755db40e" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="2d73632a-7fcd-46a9-b19c-2b357d1416c0">
+      <elementDefinition Id="491622ee-a5fb-4450-be83-74abaffdf558" />
+      <body>foreach (Player p in players) {
+  while (p.wantsCard()) {
+    p.getsCard(d.dealNewCard());
+  }
+}</body>
+      <annotatedElements>
+        <classMoniker Id="68ffb908-2091-4d7b-a029-5d586cce33e4" LastKnownName="Dealer" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="023cc94b-342a-47d5-867a-796d693d350d">
+      <profileInstance Id="e94349dd-d5b8-4033-81a7-c2649d98ef98" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="3a2d22cb-42cd-4531-b794-2b8127391d29">
+      <profileInstance Id="6f37ef59-bce9-413a-9677-ffb9bcc21e47" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="68ffb908-2091-4d7b-a029-5d586cce33e4" name="Dealer" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="1f60e4fc-c85e-4b91-b033-21e8164f1807" />
+        <suppliersInternal>
+          <dependency Id="0ebba13a-5ea9-4cd4-9a14-d7a3c5eff855">
+            <interfaceMoniker Id="992c61b8-8082-4839-af9f-72ce622a3002" LastKnownName="Player" />
+            <elementDefinition Id="c206d6c1-4235-45da-aee5-c33526cb3729" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property Id="a13d0d72-ec0a-4142-87f6-d35eedbdcbff" name="players" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0bc2a2f8-d336-4cc5-8810-45bf1c8f87af" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="2c8d6667-3396-492e-abde-cb6060b81bea" LastKnownName="List&lt;Player&gt;" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="e27cd376-dc47-4fd0-a816-f13c5cba23ff" name="playOneRound" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="11ca4c72-34c3-4418-9edf-87b952c880b8" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="992c61b8-8082-4839-af9f-72ce622a3002" name="Player" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8484e244-8cde-43ef-95ae-f43f8cd26b27" />
+        <ownedOperations>
+          <operation Id="cde04d06-ff67-42bc-9dfa-adcaf0ab3d57" name="wantsCard" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a5dc86c2-a578-4246-b6a4-bea84e7e484b" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="c1241121-a238-4e32-a1e5-1baa62f94062" direction="Return" isUnique="false">
+                  <elementDefinition Id="db4cc470-72e7-4597-aede-fb119300450d" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="5e31b660-b8d2-454b-94ca-2690cc392c0a" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="5c3e5142-828e-4b28-b10e-a1711ab8e73e" name="getsCard" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="0fdc32da-5ecb-4c5e-97be-1f88dc4435e0" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="b5b23a84-57cd-4729-b2ad-020663cb8596" name="c" direction="In" isUnique="false">
+                  <elementDefinition Id="914ff61c-da1d-4e49-9c8d-c9b2cff3968e" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7810ccd1-7427-4aaa-b08c-6de18e3b2304" LastKnownName="Card" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="fa879fa2-4310-4977-88fe-4df065cfefea" name="HumanPlayer" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="9e9ebac6-a1b0-456b-aca6-267336bb3084" />
+        <suppliersInternal>
+          <interfaceRealization Id="6fadd19e-5477-4ccb-8406-4a679583610c">
+            <interfaceMoniker Id="992c61b8-8082-4839-af9f-72ce622a3002" LastKnownName="Player" />
+            <elementDefinition Id="87115d10-76d4-45a0-bbd6-a88840ece8f7" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="437c62db-3034-419c-b592-95a3a9327636" name="wantsCard" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a76b325c-ed74-4ac0-9603-ebc66f3766d9" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="0ad64b70-9ead-4794-b195-d103925646ee" direction="Return" isUnique="false">
+                  <elementDefinition Id="8429c47a-fa06-4eb3-95fc-905389f51ee4" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="5e31b660-b8d2-454b-94ca-2690cc392c0a" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="d9732663-6782-4c12-9745-6889c5617d8e" name="getsCard" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a522d466-e630-4877-8070-503d909226cf" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="f8074949-81b9-40c5-a373-c77eaadd5673" name="c" direction="In" isUnique="false">
+                  <elementDefinition Id="a59682a1-ec05-498b-9b7a-383656160476" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7810ccd1-7427-4aaa-b08c-6de18e3b2304" LastKnownName="Card" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="e2f9dc76-2392-4466-8680-9a1b407b53f9" name="ComputerPlayer" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="a8f655cb-2d45-4e32-bc78-4e2cea817cc6" />
+        <suppliersInternal>
+          <interfaceRealization Id="07afbbcf-64d7-449b-a551-b8897c6e80ef">
+            <interfaceMoniker Id="992c61b8-8082-4839-af9f-72ce622a3002" LastKnownName="Player" />
+            <elementDefinition Id="e7b8659f-e588-4c1a-82ab-6389a53d9054" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="a64e5f5e-3162-4bec-b7a0-95583ea437bb" name="wantsCard" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e595478f-c70b-40db-8835-20810abf7d30" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="163ca27f-6d4b-46bc-87ba-c941d57fb1d0" direction="Return" isUnique="false">
+                  <elementDefinition Id="6cd15a27-694f-4ecc-8db3-47db4730e841" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="5e31b660-b8d2-454b-94ca-2690cc392c0a" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="3ab6bbc4-3cce-48cb-9802-a1db576ca666" name="getsCard" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b05a15dd-04d3-4c68-9b68-3a8c410fb775" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="f22a16c4-b282-4d11-bdb8-4b07f7b21c08" name="c" direction="In" isUnique="false">
+                  <elementDefinition Id="92f4de62-b6aa-4287-a166-faa671ff2741" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7810ccd1-7427-4aaa-b08c-6de18e3b2304" LastKnownName="Card" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="5e31b660-b8d2-454b-94ca-2690cc392c0a" name="Boolean" isAbstract="false" isLeaf="false" cachedFullName="Boolean">
+        <elementDefinition Id="8943dc84-709e-4f62-b15a-a3273aa6f165" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="7810ccd1-7427-4aaa-b08c-6de18e3b2304" name="Card" isAbstract="false" isLeaf="false" cachedFullName="Card">
+        <elementDefinition Id="96599290-fadb-4bd4-9181-0e88c7c4c514" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="2c8d6667-3396-492e-abde-cb6060b81bea" name="List&lt;Player&gt;" isAbstract="false" isLeaf="false" cachedFullName="List&lt;Player&gt;">
+        <elementDefinition Id="0690fda6-5151-4d1f-ab16-82bdaa683079" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="30c7fc98-bf38-4ce0-b4cd-2da8755db40e" name="Interfaces-Models">
+    <elementDefinition Id="649a7f09-e696-40fc-819a-31f3c2dabca0" />
+  </package>
+</logicalClassDesignerModel>

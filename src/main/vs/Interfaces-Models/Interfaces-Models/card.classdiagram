@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="1a50f02e-4fb7-43fb-9eef-30486d82c5bf" name="card" linkedPackageId="e073886b-3781-4563-805c-3b0d3ae9c7e3" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="2ba14020-11b0-41e3-8789-146201eb701c">
+      <elementDefinition Id="1c3d03fb-5926-4e67-b817-c093748d4a24" />
+      <body>while (h.wantsCard()) {
+  h.getsCard(d.dealNewCard());
+}
+while (c.wantsCard()) {
+  c.getsCard(d.dealNewCard());
+}</body>
+      <annotatedElements>
+        <classMoniker Id="c432396e-1c7d-4d1d-86f6-561b48570d7c" LastKnownName="Dealer" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="89f3dc76-e809-45b5-8ee6-19780c52a66e">
+      <profileInstance Id="35c5dfa9-0e89-42a7-8ab5-5025687afa17" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="c646c3df-cb93-4032-ae21-599d5de5a7e2">
+      <profileInstance Id="9ee24294-b594-44ed-aa2e-232ccb9bdd3b" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="c432396e-1c7d-4d1d-86f6-561b48570d7c" name="Dealer" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="388fbc1d-866d-48de-9560-d006f2508929" />
+        <targetEnds>
+          <association Id="e9323b6e-0481-455f-b072-ae66b5409eb0" isDerived="false" sourceEndRoleName="" targetEndRoleName="h" isLeaf="false" isAbstract="false">
+            <classMoniker Id="01b8e26d-1598-4d03-910c-af2972a7017a" LastKnownName="HumanPlayer" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="317d4b1e-c8da-41c1-b468-379b268b62b7" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="5971a17a-3c6b-4120-8f52-89f50db25beb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7bf56b41-1d89-45a2-b20a-76b4bfffbc2f" name="h" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="6b1a1537-0979-49cc-b8d3-5d17ec892547" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="39e112ca-1fc9-4c2b-b643-c695a25fe066" />
+          </association>
+          <association Id="4aa4d7f1-3076-4e55-a247-d3abe16e7a79" isDerived="false" sourceEndRoleName="" targetEndRoleName="h" isLeaf="false" isAbstract="false">
+            <classMoniker Id="45af916c-96ee-47b8-bbf7-9c8b40f60e4c" LastKnownName="ComputerPlayer" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8ffe47ac-56e2-414e-8b75-5a15964726c5" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="93c1d31a-67ab-409c-8021-3f7e51c222c1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ca8c3b27-7f2e-4704-9c60-9a611caa60b1" name="h" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c84d4ff5-543c-4918-8e91-849400379639" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="14cf2872-ed4a-4b5c-bc46-d221b27c075a" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="6a03d01f-f18b-45ab-bf32-6213275bf60b" name="playOneRound" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="0465922d-57af-4748-9657-531f126ba306" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="01b8e26d-1598-4d03-910c-af2972a7017a" name="HumanPlayer" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="3b083ebb-1522-43bd-a073-ea90dcae0267" />
+        <ownedOperationsInternal>
+          <operation Id="eef6c8c3-9052-4555-b78a-7da97c979cfe" name="wantsCard" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="0bdd2e7f-1701-4228-8c4b-579aff026aac" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="37c0f4e6-8360-48e3-a392-45d25c550eb7" direction="Return" isUnique="false">
+                  <elementDefinition Id="b578298d-dd99-4c15-945c-870542acd76f" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="0223a8dc-b6cb-4714-9800-c7a13340d132" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="452cd60c-3335-4466-8507-6d9a955c6586" name="getsCard" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c16a776e-cb27-4449-bf54-8975f1525700" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="8e63e8c4-4994-4c27-97bc-5d0d581c3b6c" name="c" direction="In" isUnique="false">
+                  <elementDefinition Id="156c96da-f6f9-4816-8d1f-58ca577d2bbd" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b42b6f8a-396f-4d33-a9a6-c0793c26a969" LastKnownName="Card" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="45af916c-96ee-47b8-bbf7-9c8b40f60e4c" name="ComputerPlayer" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="0abece2e-9ac7-4a91-95dd-d7d9f1cd250e" />
+        <ownedOperationsInternal>
+          <operation Id="2ee9535e-9ba7-4497-977c-d311a39f1aea" name="wantsCard" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a395c431-cc5b-4141-8233-7d766258f806" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="4e98d162-8abe-47f2-acad-6b17bc67c05f" direction="Return" isUnique="false">
+                  <elementDefinition Id="20273d8c-9d18-4d8f-b456-bd8c3c67c7ef" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="0223a8dc-b6cb-4714-9800-c7a13340d132" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="71ed9785-8f36-4dc4-bce6-5001b44b054f" name="getsCard" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="722a4e2a-3693-4e98-aedf-5d4b573fdc0d" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="8db038ff-2bbc-4698-8c64-985a4a3c85d8" name="c" direction="In" isUnique="false">
+                  <elementDefinition Id="9be8a60b-75e0-4416-b6ba-d05816b100c3" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b42b6f8a-396f-4d33-a9a6-c0793c26a969" LastKnownName="Card" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="0223a8dc-b6cb-4714-9800-c7a13340d132" name="Boolean" isAbstract="false" isLeaf="false" cachedFullName="Boolean">
+        <elementDefinition Id="8943dc84-709e-4f62-b15a-a3273aa6f165" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="b42b6f8a-396f-4d33-a9a6-c0793c26a969" name="Card" isAbstract="false" isLeaf="false" cachedFullName="Card">
+        <elementDefinition Id="96599290-fadb-4bd4-9181-0e88c7c4c514" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="e073886b-3781-4563-805c-3b0d3ae9c7e3" name="Interfaces-Models">
+    <elementDefinition Id="649a7f09-e696-40fc-819a-31f3c2dabca0" />
+  </package>
+</logicalClassDesignerModel>
