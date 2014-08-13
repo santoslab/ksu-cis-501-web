@@ -59,7 +59,7 @@ The duplicate code is bad, since both the human and computer objects are *called
 the same way*.
 Here is the situation, summarized in a class diagram:
 
-.. image:: card.jpg
+.. image:: card.png
 
 We can improve this by using an *interface*:
 
@@ -149,7 +149,7 @@ Here is the class diagram, showing how ``class Dealer`` is coded to depend on
 On the "other side" of the interface, ``HumanPlayer`` and ``ComputerPlayer`` 
 implement ("plug into") the interface:
 
-.. image:: card2.jpg
+.. image:: card2.png
 
 Either or both of ``ComputerPlayers`` and ``HumanPlayers`` can "plug into" a 
 ``Dealer`` through the interface.
@@ -178,7 +178,7 @@ Answer: We use interfaces to define the connection points where one assembly
 connects ("plugs in") to another.
 Here is a diagram of three assemblies that connect together via two interfaces:
 
-.. image:: assembly.jpg
+.. image:: assembly.png
 
 Now, the ``Assembly1`` team can code and compile its own part of the system,
 because they use interfaces ``ConnectionPointA`` and ``ConnectionPointB`` in 
@@ -236,7 +236,7 @@ Here are three examples of "plug-in" interfaces that you have likely used:
    assembly to depend on the ``IDictionary`` interface. The idea looks like
    this:
    
-   .. image:: table.jpg
+   .. image:: table.png
    
    That is, within the assembly, the table, no matter how it is implemented,
    can be indexed and assigned to and can be called with the methods, 
@@ -278,7 +278,7 @@ Here are three examples of "plug-in" interfaces that you have likely used:
    for communicating with the database, and you use these interfaces to write
    the Business Logic:
   
-   .. image:: cont.jpg
+   .. image:: cont.png
    
    You "plug" a ``UserInterface`` and a ``Database`` into the ``Controller``.
    
