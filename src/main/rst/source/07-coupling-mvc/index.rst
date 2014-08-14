@@ -71,7 +71,7 @@ coded inside the ``private void button_Click(object sender, EventArgs e)``
 method, which sits in the ``InputViewForm`` class, which itself owns all the
 system's components:
 
-.. image:: V1.jpg
+.. image:: V1.png
 
 The relevant code for this diagram reads like this:
 
@@ -213,7 +213,7 @@ Now we study the first version of the Model-View-Controller (MVC) architecture.
 This version works well when there is just *one controller object that handles
 all input events and does all model updates*:
 
-.. image:: V3a.jpg
+.. image:: V3a.png
 
 The key(s) are the delegate declarations.
 (Recall that a delegate is an "interface/data-type that specifies a single
@@ -284,7 +284,7 @@ For this system, call it, ``V3``, we have ``S(V3) = 9``, and
 An important variation on the above is to save the registry in the Model.
 Here is the revised sub-assembly:
 
-.. image:: V4a.jpg
+.. image:: V4a.png
 
 This arrangement can be used when there are multiple input views, each of which
 contacts a distinct controller object to update the model.
@@ -318,7 +318,7 @@ Here is an improvement on the immediately previous architecture,
 where there are multiple controllers that update the model:
 We store the registry of observers in a super-class to which the model attaches:
 
-.. image:: V4b.jpg
+.. image:: V4b.png
 
 Now, the model component extends (is a subclass of) an "observed model", which
 is a class that holds the registry.
