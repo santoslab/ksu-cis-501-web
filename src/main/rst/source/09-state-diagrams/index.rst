@@ -285,7 +285,7 @@ and even the methods' codings from the state diagram.
 Here is what we might design if we write multiple handler methods from the
 diagram:
 
-.. image:: bank3.jpg
+.. image:: bank3.png
 
 
 A State Diagram Defines An Input Language

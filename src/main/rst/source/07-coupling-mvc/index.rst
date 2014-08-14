@@ -582,7 +582,7 @@ This architecture, call it ``X1``, is simple, but the controller is actually
 two algoriithms --- one for ``A`` and one for ``B`` --- unnaturally glued
 together; note that ``S(X1) = 5``, and ``C(X1) = 1.25``.
 
-Since ``A`` and ``B`` are unrelated, so should be their controllers:
+Since ``A`` and ``B`` are unrelated, so should be their controllers::
 
          +--> ControllerForA --> A
         /
