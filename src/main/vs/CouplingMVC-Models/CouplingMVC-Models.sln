@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "CouplingMVC-Models", "CouplingMVC-Models\CouplingMVC-Models.modelproj", "{398D6E6B-494F-4C52-95E3-AF9268368DAB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{398D6E6B-494F-4C52-95E3-AF9268368DAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{398D6E6B-494F-4C52-95E3-AF9268368DAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{398D6E6B-494F-4C52-95E3-AF9268368DAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{398D6E6B-494F-4C52-95E3-AF9268368DAB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

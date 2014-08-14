@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="44afd92c-7eb5-47e6-94f8-96097f662bdf" name="V3" linkedPackageId="5bd83c31-b82d-4b34-a388-428c984e040f" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="2a9e9eb4-efc7-41ee-a0c2-c6728ba87e1d">
+      <elementDefinition Id="2c6b3250-6960-4e4e-ae11-79f619b0b842" />
+      <body>public void update() {
+  label.Text = model.getData();
+  Refresh();
+}</body>
+      <annotatedElements>
+        <classMoniker Id="50e0c3bf-9a43-4108-a4c0-e07c20725d08" LastKnownName="OutputViewForm" />
+      </annotatedElements>
+    </comment>
+    <comment Id="bfa70952-a828-4a17-b895-cea9154a04c5">
+      <elementDefinition Id="de7a7a82-318d-4a8c-af06-a274b4ad18bf" />
+      <body>public void onButton_Click() { han(); }</body>
+      <annotatedElements>
+        <classMoniker Id="702a3a70-72ee-4fd2-840f-79430ce4f619" LastKnownName="InputViewForm" />
+      </annotatedElements>
+    </comment>
+    <comment Id="d7602cf8-eaa7-4f5d-96d4-8f5b75eec2ec">
+      <elementDefinition Id="9c4795b2-59cc-4152-9d88-15ac40fba222" />
+      <body>delegate</body>
+      <annotatedElements>
+        <interfaceMoniker Id="dc80c64a-a8de-4fb0-b0b9-9426907ebc00" LastKnownName="Observer" />
+      </annotatedElements>
+    </comment>
+    <comment Id="b509f076-60ad-4bc1-a1d9-07b1bb6d8b1d">
+      <elementDefinition Id="77dc8806-ce5e-43e4-8337-5137a9d36efe" />
+      <body>delegate</body>
+      <annotatedElements>
+        <interfaceMoniker Id="655f75ce-9af3-4aa5-a34d-40c3daa52fcc" LastKnownName="InputHandler" />
+      </annotatedElements>
+    </comment>
+    <comment Id="cada1741-f2d0-45cc-a961-d942518d9619">
+      <elementDefinition Id="e67a42f2-7b1e-4c47-be1a-5a80fa29eda8" />
+      <body>Model-View-Controller: The Controller contacts the OutputView indirectly via calls to delegate methods saved in a registry:
+
+public void handle() {
+  ... do control algorithm...;
+  model.update();
+  foreach (Observer x in registry) { x(); }
+}
+
+The system's Main procedure constructs the model, controller, and views, and then registers the OutputView's update method with the Controller's registry.</body>
+    </comment>
+  </ownedCommentsInternal>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="50e0c3bf-9a43-4108-a4c0-e07c20725d08" name="OutputViewForm" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="ad01b754-d543-42b3-afcb-e6194d1a7f23" />
+        <suppliersInternal>
+          <interfaceRealization Id="da8a90a6-7531-4542-81a7-01c395967859">
+            <interfaceMoniker Id="dc80c64a-a8de-4fb0-b0b9-9426907ebc00" LastKnownName="Observer" />
+            <elementDefinition Id="6bdf245c-8fa6-4c29-8036-bf1a6a7869d6" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <targetEnds>
+          <association Id="bbd15053-fc7f-4a5a-a986-6afd1d71e52b" isDerived="false" sourceEndRoleName="" targetEndRoleName="model" isLeaf="false" isAbstract="false">
+            <classMoniker Id="c714cbf8-31c8-400b-b792-c937b3fd0883" LastKnownName="Model" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f443780c-6a4f-498d-a2fc-09007096bf41" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="79b88c9e-f33f-45c3-b009-37eade216149" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="93939ee2-e9eb-429f-a9e1-b2118b30b8b2" name="model" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ba135d2a-372d-4d9a-8487-3d65088ee5ca" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="70d24d00-2f4b-43e8-8cae-3e8762dde301" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="36a6719c-d648-43ea-b2f7-dd7f8055521f" name="update" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="4d71ebe5-9fb1-45fc-a415-467851e12837" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="c714cbf8-31c8-400b-b792-c937b3fd0883" name="Model" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="bf5edb1c-e255-4e20-b473-11ac3d0b3b05" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="655f75ce-9af3-4aa5-a34d-40c3daa52fcc" name="InputHandler" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e8d39e3a-6b48-4058-b2f2-4c8140407c12" />
+        <ownedOperations>
+          <operation Id="6484ed84-d77e-472a-b1c6-20d2628e6d80" name="handle" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1e245a67-64c2-4a9c-9eec-5567149965cd" />
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="dc80c64a-a8de-4fb0-b0b9-9426907ebc00" name="Observer" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9c154869-a009-4e78-a5de-0a4e058100ae" />
+        <ownedOperations>
+          <operation Id="f3a314ca-9249-4364-acb9-566219d98c73" name="update" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="657227ec-5d89-4db0-bc78-3c6bc8bcc56a" />
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="702a3a70-72ee-4fd2-840f-79430ce4f619" name="InputViewForm" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="fdef228a-381e-45ab-928a-464f4bf5a8f3" />
+        <targetEnds>
+          <association Id="f2653925-31bc-47bb-bc9c-1bd434aa02a4" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" name="han" isAbstract="false">
+            <interfaceMoniker Id="655f75ce-9af3-4aa5-a34d-40c3daa52fcc" LastKnownName="InputHandler" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3e0b1cc5-2338-42d1-8277-8c8ca315f54e" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="26dcbd9e-a5f9-40ec-b520-d2fbddb6f85d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4f689ae2-5019-4b3a-9938-d19d31e83df1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="e609bd78-8aac-45da-b030-f487a1c948d2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e9961b8d-13f6-4be5-9115-19db79e07834" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="03f9cf5b-76f0-4990-8408-fcf90658a000" name="InputViewForm" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1c4dbc11-3832-45a1-992c-32ab233b3ec5" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="78ef6752-c70f-493a-a1ea-2dadb360cedf" name="han" direction="In" isUnique="false">
+                  <elementDefinition Id="271c744f-78d5-4349-9736-583650be5ba6" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a832ad5a-d1ab-4dbb-85fe-a00c564856b8" LastKnownName="InputHandler" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="f4f34ac2-3c63-4655-a5e9-5783021424a7" name="onButton_Click" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="9bc06d1b-201b-4318-b71c-e5f4a89892f7" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="a832ad5a-d1ab-4dbb-85fe-a00c564856b8" name="InputHandler" isAbstract="false" isLeaf="false" cachedFullName="CouplingMVC-Models::InputHandler">
+        <elementDefinition Id="e8d39e3a-6b48-4058-b2f2-4c8140407c12" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="a2da0dfa-2561-4188-a21d-976aef26a5a2" name="Controller" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="84ae4640-a012-4768-91fe-62d77cfceada" />
+        <suppliersInternal>
+          <interfaceRealization Id="915a52b4-3440-4328-badc-1cf5f51d54a0">
+            <interfaceMoniker Id="655f75ce-9af3-4aa5-a34d-40c3daa52fcc" LastKnownName="InputHandler" />
+            <elementDefinition Id="0da6272b-e1a4-4240-a6b6-a2879144828e" />
+          </interfaceRealization>
+          <dependency Id="dbce7fa6-b84b-46ee-9454-5b10fbc1b7ad">
+            <interfaceMoniker Id="dc80c64a-a8de-4fb0-b0b9-9426907ebc00" LastKnownName="Observer" />
+            <elementDefinition Id="c3d28a29-b693-47dc-995e-0ec99346b04b" />
+          </dependency>
+        </suppliersInternal>
+        <targetEnds>
+          <association Id="b5d48ac2-151e-4759-a48a-b00b8893ccc0" isDerived="false" sourceEndRoleName="" targetEndRoleName="model" isLeaf="false" isAbstract="false">
+            <classMoniker Id="c714cbf8-31c8-400b-b792-c937b3fd0883" LastKnownName="Model" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5c2b42d6-ad8f-48a6-b67f-f12fd2677ba0" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="207f8807-e81c-4331-a1f7-4d0778a8c6ff" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="08fa0c13-74f8-423e-9361-d66231cba7ef" name="model" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="cea5c3bd-9b84-4cb6-9876-cafbb620273f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="30b467e4-4504-4210-9ec1-52b34ac938bd" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="bd172906-2e4c-47ac-9a15-516f22c25a2c" name="registry" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="6484c023-89aa-4034-a79a-f3311b4b697d" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="1fe20895-3030-436f-98d2-efd59dfdaa4d" LastKnownName="List&lt;Observer&gt;" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="c56816b5-cb18-412b-a854-b5991a5b0c61" name="handle" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e7579a2c-d98d-4b82-a7f2-bf80a2957f76" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="1fe20895-3030-436f-98d2-efd59dfdaa4d" name="List&lt;Observer&gt;" isAbstract="false" isLeaf="false" cachedFullName="List&lt;Observer&gt;">
+        <elementDefinition Id="48b5c64e-2437-403e-8ddb-4af0176fc06c" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="5bd83c31-b82d-4b34-a388-428c984e040f" name="CouplingMVC-Models">
+    <elementDefinition Id="30debc33-8d00-47cf-9f3e-e8a242e73dd1" />
+    <profileInstances>
+      <packageHasProfileInstances Id="8fb9e704-b915-4662-9a8c-814fdb04532d">
+        <profileInstance Id="bce98109-f854-4fe0-85f1-caea8f753600" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="27b22b52-13d1-4863-8c7d-7cf7b42984b0">
+        <profileInstance Id="676f8181-c74e-4a6f-859c-b996e831845e" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

@@ -1,0 +1,1337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="30debc33-8d00-47cf-9f3e-e8a242e73dd1"
+  name="CouplingMVC-Models" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="da74af48-91be-4440-a0de-54b60c1db4d0">
+      <body>label.Text = model.getData();
+Refresh();</body>
+      <annotatedElements>
+        <classMoniker
+          Id="cb47ac3e-376d-4087-8459-fd00fbd6be91"
+          LastKnownName="OutputViewForm"
+          LastKnownLocation="CouplingMVC-Models.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="b214f1dc-410f-47a5-b70c-64854a345d7b">
+      <body>A simplistic VS Forms Project: InputViewForm "owns" the Model and the OutputViewForm.   )-:
+
+When user presses button, code in onButtonClick() does this:
+1. ... do control system ...; model.update();
+2. out_form.update();</body>
+      <annotatedElements>
+        <classMoniker
+          Id="efcaef28-89a2-4928-ad5b-d3dbb1f76273"
+          LastKnownName="InputViewForm"
+          LastKnownLocation="CouplingMVC-Models.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="61f47b2a-41da-4aaa-8c24-8890f288c3b1">
+      <body>label.Text = model.getData();
+Refresh();</body>
+      <annotatedElements>
+        <classMoniker
+          Id="1cd4d99c-036a-4e6e-b377-1ad70373091c"
+          LastKnownName="OutputViewForm"
+          LastKnownLocation="CouplingMVC-Models.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="fbe96bdb-af48-41df-bc13-27c601c3891f">
+      <body>cont.handle();
+outform.update();</body>
+      <annotatedElements>
+        <classMoniker
+          Id="7e3e7af1-a23c-4f1e-bbdb-27adfebcf5b8"
+          LastKnownName="InputViewForm"
+          LastKnownLocation="CouplingMVC-Models.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="21a9c763-be94-41f7-a2fd-ce7e0ae6dd09">
+      <body>The controller's code (the "control algorithm") is no longer embedded in the View.
+Now, one team can code the View(s) and one team can code the controller.
+
+public void handle() { ... do control algorithm ...; model.update(); }</body>
+      <annotatedElements>
+        <classMoniker
+          Id="105c3074-5663-4714-bdb9-db30483f7189"
+          LastKnownName="Controller"
+          LastKnownLocation="CouplingMVC-Models.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="2c6b3250-6960-4e4e-ae11-79f619b0b842">
+      <body>public void update() {
+  label.Text = model.getData();
+  Refresh();
+}</body>
+      <annotatedElements>
+        <classMoniker
+          Id="ad01b754-d543-42b3-afcb-e6194d1a7f23"
+          LastKnownName="OutputViewForm"
+          LastKnownLocation="CouplingMVC-Models.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="de7a7a82-318d-4a8c-af06-a274b4ad18bf">
+      <body>public void onButton_Click() { han(); }</body>
+      <annotatedElements>
+        <classMoniker
+          Id="fdef228a-381e-45ab-928a-464f4bf5a8f3"
+          LastKnownName="InputViewForm"
+          LastKnownLocation="CouplingMVC-Models.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="9c4795b2-59cc-4152-9d88-15ac40fba222">
+      <body>delegate</body>
+      <annotatedElements>
+        <interfaceMoniker
+          Id="9c154869-a009-4e78-a5de-0a4e058100ae"
+          LastKnownName="Observer"
+          LastKnownLocation="CouplingMVC-Models.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="77dc8806-ce5e-43e4-8337-5137a9d36efe">
+      <body>delegate</body>
+      <annotatedElements>
+        <interfaceMoniker
+          Id="e8d39e3a-6b48-4058-b2f2-4c8140407c12"
+          LastKnownName="InputHandler"
+          LastKnownLocation="CouplingMVC-Models.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="e67a42f2-7b1e-4c47-be1a-5a80fa29eda8">
+      <body>Model-View-Controller: The Controller contacts the OutputView indirectly via calls to delegate methods saved in a registry:
+
+public void handle() {
+  ... do control algorithm...;
+  model.update();
+  foreach (Observer x in registry) { x(); }
+}
+
+The system's Main procedure constructs the model, controller, and views, and then registers the OutputView's update method with the Controller's registry.</body>
+    </comment>
+    <comment
+      Id="58e9f65d-4a7a-49bd-af74-5f98ebabd20b">
+      <body>delegate</body>
+      <annotatedElements>
+        <interfaceMoniker
+          Id="21f51d57-910f-4f8c-8426-2afab851ba2b"
+          LastKnownName="Observer"
+          LastKnownLocation="CouplingMVC-Models.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="68031da0-b551-426e-857a-8bd800b6db14">
+      <body>delegate</body>
+      <annotatedElements>
+        <interfaceMoniker
+          Id="671333c1-baae-4b91-b5dd-d4888902291e"
+          LastKnownName="InputHandler"
+          LastKnownLocation="CouplingMVC-Models.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="a0be7667-c935-4b37-9856-c3a7a738f3cb">
+      <body>Observer registry kept in the model.
+
+public void handle() {
+   model.update();
+   model.notify();
+}
+
+The Main procedure constructs the Model, View,
+and Controller, and then registers the View's
+update method with the Model's registry.</body>
+    </comment>
+    <comment
+      Id="866aa345-a966-44f6-a1d3-7f6cd959cc67">
+      <body>registry.Add(x);</body>
+      <annotatedElements>
+        <classMoniker
+          Id="f6b1d4d1-4af2-470a-9b1c-50c42101fd16"
+          LastKnownName="Model"
+          LastKnownLocation="CouplingMVC-Models.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="09e46823-61b5-404a-9121-05fdbc4bcd5d">
+      <body>foreach (Observer x in registry) { x(); }</body>
+      <annotatedElements>
+        <classMoniker
+          Id="f6b1d4d1-4af2-470a-9b1c-50c42101fd16"
+          LastKnownName="Model"
+          LastKnownLocation="CouplingMVC-Models.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="dfe1aefd-d67a-42bc-893c-15fe50c311f7">
+      <body>registry.Add(x);</body>
+      <annotatedElements>
+        <classMoniker
+          Id="d7dee6d7-e8b6-4dd1-9e8d-95ce886d49ec"
+          LastKnownName="ObservedModel"
+          LastKnownLocation="CouplingMVC-Models.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="fb866141-9488-423d-8ad2-cfb599682be8">
+      <body>foreach (Observer x in registry) { x(); }</body>
+      <annotatedElements>
+        <classMoniker
+          Id="d7dee6d7-e8b6-4dd1-9e8d-95ce886d49ec"
+          LastKnownName="ObservedModel"
+          LastKnownLocation="CouplingMVC-Models.uml" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="cb47ac3e-376d-4087-8459-fd00fbd6be91"
+        name="OutputViewForm"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="147416d3-3a4b-4f5f-8d0d-2677f9b78c71"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName="model"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="a906edb2-793e-4ace-84d1-79717a65ec4a"
+              LastKnownName="Model"
+              LastKnownLocation="CouplingMVC-Models.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e907127e-068c-496c-8b7b-060db305901d"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="35273196-263d-40d7-8c06-aba7eb8e949e"
+                  name="model"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation
+            Id="90c61e40-e05d-46f0-81ff-9d01d914cee1"
+            name="update"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="a906edb2-793e-4ace-84d1-79717a65ec4a"
+        name="Model"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="efcaef28-89a2-4928-ad5b-d3dbb1f76273"
+        name="InputViewForm"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="bd54b407-cc6f-4aa7-a903-11f94c1807df"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName="out_form"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="cb47ac3e-376d-4087-8459-fd00fbd6be91"
+              LastKnownName="OutputViewForm"
+              LastKnownLocation="CouplingMVC-Models.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="955a9d07-3cb5-438f-91f8-7ba359296dca"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d1444116-65aa-4311-b53d-cabd82841f1d"
+                  name="out_form"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="2406e1ea-1823-4423-9553-e264b690c008"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName="model"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="a906edb2-793e-4ace-84d1-79717a65ec4a"
+              LastKnownName="Model"
+              LastKnownLocation="CouplingMVC-Models.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1923b7f1-6d03-449b-8132-be0d144846f0"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="fd25dae5-aada-4486-9917-a1bba81d702c"
+                  name="model"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation
+            Id="aaa477ff-a04f-4fcd-a8f9-2a1022e3277e"
+            name="onButton_Click"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="1cd4d99c-036a-4e6e-b377-1ad70373091c"
+        name="OutputViewForm"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="4253bbad-e8c6-4ba6-82b5-738e6e383779"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="346f4f8e-cb37-4f4e-a5cf-9e2091972d24"
+              LastKnownName="Model"
+              LastKnownLocation="CouplingMVC-Models.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="94bafc03-ee61-4916-b1f8-44ad219cbfb2"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f9cefb05-efc5-4501-bbbe-378623d61d57"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation
+            Id="081fe6f0-5596-43d4-8490-ee4eb24c6101"
+            name="update"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="7e3e7af1-a23c-4f1e-bbdb-27adfebcf5b8"
+        name="InputViewForm"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="ab5f5ee8-c466-4cef-84a1-a01c454cdb06"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="105c3074-5663-4714-bdb9-db30483f7189"
+              LastKnownName="Controller"
+              LastKnownLocation="CouplingMVC-Models.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ab00a0d2-f66e-48b1-b5bd-c87f9f34d0d6"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c028d0e3-3552-4ca8-aa16-68e03dd5dee9"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="5ec84f71-7746-491c-a94d-387d0df70be6"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="1cd4d99c-036a-4e6e-b377-1ad70373091c"
+              LastKnownName="OutputViewForm"
+              LastKnownLocation="CouplingMVC-Models.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1cd86d5a-c396-4c77-ae43-4a44a2f1d3b6"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2a168ab9-6944-451f-a8c2-fb31b6080763"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation
+            Id="02e42e2c-2435-4708-93a7-d1e6b6df926b"
+            name="onButton_Click"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="346f4f8e-cb37-4f4e-a5cf-9e2091972d24"
+        name="Model"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="2c7edfac-cb8b-4a06-8d13-4f8d125729d1"
+            name="mydata"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="64ef2a3e-3147-4602-b4b3-c938272d363b"
+                LastKnownName="Data"
+                LastKnownLocation="CouplingMVC-Models.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="4a502577-19a0-46f2-9a7d-e1e16401cc27"
+            name="update"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="264b2028-c1af-482e-afb2-1714e183fde8"
+            name="getData"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="64ef2a3e-3147-4602-b4b3-c938272d363b"
+        name="Data" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="105c3074-5663-4714-bdb9-db30483f7189"
+        name="Controller"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="bbaffdb3-adba-4e1d-b6b0-2057f2d72fbd"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="346f4f8e-cb37-4f4e-a5cf-9e2091972d24"
+              LastKnownName="Model"
+              LastKnownLocation="CouplingMVC-Models.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4c34704e-59cb-4e0d-a78c-14bcbe8d7dd5"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="59b8154d-b815-4954-8323-dd7fcb3edc6d"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation
+            Id="770235fe-74d7-43b5-978f-1175ac6f9de2"
+            name="handle"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="ad01b754-d543-42b3-afcb-e6194d1a7f23"
+        name="OutputViewForm"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="6bdf245c-8fa6-4c29-8036-bf1a6a7869d6">
+            <interfaceMoniker
+              Id="9c154869-a009-4e78-a5de-0a4e058100ae"
+              LastKnownName="Observer"
+              LastKnownLocation="CouplingMVC-Models.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="70d24d00-2f4b-43e8-8cae-3e8762dde301"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName="model"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="bf5edb1c-e255-4e20-b473-11ac3d0b3b05"
+              LastKnownName="Model"
+              LastKnownLocation="CouplingMVC-Models.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="79b88c9e-f33f-45c3-b009-37eade216149"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ba135d2a-372d-4d9a-8487-3d65088ee5ca"
+                  name="model"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation
+            Id="4d71ebe5-9fb1-45fc-a415-467851e12837"
+            name="update"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="bf5edb1c-e255-4e20-b473-11ac3d0b3b05"
+        name="Model"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="e8d39e3a-6b48-4058-b2f2-4c8140407c12"
+        name="InputHandler"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedOperations>
+          <operation
+            Id="1e245a67-64c2-4a9c-9eec-5567149965cd"
+            name="handle"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="9c154869-a009-4e78-a5de-0a4e058100ae"
+        name="Observer"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedOperations>
+          <operation
+            Id="657227ec-5d89-4db0-bc78-3c6bc8bcc56a"
+            name="update"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="fdef228a-381e-45ab-928a-464f4bf5a8f3"
+        name="InputViewForm"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="e9961b8d-13f6-4be5-9115-19db79e07834"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            name="han"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="e8d39e3a-6b48-4058-b2f2-4c8140407c12"
+              LastKnownName="InputHandler"
+              LastKnownLocation="CouplingMVC-Models.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="26dcbd9e-a5f9-40ec-b520-d2fbddb6f85d"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e609bd78-8aac-45da-b030-f487a1c948d2"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation
+            Id="1c4dbc11-3832-45a1-992c-32ab233b3ec5"
+            name="InputViewForm"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="271c744f-78d5-4349-9736-583650be5ba6"
+                  name="han"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="e8d39e3a-6b48-4058-b2f2-4c8140407c12"
+                      LastKnownName="InputHandler"
+                      LastKnownLocation="CouplingMVC-Models.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="9bc06d1b-201b-4318-b71c-e5f4a89892f7"
+            name="onButton_Click"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="84ae4640-a012-4768-91fe-62d77cfceada"
+        name="Controller"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="0da6272b-e1a4-4240-a6b6-a2879144828e">
+            <interfaceMoniker
+              Id="e8d39e3a-6b48-4058-b2f2-4c8140407c12"
+              LastKnownName="InputHandler"
+              LastKnownLocation="CouplingMVC-Models.uml" />
+          </interfaceRealization>
+          <dependency
+            Id="c3d28a29-b693-47dc-995e-0ec99346b04b">
+            <interfaceMoniker
+              Id="9c154869-a009-4e78-a5de-0a4e058100ae"
+              LastKnownName="Observer"
+              LastKnownLocation="CouplingMVC-Models.uml" />
+          </dependency>
+        </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="30b467e4-4504-4210-9ec1-52b34ac938bd"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName="model"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="bf5edb1c-e255-4e20-b473-11ac3d0b3b05"
+              LastKnownName="Model"
+              LastKnownLocation="CouplingMVC-Models.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="207f8807-e81c-4331-a1f7-4d0778a8c6ff"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="cea5c3bd-9b84-4cb6-9876-cafbb620273f"
+                  name="model"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="6484c023-89aa-4034-a79a-f3311b4b697d"
+            name="registry"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="48b5c64e-2437-403e-8ddb-4af0176fc06c"
+                LastKnownName="List&lt;Observer&gt;"
+                LastKnownLocation="CouplingMVC-Models.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="e7579a2c-d98d-4b82-a7f2-bf80a2957f76"
+            name="handle"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="48b5c64e-2437-403e-8ddb-4af0176fc06c"
+        name="List&lt;Observer&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="f6b1d4d1-4af2-470a-9b1c-50c42101fd16"
+        name="Model"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="e63d32c0-7d3a-4b81-8bc0-a768a0f2b7c2">
+            <interfaceMoniker
+              Id="21f51d57-910f-4f8c-8426-2afab851ba2b"
+              LastKnownName="Observer"
+              LastKnownLocation="CouplingMVC-Models.uml" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="d9347129-3041-4dad-a70b-cfef5659bfa1"
+            name="registry"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="48b5c64e-2437-403e-8ddb-4af0176fc06c"
+                LastKnownName="List&lt;Observer&gt;"
+                LastKnownLocation="CouplingMVC-Models.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="002bd7b8-e506-45a0-bac2-0afb7f3f3c99"
+            name="mydata"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="64ef2a3e-3147-4602-b4b3-c938272d363b"
+                LastKnownName="Data"
+                LastKnownLocation="CouplingMVC-Models.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="d3922b45-5771-438c-a404-5575ff4e7b1d"
+            name="register"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="46ca3ae8-db7f-46bd-861e-dd888f76735e"
+                  name="x"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="9c154869-a009-4e78-a5de-0a4e058100ae"
+                      LastKnownName="Observer"
+                      LastKnownLocation="CouplingMVC-Models.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="ec90bc52-ec53-4da1-9cfe-d2c4fbeaf55b"
+            name="notify"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="8dcb2f3d-7711-44dd-a765-c45615765fe7"
+            name="update"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="b2582b4a-96fa-4a51-8d72-59f58d3512bf"
+            name="getData"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="21f51d57-910f-4f8c-8426-2afab851ba2b"
+        name="Observer"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedOperations>
+          <operation
+            Id="0d0bf5a6-a79f-4033-8362-398561796dba"
+            name="update"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="a611c24b-303b-4f5e-b1b6-c5799ef1ef1b"
+        name="Controller"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="505a82ba-cdd2-4e7e-ad7b-2762d8eebb7d">
+            <interfaceMoniker
+              Id="671333c1-baae-4b91-b5dd-d4888902291e"
+              LastKnownName="InputHandler"
+              LastKnownLocation="CouplingMVC-Models.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="96263fac-8266-4a16-9e70-e6382c3b832e"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName="model"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="f6b1d4d1-4af2-470a-9b1c-50c42101fd16"
+              LastKnownName="Model"
+              LastKnownLocation="CouplingMVC-Models.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5fc55350-5fbb-4a37-be00-04d39045f4d4"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="38d06036-dc40-40f5-9d47-f2afe62ae2ee"
+                  name="model"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation
+            Id="3026a7b9-099e-4aca-953c-0ea290d89d0a"
+            name="handle"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="671333c1-baae-4b91-b5dd-d4888902291e"
+        name="InputHandler"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedOperations>
+          <operation
+            Id="fbdea649-f5d2-447f-828b-4556b71eb496"
+            name="handle"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="d7dee6d7-e8b6-4dd1-9e8d-95ce886d49ec"
+        name="ObservedModel"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="0b956108-83af-43de-911a-f5bbc0c13ebf">
+            <interfaceMoniker
+              Id="caa528fc-7be9-4c1b-a66e-0f8e73383af4"
+              LastKnownName="Observer"
+              LastKnownLocation="CouplingMVC-Models.uml" />
+          </dependency>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="1ef4d54d-7c01-4cf6-b4e0-22cc13e9fd57"
+            name="register"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="088c5934-5372-41f0-83e8-80ab225584e7"
+                  name="x"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="9c154869-a009-4e78-a5de-0a4e058100ae"
+                      LastKnownName="Observer"
+                      LastKnownLocation="CouplingMVC-Models.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="bb41f039-1999-4a47-9b4f-e898d413bce5"
+            name="notify"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="caa528fc-7be9-4c1b-a66e-0f8e73383af4"
+        name="Observer"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedOperations>
+          <operation
+            Id="819ae1ce-4555-435a-9fd6-d7f0468fe1ab"
+            name="update"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="5b0d37c5-e099-41f7-859b-1e53ea4ac46a"
+        name="Model"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="850ab607-bfdc-40d2-b775-03cda12f31bc"
+            isSubstitutable="false">
+            <classMoniker
+              Id="d7dee6d7-e8b6-4dd1-9e8d-95ce886d49ec"
+              LastKnownName="ObservedModel"
+              LastKnownLocation="CouplingMVC-Models.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="9d26bb71-f2ff-41bf-b9d0-c7f8ce86ca81"
+            name="update"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="f7b515dd-4cb0-4329-8fc0-fc4ee92546c7"
+            name="getData"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="1cd15e0c-2edf-4c0c-a14c-457c700132b5"
+        name="Controller"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="d43c7ea0-f55f-496c-b62f-d35ed9789fbc"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName="model"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="5b0d37c5-e099-41f7-859b-1e53ea4ac46a"
+              LastKnownName="Model"
+              LastKnownLocation="CouplingMVC-Models.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1ca9c99d-12ca-48fd-ba73-9ab4202fb8b8"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="07693e70-e2f1-4bbb-b5bf-5d9525163c03"
+                  name="model"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation
+            Id="5eab828e-44a3-4e11-9905-25a44180e57a"
+            name="handle"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

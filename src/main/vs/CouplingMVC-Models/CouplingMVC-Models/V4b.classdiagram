@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="20f22663-857b-4006-acf0-1d99d423d330" name="V4b" linkedPackageId="33c71da5-c14e-49cd-906d-86145277e102" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="ae146fb1-6364-4700-a3d0-1cb44d3bd229">
+      <elementDefinition Id="dfe1aefd-d67a-42bc-893c-15fe50c311f7" />
+      <body>registry.Add(x);</body>
+      <annotatedElements>
+        <classMoniker Id="cc3e2c0c-8080-4992-adf6-10515153854c" LastKnownName="ObservedModel" />
+      </annotatedElements>
+    </comment>
+    <comment Id="d12baa65-818a-4232-80e2-7d029f07e482">
+      <elementDefinition Id="fb866141-9488-423d-8ad2-cfb599682be8" />
+      <body>foreach (Observer x in registry) { x(); }</body>
+      <annotatedElements>
+        <classMoniker Id="cc3e2c0c-8080-4992-adf6-10515153854c" LastKnownName="ObservedModel" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="73cee2cf-5f93-48fe-92ac-22f48b0b8baa">
+      <profileInstance Id="9bbc06a1-e21e-45ae-8616-3f0a275ebeac" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="2993ee5e-a568-4838-bb8b-22915d4da67c">
+      <profileInstance Id="c2e52095-fd35-4623-bb2c-39f82b2bc415" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="cc3e2c0c-8080-4992-adf6-10515153854c" name="ObservedModel" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d7dee6d7-e8b6-4dd1-9e8d-95ce886d49ec" />
+        <suppliersInternal>
+          <dependency Id="6d998ffb-cbe7-4336-970b-4af807ea998c">
+            <interfaceMoniker Id="e2026a58-6e71-4c7f-8a6f-dd1e975439dd" LastKnownName="Observer" />
+            <elementDefinition Id="0b956108-83af-43de-911a-f5bbc0c13ebf" />
+          </dependency>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="df8005a1-30cd-4ee6-8db6-2094ce77061d" name="register" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1ef4d54d-7c01-4cf6-b4e0-22cc13e9fd57" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="68441437-4d64-413a-a812-af6d46296a61" name="x" direction="In" isUnique="false">
+                  <elementDefinition Id="088c5934-5372-41f0-83e8-80ab225584e7" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="6365cdc5-e674-4fcd-a249-cf75f82b8bac" LastKnownName="Observer" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="6703b759-35c3-48c4-8421-ce1201446cc2" name="notify" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="bb41f039-1999-4a47-9b4f-e898d413bce5" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="e2026a58-6e71-4c7f-8a6f-dd1e975439dd" name="Observer" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="caa528fc-7be9-4c1b-a66e-0f8e73383af4" />
+        <ownedOperations>
+          <operation Id="de098614-40de-4a68-9a42-002cee9f8de0" name="update" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="819ae1ce-4555-435a-9fd6-d7f0468fe1ab" />
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="3c519d78-fb5b-485e-9c51-352b2a5a7f77" name="Model" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="5b0d37c5-e099-41f7-859b-1e53ea4ac46a" />
+        <generalsInternal>
+          <generalization Id="fce7724f-7389-410a-a0cd-2233949d3506" isSubstitutable="false">
+            <classMoniker Id="cc3e2c0c-8080-4992-adf6-10515153854c" LastKnownName="ObservedModel" />
+            <elementDefinition Id="850ab607-bfdc-40d2-b775-03cda12f31bc" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="4c939cb6-cc4e-42a3-a547-d834af8a42c4" name="update" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="9d26bb71-f2ff-41bf-b9d0-c7f8ce86ca81" />
+          </operation>
+          <operation Id="f8f30142-f0ce-4dfa-87b5-4edf320ec61d" name="getData" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f7b515dd-4cb0-4329-8fc0-fc4ee92546c7" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="6ba2a232-b9d6-4fe9-b202-7b4932d489f1" name="Controller" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="1cd15e0c-2edf-4c0c-a14c-457c700132b5" />
+        <targetEnds>
+          <association Id="3178f5a9-45e6-4e41-97dc-efec4de28e1e" isDerived="false" sourceEndRoleName="" targetEndRoleName="model" isLeaf="false" isAbstract="false">
+            <classMoniker Id="3c519d78-fb5b-485e-9c51-352b2a5a7f77" LastKnownName="Model" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="06e552f5-3d80-4bd2-853e-ce149c8a85b2" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="1ca9c99d-12ca-48fd-ba73-9ab4202fb8b8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d15d6cbf-5b58-413a-8b26-97d9b104b9c0" name="model" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="07693e70-e2f1-4bbb-b5bf-5d9525163c03" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d43c7ea0-f55f-496c-b62f-d35ed9789fbc" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="568f3a9b-04a5-4ccb-a7a2-0bccbb861303" name="handle" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="5eab828e-44a3-4e11-9905-25a44180e57a" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="6365cdc5-e674-4fcd-a249-cf75f82b8bac" name="Observer" isAbstract="false" isLeaf="false" cachedFullName="CouplingMVC-Models::Observer">
+        <elementDefinition Id="9c154869-a009-4e78-a5de-0a4e058100ae" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="33c71da5-c14e-49cd-906d-86145277e102" name="CouplingMVC-Models">
+    <elementDefinition Id="30debc33-8d00-47cf-9f3e-e8a242e73dd1" />
+  </package>
+</logicalClassDesignerModel>
