@@ -255,12 +255,18 @@ Here is an example of a test class with a test method, ready to run:
       }
     }
   }
-   
+
 This code lives in ``UnitTest1.cs`` within Project ``UnitTests`` within
-Solution ``03-Classes-VR``.
+Solution ``03-Classes-VR``. The ``Assert.AreEqual`` method is used above to
+ensure that the expected value (first argument) is equal to the resulting value
+(second argument); if they are inequal, then the test fails.
    
 To run the unit tests, you can use the "Run" (or "Debug") "All tests" menu item 
 under the Visual Studio "TEST" menu.
+For each test ran, Visual Studio displays its status (i.e., pass/fail) 
+in the "Test Explorer" window.
+One can click on each test result to see more details such as the test console
+output. 
 
 Code Coverage
 =============
