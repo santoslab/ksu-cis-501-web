@@ -216,19 +216,48 @@ Unit Testing in Visual Studio
 
 The details are found in the :ref:`unit-testing` course note.
 For our card example, say we coded ``class Card`` in Visual Studio in solution
-``CardConcepts``.
+``03-Classes-VR``.
 If you look in VS's Solution Explorer window, you see that solution 
-``CardConcepts`` holds one *Project*, also named ``CardConcepts``.
-And within the project is a file, ``Card.cs``, that holds ``class Card``.
+``03-Classes-VR`` holds two *Project*s, named ``CardConcepts`` and 
+``UnitTests``.
+And within the ``CardConcepts`` project is a file, ``Card.cs``, 
+that holds ``class Card``.
 
 Here is an example of a test class with a test method, ready to run:
 
 .. code-block:: c#
 
-   PENDING
+   using System;
+   using Microsoft.VisualStudio.TestTools.UnitTesting;
+   using CardConcepts;
+
+   namespace UnitTests {
    
-This code lives in ``CardUnitTest.cs`` within Project ``UnitTests`` within
-Solution ``CardConcepts``.
+    [TestClass]
+    public class UnitTest1 {
+    
+      [TestMethod]
+      public void TestMethod1() {
+        Card c1 = new Card(Count.Ace, Suit.Hearts);
+        Assert.AreEqual(Count.Ace, c1.count);
+      }
+
+      [TestMethod]
+      public void TestMethod2() {
+        Card c1 = new Card(Count.Ace, Suit.Hearts);
+        Assert.AreEqual(Suit.Hearts, c1.suit);
+      }
+
+      [TestMethod]
+      public void TestMethod3() {
+        Card c1 = new Card(Count.Ace, Suit.Hearts);
+        Assert.AreEqual(1, c1.BJvalue());
+      }
+    }
+  }
+   
+This code lives in ``UnitTest1.cs`` within Project ``UnitTests`` within
+Solution ``03-Classes-VR``.
    
 To run the unit tests, you can use the "Run" (or "Debug") "All tests" menu item 
 under the Visual Studio "TEST" menu.
