@@ -118,22 +118,32 @@ Let's study the storage layout for this example, when the execution reaches ``//
 .. code-block:: c#
 
    using System;
-   public class Prog {
-     public static int size = 4;
-     
-     public static void Main() {
-       int[] r = new int[size];
-       r[0] = size;
-       int j = size - 1;
-       r[j] = f(j);
-     }
+   using System.Collections.Generic;
+   using System.Linq;
+   using System.Text;
 
-     public static int f(int x) {
-       // the dictionary is a kind of array, indexed by strings, that can grow:
-       Dictionary<string, int> d = new Dictionary<string, int>();
-       d["a"] = x; d["c"] = d["a"] + x;
-       //***
-       return size + x;
+   namespace Storage_Object_Diagrams_1 {
+   
+     // example that shows static variable and two objects
+     class Program {
+
+       public static int size = 4;
+
+       public static void Main() {
+         int[] r = new int[size];
+         r[0] = size;
+         int j = size - 1;
+         r[j] = f(j);
+       }
+
+       public static int f(int x) {
+         // this dictionary is a kind of array, indexed by strings, that can grow:
+         Dictionary<string, int> d = new Dictionary<string, int>();
+         d["a"] = x;
+         d["c"] = d["a"] + x;
+         //***  insert breakpoint at the front of the next line:
+         return size + x;
+       }
      }
    }
 
@@ -167,29 +177,42 @@ Run this example, and stop it when the execution reaches ``//***``:
 .. code-block:: c#
 
    using System;
-   public class Ex2 {
-     public static void Main() {
-       Clock c = new Clock(80);
-       Clock d = new Clock(90);
-       c.tick(2);
-       Clock e = d;
-       d.tick(3);
-       Console.WriteLine(e.getTime());  Console.ReadLine();
-     }
-  }
+   using System.Collections.Generic;
+   using System.Linq;
+   using System.Text;
 
-  class Clock {
-    static int count = 0;
-    private int t = 0;
-    public Clock(int start) { 
-      t = start; count = count + 1;
-    }
-    public void tick(int n) {
-      //***
-      t = t + n;
-    }
-    public int getTime() { return t; }
-  }
+   namespace Storage_Object_Diagrams_2 {
+
+     class Program {
+       // example that shows two objects that share a static field
+       static void Main() {
+         Clock c = new Clock(80);
+         Clock d = new Clock(90);
+         c.tick(2);
+         Clock e = d;
+         d.tick(3);
+         Console.WriteLine(e.getTime());
+         Console.ReadLine();   //*** insert break point at beginning of this line   
+       }
+     }
+
+     class Clock {
+       static int count = 0;
+       private int t = 0;
+
+       public Clock(int start) {
+         t = start;
+         count = count + 1;
+       }
+
+       public void tick(int n) {
+         //*** insert break point at beginning of next line:
+         t = t + n;
+       }
+
+       public int getTime() { return t; }
+     }
+   }
   
 When the breakpoint is reached the second time, due to the call, ``d.tick(3)``, 
 here is the storage diagram:
