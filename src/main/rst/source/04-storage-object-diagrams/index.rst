@@ -265,7 +265,7 @@ This setup lets the code for ``tick``, saved in the Code Area, work correctly
 with all of object ``c`` and ``d`` (and ``e``).
 
 
-Object diagrams
+Object Diagrams
 ===============
 
 A well-written program will allocate its objects in a pattern ("topology") in
@@ -306,6 +306,97 @@ An object diagram is used by a programmer to explain to others what the program
 It is a standard form of documentation that accompanies a system.
 You will use object diagrams a lot when you design, implement, test, and explain
 complex systems.
+
+Object Serialization/Deserialization
+************************************
+
+Many tools for object-oriented programming languages like C# exist that provide
+object serialization/deserialization in a textual form.
+The tools aim to provide the ability to "persist" object states across app
+sessions.
+That is, one can "save" the object state by *serializing* the object and all
+objects reachable from it (i.e., by following the arrows in the object diagram),
+as a string and then write it to a file; the object can later then be "restored"
+by *deserializing* the string stored in the file.
+It just so happen that the typical textual form used by these tools is actually
+a textual encoding of the object diagram.
+
+One such tool that we will use here is 
+`Json.NET <http://http://james.newtonking.com/json>`__.
+For example, for the ``Clock`` example in the ``Storage_Object_Diagrams_2`` 
+above, we serialize the objects stored in ``c``, ``d``, and ``e`` of the 
+``Program``'s ``Main`` method as follows:
+
+.. code-block:: c#
+
+   static void Main() {
+     Clock c = new Clock(80);
+     Clock d = new Clock(90);
+     c.tick(2);
+     Clock e = d;
+     d.tick(3);
+     Console.WriteLine(e.getTime());
+            
+     // serializes values of c, d, and e as mString
+     Dictionary<string, Object> m = new Dictionary<string, Object>();
+     m["c"] = c;
+     m["d"] = d;
+     m["e"] = e;
+     JsonSerializerSettings settings = new JsonSerializerSettings {
+       ContractResolver = new CustomJsonContractResolver(),
+       PreserveReferencesHandling = PreserveReferencesHandling.Objects
+     };
+     string mString = JsonConvert.SerializeObject(m, Formatting.Indented, settings);
+     Console.WriteLine(mString);
+     
+     // ...
+   }
+
+The important part is the call to ``JsonConvert.SerializeObject`` that can
+serialize any .Net object (of any type) into a string in the form of
+Javascript Object Notation (JSON). JSON format is simply a (possibly-nested)
+dictionary object format consisting of keys and values: 
+``{`` key1 ``:`` value1 ``,`` ... ``,`` keyN ``:`` valueN ``}``
+where the keys are field names (or array indices) and the values are the 
+corresponding values of the fields (or the array elements).
+
+For the example above, the content of ``mString`` is as follows.
+
+.. code-block:: json
+
+   {
+     "$id": "1",
+     "c": {
+       "$id": "2",
+       "t": 82
+     },
+     "d": {
+       "$id": "3",
+       "t": 93
+     },
+     "e": {
+       "$ref": "3"
+     }
+   }
+   
+As can be observed, for each object, Json.NET assigns an object handle with
+mapped to the key ``$id``. The first JSON object with ``$id`` equal to ``"1"`` 
+is the object pointed to by ``m``, which is a ``Dictionary<string, Object>``.
+Object ``m`` contains the values of ``c``, ``d``, and ``e`` (which are mapped by
+keys ``"c"``, ``"d"``, and ``"e"``, respectively). Notice that the JSON object
+``"e"`` contains a reference to ``"3"`` (indicated by the key ``"$ref"``).
+This indicates that the object has been serialized before (i.e., in ``"d"``);
+thus, we can see that ``"d"`` and ``"e"`` (hence ``d`` and ``e``) are actually 
+pointing to the same object (alias), which we do not see in the VS debugger.
+
+To deserialize the object back from ``mString``, one can use 
+``JsonConvert.DeserializeObject`` as follows:
+
+.. code-block:: c#
+
+   Dictionary<string, Object> m2 = JsonConvert.DeserializeObject<Dictionary<string, Object>>(mString, settings);
+   
+When ``m2`` is serialized, the resulting string is equal to ``mString``!
 
 
 Object Diagrams for Design
