@@ -229,36 +229,38 @@ Here is an example of a test class with a test method, ready to run:
 
    using System;
    using Microsoft.VisualStudio.TestTools.UnitTesting;
-   using CardConcepts;
+   using Classes_VR_CardConcepts;
 
-   namespace UnitTests {
+   namespace Classes_VR_UnitTests {
    
-    [TestClass]
-    public class UnitTest1 {
-    
-      [TestMethod]
-      public void TestMethod1() {
-        Card c1 = new Card(Count.Ace, Suit.Hearts);
-        Assert.AreEqual(Count.Ace, c1.count);
-      }
+     [TestClass]
+     public class UnitTest1 {
+     
+       [TestMethod]
+       public void TestMethod1() {
+         Card c1 = new Card(Count.Ace, Suit.Hearts);
+         Assert.AreEqual(Count.Ace, c1.count);
+       }
 
-      [TestMethod]
-      public void TestMethod2() {
-        Card c1 = new Card(Count.Ace, Suit.Hearts);
-        Assert.AreEqual(Suit.Hearts, c1.suit);
-      }
+       [TestMethod]
+       public void TestMethod2() {
+         Card c1 = new Card(Count.Ace, Suit.Hearts);
+         Assert.AreEqual(Suit.Hearts, c1.suit);
+       }
 
-      [TestMethod]
-      public void TestMethod3() {
-        Card c1 = new Card(Count.Ace, Suit.Hearts);
-        Assert.AreEqual(1, c1.BJvalue());
-      }
-    }
-  }
+       [TestMethod]
+       public void TestMethod3() {
+         Card c1 = new Card(Count.Ace, Suit.Hearts);
+         Assert.AreEqual(1, c1.BJvalue());
+         Console.WriteLine(c1.ToString());
+       }
+     }
+   }
 
-This code lives in ``UnitTest1.cs`` within Project ``UnitTests`` within
-Solution ``03-Classes-VR``. The ``Assert.AreEqual`` method is used above to
-ensure that the expected value (first argument) is equal to the resulting value
+This code lives in ``UnitTest1.cs`` within Project ``03-Classes-VR-UnitTests`` 
+within Solution ``03-Classes-VR``.
+The ``Assert.AreEqual`` method is used above to ensure that the expected value
+(first argument) is equal to the resulting/actual value
 (second argument); if they are inequal, then the test fails.
    
 To run the unit tests, you can use the "Run" (or "Debug") "All tests" menu item 
@@ -266,7 +268,7 @@ under the Visual Studio "TEST" menu.
 For each test ran, Visual Studio displays its status (i.e., pass/fail) 
 in the "Test Explorer" window.
 One can click on each test result to see more details such as the test console
-output. 
+output (i.e., see the output for ``TestMethod3``). 
 
 Code Coverage
 =============
