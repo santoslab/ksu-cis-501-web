@@ -3,6 +3,20 @@
 Schedule
 ########
 
+.. |D0| replace:: TBA
+
+.. |D1| replace:: TBA
+
+.. |D2| replace:: TBA
+
+.. |D3| replace:: TBA
+
+.. |D4| replace:: TBA
+
+.. |FinishDP| replace:: TBA
+
+.. |SATalk| replace:: TBA
+
 .. raw:: html
 
    <h3>CIS 501: Software Architecture and Design, Fall 2014</h3>
@@ -28,7 +42,7 @@ Schedule
      - 
    * - 2. T: Sep 2
      - :ref:`classes-vr`
-     - **Assignment 1: due on Sep 8**
+     - **Assignment 1: due on Sep 11**
    * - 2. U: Sep 4
      - :ref:`storage-object-diagrams`
      - 
@@ -37,19 +51,19 @@ Schedule
      -  
    * - 3. U: Sep 11
      - :ref:`interfaces`
-     - **Assignment 2: due on Sep 22**
+     - 
    * - 4. T: Sep 16
      - :ref:`interfaces`
-     -
+     - **Assignment 2: due on Sep 26**
    * - 4. U: Sep 18
      - :ref:`coupling-mvc`
      - 
    * - 5. T: Sep 23
      - :ref:`coupling-mvc`
-     - **Assignment 3: due on Oct 6**
-   * - 5. U: Sep 25
-     - :ref:`coupling-mvc`
      - 
+   * - 5. U: Sep 25
+     - TBA
+     - **Assignment 3: due on Oct 9**
    * - 6. T: Sep 30
      - *No Lecture*
      - 1-on-1 meeting, *Instructor Travel*
@@ -58,39 +72,39 @@ Schedule
      - 1-on-1 meeting, *Instructor Travel*
    * - 7. T: Oct 7
      - :ref:`use-cases`
-     - **Assignment 4: due on Oct 14**, *Instructor Travel*
-   * - 7. U: Oct 9
-     - :ref:`use-cases` & :ref:`state-diagrams`
      - *Instructor Travel*
-   * - 8. T: Oct 14
+   * - 7. U: Oct 9
      - :ref:`state-diagrams`
+     - **Assignment 4: due on Oct 17**, *Instructor Travel*
+   * - 8. T: Oct 14
+     - :ref:`multi-threaded`
      - 
    * - 8. U: Oct 16
      - :ref:`multi-threaded`
-     - 1-on-1 meeting
+     - **Assignment 5: due on: Nov 4**
    * - 9. T: Oct 21
      - *No Lecture*
      - 1-on-1 meeting
    * - 9. U: Oct 23
-     - **Mid-term Exam**
-     - **Assignment 5: due on: Nov 5**
+     - *No Lecture*
+     - 1-on-1 meeting, 
    * - 10. T: Oct 28
-     - :ref:`multi-threaded`
+     - **Mid-term Exam**
      - 
    * - 10. U: Oct 30
-     - TBA
+     - |D0|
      - 
    * - 11. T: Nov 4
-     - TBA
-     -
+     - |D2|
+     - 
    * - 11. U: Nov 6
-     - TBA
-     - **Project: design due on Nov 16, implementation due on Dec 5**
+     - |D2|
+     - **Project: design due on Nov 13, implementation due on Dec 9**
    * - 12. T: Nov 11
-     - TBA
+     - |D1|
      - 
    * - 12. U: Nov 13
-     - TBA
+     - |D4|
      - 
    * - 13. T: Nov 18
      - *No Lecture*
@@ -105,16 +119,16 @@ Schedule
      - *No Lecture*
      - **Thanksgiving Break**
    * - 14. T: Dec 2
-     - TBA
+     - |D3|
      -
    * - 14. U: Dec 4
-     - *No Lecture*
+     - |FinishDP|
      - 
    * - 15. T: Dec 9
      - TBA
      -
    * - 15. U: Dec 11
-     - TBA
+     - |SATalk|
      - 
    * - 16. T: Dec 16
      - Final Exam
