@@ -87,7 +87,7 @@ Schedule
      - 1-on-1 meeting
    * - 9. U: Oct 23
      - *No Lecture*
-     - 1-on-1 meeting, 
+     - 1-on-1 meeting
    * - 10. T: Oct 28
      - **Mid-term Exam**
      - 

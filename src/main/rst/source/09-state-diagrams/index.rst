@@ -1,6 +1,6 @@
 .. _state-diagrams:
 
-State diagrams for programming controllers
+State Diagrams for Programming Controllers
 ##########################################
 
 A controller holds an algorithm or protocol.
