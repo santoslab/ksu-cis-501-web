@@ -95,7 +95,7 @@ E-mail:       ``robby at ksu.edu``
 Graduate Teaching Assistant
 ***************************
 
-Ana Stanescu,
+`Ana Stanescu <http://anakstate.wix.com/anakstate>`__,
 Office:       TBA,
 Office Hours: TBD,
 E-mail:       ``anas at ksu.edu``

@@ -72,10 +72,12 @@ Schedule
      - 1-on-1 meeting, *Instructor Travel*
    * - 7. T: Oct 7
      - :ref:`use-cases`
-     - *Instructor Travel*
+     - *Instructor Travel*,
+       *Lecturer:* `Ana Stanescu <http://anakstate.wix.com/anakstate>`__
    * - 7. U: Oct 9
      - :ref:`state-diagrams`
-     - **Assignment 4: due on Oct 17**, *Instructor Travel*
+     - **Assignment 4: due on Oct 17**, *Instructor Travel*,
+       *Guest Lecturer:* `Dr. Venkatesh-Prasad Ranganath <http://people.cis.ksu.edu/~rvprasad>`__
    * - 8. T: Oct 14
      - :ref:`multi-threaded`
      - 
