@@ -96,8 +96,8 @@ Graduate Teaching Assistant
 ***************************
 
 `Ana Stanescu <http://anakstate.wix.com/anakstate>`__,
-Office:       TBA,
-Office Hours: TBD,
+Office:       227H Nichols Hall,
+Office Hours: M W 1-2pm (or by appointment),
 E-mail:       ``anas at ksu.edu``
 
 Grading
