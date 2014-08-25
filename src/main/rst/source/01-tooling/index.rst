@@ -71,6 +71,17 @@ For simplicity, we will use Windows Forms in this course.
 Git/GitHub
 **********
 
+To survive any large software project, you must manage backups, variations, and
+extensions of your system.
+If you work in a team, you must integrate all team members' work in a coherent
+way.
+
+It is best to use a professional version control tool to do this.
+
+Michael Ernst at the Univ. of Washington has written a nice 
+`introductory article <http://homes.cs.washington.edu/~mernst/advice/version-control.html>`__
+about `version control and a few popular tools.
+
 We will be using the `Git <http://www.git-scm.com>`__ distributed version 
 control system (see the 
 `Documentation <http://www.git-scm.com/doc>`__ section for reference) and 
@@ -87,13 +98,65 @@ We will be using
 `Visual Studio Git integration <http://msdn.microsoft.com/en-us/library/hh850437.aspx>`__
 with a very simple and specific Git workflow to sync your private repository with 
 the instructor's GitHub repository; in-class exercise and assignment submissions
-will be done by simply committing/pushing your changes to your private repository.
+will be done by simply committing/pushing your work to your private repository.
 
-Git Workflow
-============
+Git/GitHub Workflow
+===================
 
-TBA.
+As mentioned above, we will give you a private repository at GitHub to store
+your coursework. 
+For each exercise and assignment, we will provide a starting zip file (containing
+Visual Studio Solutions, exercise/assignment description in HTML/Markdown, etc.).
+The simple workflow is then to have you download and uncompress zip file to your
+Git local repository, work on the exercise/assignment, and commit/push your
+changes (as often as you want). At the specified deadline for the 
+exercise/assignment, we will clone your private repository and grade your work.
+  
+Here is the workflow step-by-step when working on an exercise or assignment:
 
+1. Clone your GitHub private repository (do this only once per machine).
+
+   Do this in Visual Studio:
+   
+   a. select the "Connect to Team Foundation Server..." menu item
+      under the "TEAM" menu.
+      It will open the "Team Explorer" view.
+       
+   b. Click on the "Connect To Team Projects" button
+    
+      .. image:: connect-button.png
+      
+   c. Select "Clone", and enter `https://github.com/ksu-cis-501/<username>.git`,
+      where `<username>` is your GitHub username.
+      If you prefer, you can adjust the directory for your local Git repository
+      in the next texbox.
+      
+   d. Click on the "Clone" button.
+      After cloning, your local Git repository (and its location) will be 
+      listed.
+      
+   e. Select the listed local Git repository, and it should change the view to
+      display the following:
+      
+      .. image:: local-repo.png
+
+2. Download and uncompress the starting zip file for the exercise/assignment,
+   and move the uncompressed content so it is located under your local Git
+   repository directory.
+
+3. Work on the exercise/assignment and commit/push your changes as often as you
+   want.
+   
+   To commit/push: 
+   
+   a. select "Changes" under "Project" in "Team Explorer" (see the Step 1e):
+   
+   b. under "Untracked Files", select "Add All".
+   
+   c. Enter a commit message that describe your changes.
+   
+   d. Select "Commit/Push" from the drop-down combo box/button.
+      
 
 Creating A New Project
 **********************
@@ -651,7 +714,7 @@ C# has a primitive critical-section operation, called ``lock``,
 which uses an object's handle as a kind of semaphore.
 Here is an example of a clock object that is shared by three threads of
 execution. (You place a "lock" around the body of each method to the shared
-object, that is, fake a Brinch-Hansen-style monitor. )-:
+object):
 
 .. code-block:: c#
 
@@ -925,7 +988,7 @@ Lists (Dynamic Arrays)
 
 Most of the time, the arrays you use will need to grow and shrink. 
 That is, you want a list, not an array.
-Lists are faked in C# by a library class, List.
+Lists are implemented in C# by a library class, List.
 Here are two links for reference:
 
 * http://msdn.microsoft.com/en-us/library/6sh2ey19.aspx
