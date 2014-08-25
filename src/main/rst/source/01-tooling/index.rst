@@ -140,12 +140,15 @@ Here is the workflow step-by-step when working on an exercise or assignment:
       display the following:
       
       .. image:: local-repo.png
+      
+2. If you work with multiple machines (e.g., in the lab and your personal
+   machine), do a Git pull, by selecting "Unsynced Commits" and then "Pull". 
 
-2. Download and uncompress the starting zip file for the exercise/assignment,
+3. Download and uncompress the starting zip file for the exercise/assignment,
    and move the uncompressed content so it is located under your local Git
    repository directory.
 
-3. Work on the exercise/assignment and commit/push your changes as often as you
+4. Work on the exercise/assignment and commit/push your changes as often as you
    want.
    
    To commit/push: 
