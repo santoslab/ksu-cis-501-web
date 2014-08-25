@@ -132,6 +132,7 @@ Here is the workflow step-by-step when working on an exercise or assignment:
       in the next texbox.
       
    d. Click on the "Clone" button.
+      You will be prompted to enter your GitHub credential.
       After cloning, your local Git repository (and its location) will be 
       listed.
       

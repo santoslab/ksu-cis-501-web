@@ -16,7 +16,7 @@ using blueprints and architectural design patterns.
                         Office:       324B Nichols Hall,
                         Office Hours: T U 1:30-2:30pm (or by appointment),
                         E-mail:       ``robby at ksu.edu``
-**Teaching Assistant**  Ana Stanescu,
+**Teaching Assistant**  `Ana Stanescu <http://anakstate.wix.com/anakstate>`__,
                         Office:       TBA,
                         Office Hours: TBD,
                         E-mail:       ``anas at ksu.edu``
