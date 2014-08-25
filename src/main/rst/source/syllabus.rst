@@ -45,7 +45,7 @@ Here is a list of topics to be covered:
 
 13. Design patterns: behavioral, structural, and creational
 
-14. Introduction to software architecture
+14. Introduction to software architecture "theory"
 
 
 Materials
