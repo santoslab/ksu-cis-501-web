@@ -131,7 +131,7 @@ Schedule
      - |SATalk|
      - 
    * - 16. T: Dec 16
-     - Final Exam
+     - **Final Exam**
      - **Time:** 9:40am - 11:30am
    
 ----
