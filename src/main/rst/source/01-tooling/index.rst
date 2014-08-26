@@ -126,7 +126,7 @@ Here is the workflow step-by-step when working on an exercise or assignment:
     
       .. image:: connect-button.png
       
-   c. Select "Clone", and enter `https://github.com/ksu-cis-501/<username>.git`,
+   c. Select "Clone", and enter `https://github.com/ksu-cis-501/<username>-coursework.git`,
       where `<username>` is your GitHub username.
       If you prefer, you can adjust the directory for your local Git repository
       in the next texbox.
