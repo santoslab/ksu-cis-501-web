@@ -149,7 +149,8 @@ Here is the workflow step-by-step when working on an exercise or assignment:
    repository directory.
 
 4. Work on the exercise/assignment and commit/push your changes as often as you
-   want.
+   want (make sure to commit/push your changes before working on a different
+   machine).
    
    To commit/push: 
    

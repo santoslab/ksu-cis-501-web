@@ -35,7 +35,8 @@ Schedule
      - Lecture
      - Remarks
    * - 1. T: Aug 26
-     - Course Administration & :ref:`notes` 
+     - `Course Administration <https://online.ksu.edu/COMS/player/content/CIS_501_ROBBY/content/Modules/Slides/Slides/CIS%20501%20Course%20Administration.pdf?ext=.pdf>`__ 
+       & :ref:`notes` 
      - 
    * - 1. U: Aug 28
      - :ref:`intro-softwarearch`
