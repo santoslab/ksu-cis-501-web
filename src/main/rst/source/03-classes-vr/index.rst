@@ -218,7 +218,7 @@ The details are found in the :ref:`unit-testing` course note.
 For our card example, say we coded ``class Card`` in Visual Studio in solution
 ``03-Classes-VR``.
 If you look in VS's Solution Explorer window, you see that solution 
-``03-Classes-VR`` holds two *Project*s, named ``CardConcepts`` and 
+``03-Classes-VR`` holds two *Project* s, named ``CardConcepts`` and 
 ``UnitTests``.
 And within the ``CardConcepts`` project is a file, ``Card.cs``, 
 that holds ``class Card``.

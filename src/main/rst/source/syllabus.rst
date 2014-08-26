@@ -25,7 +25,7 @@ Here is a list of topics to be covered:
 
 3.  Classes and objects; storage layout; object diagrams
 
-4.  Class diagrams and using Nclass to draw them
+4.  Class diagrams and using Visual Studio to draw them
 
 5.  Interfaces, abstract classes, and C# delegates
 

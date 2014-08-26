@@ -80,7 +80,7 @@ It is best to use a professional version control tool to do this.
 
 Michael Ernst at the Univ. of Washington has written a nice 
 `introductory article <http://homes.cs.washington.edu/~mernst/advice/version-control.html>`__
-about `version control and a few popular tools.
+about version control and a few popular tools.
 
 We will be using the `Git <http://www.git-scm.com>`__ distributed version 
 control system (see the 
@@ -397,9 +397,9 @@ part of the same namespace. You do this:
         }
       }
 
-      that you fill in.
-      (Remember, to rename ``Class2``, just right-click on it in the Solutions
-      window.)
+   that you fill in.
+   (Remember, to rename ``Class2``, just right-click on it in the Solutions
+   window.)
       
 2. Now you can use it in the other files of your project.
 
