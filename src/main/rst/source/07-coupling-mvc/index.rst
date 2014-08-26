@@ -1,3 +1,17 @@
+.. raw:: html
+
+   <br/>
+   <font color="darkgray">
+   <big><big><b>
+   
+Course Notes --- CIS 501: Software Architecture and Design, Fall 2014
+
+.. raw:: html
+
+   </b></big></big>
+   </font>
+
+
 .. _coupling-mvc:
 
 Coupling and the Model-View-Controller (MVC) Architecture
