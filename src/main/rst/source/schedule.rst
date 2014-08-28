@@ -39,7 +39,7 @@ Schedule
        & :ref:`notes` 
      - 
    * - 1. U: Aug 28
-     - :ref:`intro-softwarearch`
+     - :ref:`intro-softwarearch` [`X2 <http://softwarearch.santoslab.org/02-Intro-SoftwareArch.zip>`__]
      - 
    * - 2. T: Sep 2
      - :ref:`classes-vr`
