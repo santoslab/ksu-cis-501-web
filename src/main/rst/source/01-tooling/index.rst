@@ -141,18 +141,16 @@ Here is the workflow step-by-step when working on an exercise or assignment:
       
       .. image:: local-repo.png
       
-2. If you work with multiple machines (e.g., in the lab and your personal
-   machine), do a Git pull, by selecting "Unsynced Commits" and then "Pull". 
+2. Do a Git pull, by selecting "Unsynced Commits" and then "Pull". 
 
 3. Download and uncompress the starting zip file for the exercise/assignment,
    and move the uncompressed content so it is located under your local Git
    repository directory.
 
-4. Work on the exercise/assignment and commit/push your changes as often as you
-   want (make sure to commit/push your changes before working on a different
-   machine).
+4. Work on the exercise/assignment and commit & push your changes as often as 
+   you want.
    
-   To commit/push: 
+   To commit and push: 
    
    a. select "Changes" under "Project" in "Team Explorer" (see the Step 1e):
    
@@ -160,7 +158,10 @@ Here is the workflow step-by-step when working on an exercise or assignment:
    
    c. Enter a commit message that describe your changes.
    
-   d. Select "Commit/Push" from the drop-down combo box/button.
+   d. Select "Commit and Push" from the drop-down combo box/button.
+   
+**Important: make sure to commit and push your changes before ending your 
+programming session.**
       
 
 Creating A New Project
