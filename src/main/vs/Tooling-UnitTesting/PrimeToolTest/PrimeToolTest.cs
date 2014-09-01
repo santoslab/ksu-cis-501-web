@@ -28,6 +28,7 @@ y
 
         // test prime tool console app on 3 using a script with expected output
         // that it is a prime
+        // (be careful with white-space for the expected output)
         [TestMethod]
         public void ConsoleNum3Prime()
         {

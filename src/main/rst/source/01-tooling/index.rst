@@ -1001,147 +1001,192 @@ Below is an example to illustrate how one can test a console app.
    using System.Linq;
    using System.Text;
    using System.Threading.Tasks;
-
-   namespace PrimeTool {
    
-     // A simple prime tester console app
-     // (make sure the Program class visibility is public)
-     public class Program {
-    
-       // (make sure the main method visibility is public)
-       public static void Main(string[] args) {
-         int n = ReadPositiveInt("Enter a number:");
-         Console.WriteLine();
-
-         if (IsPrime(n)) {
-           Console.WriteLine(n + " is a prime!");
-         } else {
-           Console.WriteLine(n + " is not a prime!");
-         }
-
-         Console.ReadLine();
-       }
-
-       // reads a positive int from user input
-       public static int ReadPositiveInt(string msg) {
-         int n = -1;
-         
-         // repeat until positive int input
-         while (n < 0) {
-           Console.Write(msg + " ");
-           n = Int32.Parse(Console.ReadLine());
-         }
-         return n;
-       }
-
-       // from http://www.dotnetperls.com/prime
-       public static bool IsPrime(int candidate) {
-         // Test whether the parameter is a prime number.
-         if ((candidate & 1) == 0) {
-           if (candidate == 2) {
-             return true;
-           } else {
-             return false;
+   namespace PrimeTool
+   {
+       // A simple prime tester console app
+       // (make sure the Program class visibility is public)
+       public class Program
+       {
+           // (make sure the main method visibility is public)
+           public static void Main(string[] args)
+           {
+               bool exit = false;
+   
+               while (!exit)
+               {
+                   int n = ReadPositiveInt("Enter a number:");
+                   Console.WriteLine();
+   
+                   if (IsPrime(n))
+                   {
+                       Console.WriteLine(n + " is a prime!");
+                   }
+                   else
+                   {
+                       Console.WriteLine(n + " is not a prime!");
+                   }
+   
+   
+                   Console.Write("Do you want to exit (enter y to exit)? ");
+                   exit = Console.ReadLine() == "y";
+                   Console.WriteLine();
+               }
+   
+               Console.ReadLine();
            }
-         }
-         // Note:
-         // ... This version was changed to test the square.
-         // ... Original version tested against the square root.
-         // ... Also we exclude 1 at the end.
-         for (int i = 3; (i * i) <= candidate; i += 2) {
-           if ((candidate % i) == 0) {
-             return false;
+   
+           // reads a positive int from user input
+           public static int ReadPositiveInt(string msg)
+           {
+               int n = -1;
+               while (n < 0) // repeat until positive int input
+               {
+                   Console.Write(msg + " ");
+                   n = Int32.Parse(Console.ReadLine());
+               }
+               return n;
            }
-         }
-         return candidate != 1;
+   
+           // from http://www.dotnetperls.com/prime
+           public static bool IsPrime(int candidate)
+           {
+               // Test whether the parameter is a prime number.
+               if ((candidate & 1) == 0)
+               {
+                   if (candidate == 2)
+                   {
+                       return true;
+                   }
+                   else
+                   {
+                       return false;
+                   }
+               }
+               // Note:
+               // ... This version was changed to test the square.
+               // ... Original version tested against the square root.
+               // ... Also we exclude 1 at the end.
+               for (int i = 3; (i * i) <= candidate; i += 2)
+               {
+                   if ((candidate % i) == 0)
+                   {
+                       return false;
+                   }
+               }
+               return candidate != 1;
+           }
        }
-     }
    }
+
    
 .. code-block:: c#
 
    using System;
    using System.IO;
    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-   namespace PrimeToolTest {
    
-     [TestClass]
-     public class PrimeToolTest {
-        
-        // test IsPrime(2) directly
-       [TestMethod]
-       public void Num2Prime() {
-         Assert.IsTrue(PrimeTool.Program.IsPrime(2));
-       }
-
-       // test prime tool console app on 2 using a script without expected output
-       [TestMethod]
-       public void ConsoleNum2Prime( {
-         // @"..." is a multi-line string
-         test(@"2
+   namespace PrimeToolTest
+   {
+       [TestClass]
+       public class PrimeToolTest
+       {
+           // test IsPrime(2) directly
+           [TestMethod]
+           public void Num2Prime()
+           {
+               Assert.IsTrue(PrimeTool.Program.IsPrime(2));
+           }
+   
+           // test prime tool console app on 2 using a script without expected output
+           [TestMethod]
+           public void ConsoleNum2Prime()
+           {
+               // @"" is a multi-line string
+               // the first line is "2" which will be entered for the number to test
+               // the second line is "y" which will be entered for exiting the app 
+               test(@"2
+   y
    ", null);
-       }
-
-       // test prime tool console app on 3 using a script with expected output
-       // that it is a prime
-       [TestMethod]
-       public void ConsoleNum3Prime() {
-         test(@"3", 
-              @"Enter a number: 
+           }
+   
+           // test prime tool console app on 3 using a script with expected output
+           // that it is a prime
+           // (be careful with white-space for the expected output)
+           [TestMethod]
+           public void ConsoleNum3Prime()
+           {
+               test(@"3
+   y",
+                    @"Enter a number: 
    3 is a prime!
+   Do you want to exit (enter y to exit)? 
    ");
-       }
-
-       // test prime tool console app on 4 using a script with expected output
-       // that it is not a prime
-       [TestMethod]
-       public void ConsoleNum4NotPrime() {
-         test(@"4
-   ", @"Enter a number: 
+           }
+   
+           // test prime tool console app on 4 and 55 using a script with expected output
+           // that it is not a prime
+           [TestMethod]
+           public void ConsoleNum4And55NotPrime()
+           {
+               test(@"4
+   n
+   55
+   y
+   ",
+                    @"Enter a number: 
    4 is not a prime!
+   Do you want to exit (enter y to exit)? 
+   Enter a number: 
+   55 is not a prime!
+   Do you want to exit (enter y to exit)? 
    ");
+           }
+   
+           // test utility method to run the prime tool app with 
+           // a string script as input
+           void test(string script, string expectedOutput)
+           {
+               // save default Console.Out and Console.In
+               TextWriter cout = Console.Out;
+               TextReader cin = Console.In;
+               
+               // redirect Console.Out to a StringWriter (buffer)
+               StringWriter sw = new StringWriter();
+               Console.SetOut(sw);
+   
+               // set script as the app Console.In
+               StringReader sr = new StringReader(script);
+               Console.SetIn(sr);
+   
+               // call the console app
+               PrimeTool.Program.Main(new string[0]);
+   
+               // restore default Console.Out and Console.In
+               Console.SetOut(cout);
+               Console.SetIn(cin);
+   
+               // close resources
+               sw.Close();
+               sr.Close();
+   
+               // get the actual ouput
+               // if the expected output is null, 
+               //    then the test simply prints out the actual output (for debugging) 
+               // otherwise, it asserts that the expected output is equal to the actual ouput
+               string actualOutput = sw.ToString();
+               if (expectedOutput == null)
+               {
+                   Console.Write(actualOutput);
+               }
+               else
+               {
+                   Assert.AreEqual(expectedOutput, actualOutput);
+               }
+           }
        }
-
-       // test utility method to run the prime tool app with 
-       // a string script as input
-       void test(string script, string expectedOutput) {
-         // save default Console.Out and Console.In
-         TextWriter cout = Console.Out;
-         TextReader cin = Console.In;
-            
-         // redirect Console.Out to a StringWriter (buffer)
-         StringWriter sw = new StringWriter();
-         Console.SetOut(sw);
-
-         // set script as the app Console.In
-         StringReader sr = new StringReader(script);
-         Console.SetIn(sr);
-
-         // call the console app
-         PrimeTool.Program.Main(new string[0]);
-
-         // restore default Console.Out and Console.In
-         Console.SetOut(cout);
-         Console.SetIn(cin);
-
-         // close resources
-         sw.Close();
-         sr.Close();
-
-         // get the actual ouput
-         // if the expected output is null, 
-         //    then the test simply prints out the actual output (for debugging) 
-         // otherwise, it asserts that the expected output is equal to the actual ouput
-         string actualOutput = sw.ToString();
-         if (expectedOutput == null) {
-           Console.Write(actualOutput);
-         } else {
-           Assert.AreEqual(expectedOutput, actualOutput);
-         }
-       }
-     }
    }
+
    
 Visual Studio also supports UI testing by recording user input events (see MSDN's
 `Verifying Code by Using UI Automation <http://msdn.microsoft.com/en-us/library/dd286726.aspx>`__
