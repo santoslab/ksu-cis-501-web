@@ -13,16 +13,26 @@ namespace PrimeTool
         // (make sure the main method visibility is public)
         public static void Main(string[] args)
         {
-            int n = ReadPositiveInt("Enter a number:");
-            Console.WriteLine();
+            bool exit = false;
 
-            if (IsPrime(n))
+            while (!exit)
             {
-                Console.WriteLine(n + " is a prime!");
-            }
-            else
-            {
-                Console.WriteLine(n + " is not a prime!");
+                int n = ReadPositiveInt("Enter a number:");
+                Console.WriteLine();
+
+                if (IsPrime(n))
+                {
+                    Console.WriteLine(n + " is a prime!");
+                }
+                else
+                {
+                    Console.WriteLine(n + " is not a prime!");
+                }
+
+
+                Console.Write("Do you want to exit (enter y to exit)? ");
+                exit = Console.ReadLine() == "y";
+                Console.WriteLine();
             }
 
             Console.ReadLine();

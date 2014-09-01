@@ -19,7 +19,10 @@ namespace PrimeToolTest
         public void ConsoleNum2Prime()
         {
             // @"" is a multi-line string
+            // the first line is "2" which will be entered for the number to test
+            // the second line is "y" which will be entered for exiting the app 
             test(@"2
+y
 ", null);
         }
 
@@ -28,20 +31,30 @@ namespace PrimeToolTest
         [TestMethod]
         public void ConsoleNum3Prime()
         {
-            test(@"3", 
+            test(@"3
+y",
                  @"Enter a number: 
 3 is a prime!
+Do you want to exit (enter y to exit)? 
 ");
         }
 
-        // test prime tool console app on 4 using a script with expected output
+        // test prime tool console app on 4 and 55 using a script with expected output
         // that it is not a prime
         [TestMethod]
-        public void ConsoleNum4NotPrime()
+        public void ConsoleNum4And55NotPrime()
         {
             test(@"4
-", @"Enter a number: 
+n
+55
+y
+",
+                 @"Enter a number: 
 4 is not a prime!
+Do you want to exit (enter y to exit)? 
+Enter a number: 
+55 is not a prime!
+Do you want to exit (enter y to exit)? 
 ");
         }
 
