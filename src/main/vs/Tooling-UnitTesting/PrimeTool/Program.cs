@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace PrimeTool
 {
-    // A simple prime tester console appp
+    // A simple prime tester console app
+    // (make sure the Program class visibility is public)
     public class Program
     {
+        // (make sure the main method visibility is public)
         public static void Main(string[] args)
         {
             int n = ReadPositiveInt("Enter a number:");
