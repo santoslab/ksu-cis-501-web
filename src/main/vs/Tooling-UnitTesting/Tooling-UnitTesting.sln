@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClockConsoleApplication", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClockUnitTest", "ClockUnitTest\ClockUnitTest.csproj", "{2A9ACCAB-C563-4979-A6D1-971724013D54}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimeTool", "PrimeTool\PrimeTool.csproj", "{EEEAD960-0CCB-49AB-A85B-5BB616EBD146}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimeToolTest", "PrimeToolTest\PrimeToolTest.csproj", "{3C25C0CE-2710-41BC-A0F7-1EA899E9B752}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{2A9ACCAB-C563-4979-A6D1-971724013D54}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A9ACCAB-C563-4979-A6D1-971724013D54}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A9ACCAB-C563-4979-A6D1-971724013D54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEEAD960-0CCB-49AB-A85B-5BB616EBD146}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEEAD960-0CCB-49AB-A85B-5BB616EBD146}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEEAD960-0CCB-49AB-A85B-5BB616EBD146}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEEAD960-0CCB-49AB-A85B-5BB616EBD146}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C25C0CE-2710-41BC-A0F7-1EA899E9B752}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C25C0CE-2710-41BC-A0F7-1EA899E9B752}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C25C0CE-2710-41BC-A0F7-1EA899E9B752}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C25C0CE-2710-41BC-A0F7-1EA899E9B752}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
