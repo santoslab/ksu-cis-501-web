@@ -55,7 +55,8 @@ Schedule
      - 
    * - 4. T: Sep 16
      - :ref:`interfaces`
-     - **Assignment 2: due on Sep 26**
+     - **Assignment 2: due on Sep 26**, *Instructor Travel*,
+       *Lecturer:* `Ana Stanescu <http://anakstate.wix.com/anakstate>`__
    * - 4. U: Sep 18
      - :ref:`coupling-mvc`
      - 
