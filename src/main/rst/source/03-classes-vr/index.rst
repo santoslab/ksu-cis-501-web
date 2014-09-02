@@ -166,8 +166,9 @@ we have high confidence that the assembly operates as desired.
 How do we test and validate the quality of a class that cannot "execute" all alone?
 
 There are special tools to test a class alone; 
-Visual Studio provides an easy way to write a *test harness* for *unit testing*
-an individual class.
+Visual Studio provides an easy way to write a 
+`test harness <http://istqbexamcertification.com/what-is-test-harness-unit-test-framework-tools-in-software-testing/`__ 
+for *unit testing* an individual class.
 (Like its name suggests, "unit testing" is the testing of one unit of a system.)
 
 A unit test of a class is a script of actions that use one or more objects
@@ -232,9 +233,9 @@ The details are found in the :ref:`unit-testing` course note.
 For our card example, say we coded ``class Card`` in Visual Studio in solution
 ``03-Classes-VR``.
 If you look in VS's Solution Explorer window, you see that solution 
-``03-Classes-VR`` holds two *Project* s, named ``CardConcepts`` and 
-``UnitTests``.
-And within the ``CardConcepts`` project is a file, ``Card.cs``, 
+``03-Classes-VR`` holds two *Project* s, named ``03-Classes-VR-CardConcepts`` and 
+``03-Classes-VR-UnitTests``.
+And within the ``03-Classes-VR-CardConcepts`` project is a file, ``Card.cs``, 
 that holds ``class Card``.
 
 Here is an example of a test class with a test method, ready to run:
@@ -272,7 +273,7 @@ Here is an example of a test class with a test method, ready to run:
    }
 
 This code lives in ``UnitTest1.cs`` within Project ``03-Classes-VR-UnitTests`` 
-within Solution ``03-Classes-VR``.
+inside Solution ``03-Classes-VR``.
 The ``Assert.AreEqual`` method is used above to ensure that the expected value
 (first argument) is equal to the resulting/actual value
 (second argument); if they are inequal, then the test fails.
