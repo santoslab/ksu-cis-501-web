@@ -14,18 +14,30 @@ Course Notes --- CIS 501: Software Architecture and Design, Fall 2014
 
 .. _storage-object-diagrams:
 
-Storage Diagrams and Object Diagrams
-####################################
+Storage and Object Diagrams
+###########################
 
 You can't be a good programmer if you do not understand how data structures are
 laid out in storage.
 Here is a short quiz: What is allocated in storage by these declarations?
 
-* ``int x = 3`` (a fullword named ``x`` is allocated to hold integer ``3``.)
+* Consider the following declaration:
 
-* ``int[] r = new int[5]`` (a sequence of five fullwords is allocated for the 
+  .. code-block:: c#
+
+     int x = 3;
+   
+  It declares a fullword named ``x`` is allocated to hold integer ``3``.
+
+* Or this:
+
+  .. code-block:: c#
+  
+     int[] r = new int[5]; 
+
+  A sequence of five fullwords is allocated for the 
   array, and the addresss --- handle --- of the array is stored in a fullword
-  named ``r``)
+  named ``r``
   
 * This example is from C:
 

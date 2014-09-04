@@ -39,13 +39,13 @@ Schedule
        & :ref:`notes` 
      - 
    * - 1. U: Aug 28
-     - :ref:`intro-softwarearch` [`X2 <http://softwarearch.santoslab.org/02-Intro-SoftwareArch.zip>`__]
+     - :ref:`intro-softwarearch` [`X2 <https://online.ksu.edu/COMS/player/content/CIS_501_ROBBY/content/Modules/Exercises/02-Intro-SoftwareArch.zip>`__]
      - 
    * - 2. T: Sep 2
-     - :ref:`classes-vr` [`X3 <http://softwarearch.santoslab.org/03-Classes-VR.zip>`__]
+     - :ref:`classes-vr` [`X3 <https://online.ksu.edu/COMS/player/content/CIS_501_ROBBY/content/Modules/Exercises/03-Classes-VR.zip>`__]
      - **Assignment 1: due on Sep 11** [`A1 <https://online.ksu.edu/COMS/player/content/CIS_501_ROBBY/content/Modules/Assignments/Todo.zip?ext=.zip>`__]
    * - 2. U: Sep 4
-     - :ref:`storage-object-diagrams`
+     - :ref:`storage-object-diagrams` [`X4 <https://online.ksu.edu/COMS/player/content/CIS_501_ROBBY/content/Modules/Exercises/04-Storage-Object-Diagrams.zip?ext=.zip>`__]
      - 
    * - 3. T: Sep 9
      - :ref:`class-diagrams`
