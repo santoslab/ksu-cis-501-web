@@ -254,11 +254,14 @@ Now, run VS on the example and break at point ``//***`` to see how VS presents
 the storage layout.
 Match it to the above diagram.
 
-Visual Studio is not good at showing the handles (addresses) of objects, and
+Visual Studio does not show the handles (addresses) of objects, and
 VS does *not* show the difference between the stack and the heap, and
 it does not show that ``c`` and ``e`` hold the same handle to
 (that is, they *alias*)
 the same object, which is can be bad! Be careful!
+To show object handles (thus, one can tell object aliases), 
+right-click on the objects of interest in the debugger's "Locals" view, 
+and select "Make Object ID".
 
 Now, consider the code in tick:
 
