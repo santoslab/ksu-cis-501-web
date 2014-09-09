@@ -14,18 +14,30 @@ Course Notes --- CIS 501: Software Architecture and Design, Fall 2014
 
 .. _storage-object-diagrams:
 
-Storage Diagrams and Object Diagrams
-####################################
+Storage and Object Diagrams
+###########################
 
 You can't be a good programmer if you do not understand how data structures are
 laid out in storage.
 Here is a short quiz: What is allocated in storage by these declarations?
 
-* ``int x = 3`` (a fullword named ``x`` is allocated to hold integer ``3``.)
+* Consider the following declaration:
 
-* ``int[] r = new int[5]`` (a sequence of five fullwords is allocated for the 
+  .. code-block:: c#
+
+     int x = 3;
+   
+  It declares a fullword named ``x`` is allocated to hold integer ``3``.
+
+* Or this:
+
+  .. code-block:: c#
+  
+     int[] r = new int[5]; 
+
+  A sequence of five fullwords is allocated for the 
   array, and the addresss --- handle --- of the array is stored in a fullword
-  named ``r``)
+  named ``r``
   
 * This example is from C:
 
@@ -242,11 +254,14 @@ Now, run VS on the example and break at point ``//***`` to see how VS presents
 the storage layout.
 Match it to the above diagram.
 
-Visual Studio is not good at showing the handles (addresses) of objects, and
+Visual Studio does not show the handles (addresses) of objects, and
 VS does *not* show the difference between the stack and the heap, and
 it does not show that ``c`` and ``e`` hold the same handle to
 (that is, they *alias*)
 the same object, which is can be bad! Be careful!
+To show object handles (thus, one can tell object aliases), 
+right-click on the objects of interest in the debugger's "Locals" view, 
+and select "Make Object ID".
 
 Now, consider the code in tick:
 
