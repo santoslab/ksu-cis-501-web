@@ -10,20 +10,6 @@
       </annotatedElements>
     </comment>
   </ownedCommentsInternal>
-  <profileInstances>
-    <packageHasProfileInstances Id="ed35fdc2-cabc-4f1d-9271-173c341d9abe">
-      <profileInstance Id="811b7eb5-758b-44a1-90f7-f4755e5824f1" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="e62a0f84-013f-40fe-844d-a3d9603618c6">
-      <profileInstance Id="9e86e519-9d57-4242-8c1b-ee6ad64eb3cd" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <logicalClassDesignerModelHasTypes>
       <class Id="f5b5b0fd-bc94-47ed-97de-4a3b64d9f450" name="Paper" isAbstract="false" isLeaf="false" isActiveClass="false">
@@ -378,5 +364,19 @@
   </packagedElements>
   <package Id="d48ffffb-08bf-45f5-91f3-53dd6619df86" name="ClassDiagrams-Models">
     <elementDefinition Id="770db705-38d3-4b73-a75e-a98f00cba5cc" />
+    <profileInstances>
+      <packageHasProfileInstances Id="ed35fdc2-cabc-4f1d-9271-173c341d9abe">
+        <profileInstance Id="811b7eb5-758b-44a1-90f7-f4755e5824f1" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="e62a0f84-013f-40fe-844d-a3d9603618c6">
+        <profileInstance Id="9e86e519-9d57-4242-8c1b-ee6ad64eb3cd" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </logicalClassDesignerModel>
