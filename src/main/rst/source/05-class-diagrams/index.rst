@@ -73,11 +73,12 @@ Here is a quick summary:
   
 * The arrows define relationships. For the above example:
   
-  * A solid arrow defines *dependency* (coupling): "A refers to B", or
+  * A solid arrow defines *dependency* (coupling, or **association** in 
+    Visual Studio lingo): "A refers to B", or
     "A needs B to compile correctly" and *"A retains a handle to B in a field."*
   
-  * The dashed arrow defines dependency also, but where there is not a field to
-    remember the entity depended upon.
+  * The dashed arrow defines dependency also (**dependency** in VS), but where 
+    there is not a field to remember the entity depended upon.
 
   * A solid arrow with a diamond at its base defines *composition*: "A owns B" 
     or "B is part of A" or "if A dies, so does B".
