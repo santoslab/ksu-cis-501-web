@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="649a7f09-e696-40fc-819a-31f3c2dabca0"
   name="Interfaces-Models" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -21,7 +21,7 @@
       <annotatedElements>
         <classMoniker
           Id="ab846301-dccd-4b32-a1a8-d88e8bad4877"
-          LastKnownName="Aseembly3"
+          LastKnownName="Assembly3"
           LastKnownLocation="Interfaces-Models.uml" />
       </annotatedElements>
     </comment>
@@ -339,7 +339,7 @@ helper.process(table[newKey]);</body>
     <packageHasNamedElement>
       <class
         Id="ab846301-dccd-4b32-a1a8-d88e8bad4877"
-        name="Aseembly3"
+        name="Assembly3"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">

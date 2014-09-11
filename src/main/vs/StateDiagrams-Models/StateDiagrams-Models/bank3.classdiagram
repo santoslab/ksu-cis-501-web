@@ -1,19 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="a474eea0-a391-4229-8439-d3b2c57338b2" name="bank3" linkedPackageId="dfe5b76a-9ffb-4afd-a7cc-3b689dc43eed" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
-  <profileInstances>
-    <packageHasProfileInstances Id="2aa93794-aaf8-4254-98a2-b2a5f7d4ea8b">
-      <profileInstance Id="9408f7a7-359a-45e7-b58c-5389eb73f6d3" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="1950d481-d32a-49f1-82ca-3caf15af345c">
-      <profileInstance Id="cd7729c0-78cc-4f85-b650-5353f52e1e9e" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="a474eea0-a391-4229-8439-d3b2c57338b2" name="bank3" linkedPackageId="dfe5b76a-9ffb-4afd-a7cc-3b689dc43eed" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <packagedElements>
     <logicalClassDesignerModelHasTypes>
       <class Id="9ccd98a1-e991-4b08-b1ad-d1981a8f3e38" name="ATMForm" isAbstract="false" isLeaf="false" isActiveClass="false">
@@ -143,15 +129,51 @@
             <enumerationMoniker Id="0f2598f8-54f9-4bd3-8ff1-85160d540fa8" LastKnownName="Status" />
             <elementDefinition Id="9575f953-69cf-4e08-a0f8-892279354e65" />
           </dependency>
-          <dependency Id="41cf755a-b88d-4a2e-ad2d-d51b0ecbab47">
-            <interfaceMoniker Id="de36e03c-1795-4a34-8477-135f1d9c0888" LastKnownName="BankDatabase" />
-            <elementDefinition Id="bf2c0c48-7953-418a-bed0-45e105b2de2b" />
-          </dependency>
-          <dependency Id="b84cd6eb-8b17-40ae-b86e-c56826be9306">
-            <interfaceMoniker Id="4f52a7b6-60fd-460e-bd4d-90a015acb746" LastKnownName="BankAccount" />
-            <elementDefinition Id="e0dbd733-1487-439d-b812-6cf926bbb6b2" />
-          </dependency>
         </suppliersInternal>
+        <targetEnds>
+          <association Id="2b74a66f-f3db-48b1-b6fa-3f1e05905a6c" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <interfaceMoniker Id="de36e03c-1795-4a34-8477-135f1d9c0888" LastKnownName="BankDatabase" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7bbef0df-334b-44ca-b8c5-8ab92b2d578b" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="ee140b84-7589-4c90-b727-1842d2a9a5c8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0232f633-c971-4fb4-9a1f-30a2f40449b3" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f93042f1-b2e6-49cf-a9a3-748481d21b1d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="ebcd3808-f625-48dd-95b9-e953e386190d" />
+          </association>
+          <association Id="822b3344-9ab8-476b-9f7f-8a54a14a1d59" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <interfaceMoniker Id="4f52a7b6-60fd-460e-bd4d-90a015acb746" LastKnownName="BankAccount" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c1075793-fc0b-4be5-9421-5acb7961df65" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="e914bb51-fa2b-4fb6-a6d9-3a198a6b28fe" name="Lower" value="0">
+                      <elementDefinition Id="c0568f14-30e9-439d-a4ff-b4074f55a4f8" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="0a78d634-9b42-4aeb-a43d-08549d8752ec" name="Upper" value="1">
+                      <elementDefinition Id="fcf210fd-0bec-4fef-bc23-99685cf97c96" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="d179550f-d1e6-45f1-98b8-eaf6c5281672" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2098967d-dfa1-48bb-a09a-00155a06fede" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="51cbca46-840d-4bac-8008-5c2d6cbb9013" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d9ebc19f-c2a2-47a0-bb5f-f7dfc989e61d" />
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property Id="c4b8e224-14dc-4f4e-8096-fb8cd24a31c4" name="state" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="87b0e9af-84e0-4c7a-8e9f-4d324a6a3407" />
@@ -438,5 +460,19 @@
   </packagedElements>
   <package Id="dfe5b76a-9ffb-4afd-a7cc-3b689dc43eed" name="StateDiagrams-Models">
     <elementDefinition Id="6895c48d-2948-4a5e-a536-a2b5f89af2bb" />
+    <profileInstances>
+      <packageHasProfileInstances Id="2aa93794-aaf8-4254-98a2-b2a5f7d4ea8b">
+        <profileInstance Id="9408f7a7-359a-45e7-b58c-5389eb73f6d3" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="1950d481-d32a-49f1-82ca-3caf15af345c">
+        <profileInstance Id="cd7729c0-78cc-4f85-b650-5353f52e1e9e" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </logicalClassDesignerModel>

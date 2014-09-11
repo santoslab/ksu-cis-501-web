@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="74431a3d-6d20-4c41-8380-734109326749" name="assembly" linkedPackageId="933bfd98-dd8e-4f69-9f9c-420e3888c8f9" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="74431a3d-6d20-4c41-8380-734109326749" name="assembly" linkedPackageId="933bfd98-dd8e-4f69-9f9c-420e3888c8f9" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <ownedCommentsInternal>
     <comment Id="59974a44-616c-4ecd-9487-3dde21d85a36">
       <elementDefinition Id="8a11918b-cc14-4eb3-a6a0-e0e727d98402" />
@@ -13,7 +13,7 @@
       <elementDefinition Id="720f2414-9ee6-4533-9e01-fc4e970a4dbd" />
       <body>... controller.b1() ...</body>
       <annotatedElements>
-        <classMoniker Id="1698524f-c146-4624-a37e-d58d40d3595c" LastKnownName="Aseembly3" />
+        <classMoniker Id="1698524f-c146-4624-a37e-d58d40d3595c" LastKnownName="Assembly3" />
       </annotatedElements>
     </comment>
   </ownedCommentsInternal>
@@ -136,7 +136,7 @@
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
-      <class Id="1698524f-c146-4624-a37e-d58d40d3595c" name="Aseembly3" isAbstract="false" isLeaf="false" isActiveClass="false">
+      <class Id="1698524f-c146-4624-a37e-d58d40d3595c" name="Assembly3" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="ab846301-dccd-4b32-a1a8-d88e8bad4877" />
         <targetEnds>
           <association Id="2b46ffb7-c351-4614-b7c8-683404763e5c" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
