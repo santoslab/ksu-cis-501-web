@@ -13,30 +13,38 @@
       </annotatedElements>
     </comment>
   </ownedCommentsInternal>
-  <profileInstances>
-    <packageHasProfileInstances Id="023cc94b-342a-47d5-867a-796d693d350d">
-      <profileInstance Id="e94349dd-d5b8-4033-81a7-c2649d98ef98" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="3a2d22cb-42cd-4531-b794-2b8127391d29">
-      <profileInstance Id="6f37ef59-bce9-413a-9677-ffb9bcc21e47" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <logicalClassDesignerModelHasTypes>
       <class Id="68ffb908-2091-4d7b-a029-5d586cce33e4" name="Dealer" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="1f60e4fc-c85e-4b91-b033-21e8164f1807" />
-        <suppliersInternal>
-          <dependency Id="0ebba13a-5ea9-4cd4-9a14-d7a3c5eff855">
+        <targetEnds>
+          <association Id="e24ee9b1-9882-413d-b644-c7e23719c2fc" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
             <interfaceMoniker Id="992c61b8-8082-4839-af9f-72ce622a3002" LastKnownName="Player" />
-            <elementDefinition Id="c206d6c1-4235-45da-aee5-c33526cb3729" />
-          </dependency>
-        </suppliersInternal>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f77af26b-33a7-472b-8cfb-803f429bdc9b" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9de70ced-711c-4455-bf77-3144bb9b1166" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6ee24d02-95ea-4fa8-b7e7-ca7d056af721" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="8f4ad3af-37c7-4646-8a46-47034cd9e684" name="Lower" value="1">
+                      <elementDefinition Id="9d4ce0ea-d5cf-4db0-9581-35824c8c5cc9" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="40192534-bf0d-49bd-a8be-17c6b349747c" name="Upper" value="*">
+                      <elementDefinition Id="6c8820f3-8b7e-4457-bc7d-8f29f47acde8" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="e0e5f588-1299-4ff4-9766-c4ae37716d41" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="1606bf9c-b639-405e-8f32-a2ed0411d24a" />
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property Id="a13d0d72-ec0a-4142-87f6-d35eedbdcbff" name="players" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="0bc2a2f8-d336-4cc5-8810-45bf1c8f87af" />
@@ -181,5 +189,19 @@
   </packagedElements>
   <package Id="30c7fc98-bf38-4ce0-b4cd-2da8755db40e" name="Interfaces-Models">
     <elementDefinition Id="649a7f09-e696-40fc-819a-31f3c2dabca0" />
+    <profileInstances>
+      <packageHasProfileInstances Id="023cc94b-342a-47d5-867a-796d693d350d">
+        <profileInstance Id="e94349dd-d5b8-4033-81a7-c2649d98ef98" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="3a2d22cb-42cd-4531-b794-2b8127391d29">
+        <profileInstance Id="6f37ef59-bce9-413a-9677-ffb9bcc21e47" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </logicalClassDesignerModel>

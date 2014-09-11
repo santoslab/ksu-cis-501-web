@@ -122,14 +122,59 @@ helper.process(table[newKey]);</body>
               LastKnownName="ConnectionPointB"
               LastKnownLocation="Interfaces-Models.uml" />
           </interfaceRealization>
-          <dependency
-            Id="733eac9f-1361-4301-b97a-8e74965ba3d7">
+        </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="9a54f516-e6ee-4459-a9b7-884a15517d2c"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
             <interfaceMoniker
               Id="a0ce361c-947c-4558-9682-ea5bc157f7d8"
               LastKnownName="ConnectionPointA"
               LastKnownLocation="Interfaces-Models.uml" />
-          </dependency>
-        </suppliersInternal>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="562d90b8-06c5-4486-82d4-f90643f88650"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="ec97e903-e450-4eb1-a809-cca22a0feabd"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="6aa79336-9a27-4a63-aaa1-93773f8337aa"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="24582950-5284-49ec-aa98-b66857d0cd34"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="e3c3a8e3-b2d4-4dea-ac8c-e926a77ee8f9"
@@ -298,15 +343,58 @@ helper.process(table[newKey]);</body>
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
-        <suppliersInternal>
-          <dependency
-            Id="a4908031-87e3-4cc4-9cb1-e79c39a99a32">
+        <targetEnds>
+          <association
+            Id="1dbba557-3299-49d6-9dd2-235f5f236919"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
             <interfaceMoniker
               Id="32b99bfb-089d-41c7-b615-64a3fa8f0e43"
               LastKnownName="ConnectionPointB"
               LastKnownLocation="Interfaces-Models.uml" />
-          </dependency>
-        </suppliersInternal>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7d742abd-c48e-46ae-997c-182c280531a3"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="5f80d866-3988-479e-9494-30a817fb2792"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="898f990d-3ee1-40ad-b440-6012ad20815e"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="60d72517-1b6a-499d-9eba-a4ba2830eb7f"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="88bbca7b-7201-49ea-9346-5a1791addd10"
@@ -574,15 +662,58 @@ helper.process(table[newKey]);</body>
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
-        <suppliersInternal>
-          <dependency
-            Id="c206d6c1-4235-45da-aee5-c33526cb3729">
+        <targetEnds>
+          <association
+            Id="1606bf9c-b639-405e-8f32-a2ed0411d24a"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
             <interfaceMoniker
               Id="8484e244-8cde-43ef-95ae-f43f8cd26b27"
               LastKnownName="Player"
               LastKnownLocation="Interfaces-Models.uml" />
-          </dependency>
-        </suppliersInternal>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9de70ced-711c-4455-bf77-3144bb9b1166"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e0e5f588-1299-4ff4-9766-c4ae37716d41"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="9d4ce0ea-d5cf-4db0-9581-35824c8c5cc9"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="6c8820f3-8b7e-4457-bc7d-8f29f47acde8"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="0bc2a2f8-d336-4cc5-8810-45bf1c8f87af"
@@ -1084,13 +1215,6 @@ helper.process(table[newKey]);</body>
               LastKnownName="ControllerInterface"
               LastKnownLocation="Interfaces-Models.uml" />
           </interfaceRealization>
-          <dependency
-            Id="297d5f0c-f93d-4124-8853-0eda12b9cb52">
-            <interfaceMoniker
-              Id="fba6f619-637f-4e1a-931d-b8f4bf946df0"
-              LastKnownName="UserInterface"
-              LastKnownLocation="Interfaces-Models.uml" />
-          </dependency>
         </suppliersInternal>
         <targetEnds>
           <association
@@ -1121,6 +1245,43 @@ helper.process(table[newKey]);</body>
                 <memberEnd
                   Id="5f8d4796-aed3-4bf1-8c46-301e6595219c"
                   name="engine"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="6a78d718-a5ff-4d13-800f-66e5faa1e6d7"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="fba6f619-637f-4e1a-931d-b8f4bf946df0"
+              LastKnownName="UserInterface"
+              LastKnownLocation="Interfaces-Models.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9f0bdea0-cea0-44de-a6d0-06781a281eb1"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4d89a300-373c-411d-8b70-4d2a10055881"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -1203,15 +1364,45 @@ helper.process(table[newKey]);</body>
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
-        <suppliersInternal>
-          <dependency
-            Id="ce1acc48-2b75-43f9-b9f4-98ff1e392977">
+        <targetEnds>
+          <association
+            Id="65703cbf-3783-4243-be1e-730637676a54"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
             <interfaceMoniker
               Id="d554e75b-ce5d-44c0-b1b7-4282fd7fa48a"
               LastKnownName="Database"
               LastKnownLocation="Interfaces-Models.uml" />
-          </dependency>
-        </suppliersInternal>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e261706a-9bc7-4233-b6bf-e75bb0503445"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2bc0a15b-44d5-46cf-8d7a-9994504a2aa1"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="5f4122f8-648a-4a9f-ac8f-e0664ca5b47a"
@@ -1391,15 +1582,6 @@ helper.process(table[newKey]);</body>
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
-        <suppliersInternal>
-          <dependency
-            Id="872e4f56-8b44-494e-bf89-86576f17c856">
-            <interfaceMoniker
-              Id="586e2a63-8cc8-4b00-8f76-ca56e430dbe6"
-              LastKnownName="IDictionary"
-              LastKnownLocation="Interfaces-Models.uml" />
-          </dependency>
-        </suppliersInternal>
         <targetEnds>
           <association
             Id="d7be33c2-0329-4b1b-a597-6f50819ab9f9"
@@ -1449,6 +1631,56 @@ helper.process(table[newKey]);</body>
                       value="*" />
                   </upperValueInternal>
                 </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="3e14ca76-6a7f-4c93-a1f4-aae37a5cae2c"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="586e2a63-8cc8-4b00-8f76-ca56e430dbe6"
+              LastKnownName="IDictionary"
+              LastKnownLocation="Interfaces-Models.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2e984a73-2cf5-4cc7-8a61-47e248bb5ffe"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="c6c7923f-14a6-4318-80d2-578742e45e06"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="1ccb795e-f089-47b9-9c2e-70767626e91b"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3f844720-c56d-45d3-88fd-6f9e64d3e028"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>

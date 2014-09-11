@@ -13,20 +13,6 @@ helper.process(table[newKey]);</body>
       </annotatedElements>
     </comment>
   </ownedCommentsInternal>
-  <profileInstances>
-    <packageHasProfileInstances Id="a13bcfd5-fd88-4f1a-afad-c4c0b239547c">
-      <profileInstance Id="2fa300b4-4439-475c-8e7f-f4ffbe9483a2" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="f0475887-7700-436a-a591-e44b2cf2a0b9">
-      <profileInstance Id="d518c36d-a639-4d98-84bd-44331de6ec6a" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <logicalClassDesignerModelHasTypes>
       <Interface Id="6874f3e4-0208-4482-8f0f-47d880db2901" name="IDictionary" isAbstract="false" isLeaf="false">
@@ -93,12 +79,6 @@ helper.process(table[newKey]);</body>
     <logicalClassDesignerModelHasTypes>
       <class Id="d74f6a4f-e4a0-452d-9ddc-2e00e629f999" name="Assembly" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="2b3b3f6f-e2da-4d2b-8eb6-9bd8177e7d7f" />
-        <suppliersInternal>
-          <dependency Id="400bd457-51bf-4569-8b78-9ed3777de3e6">
-            <interfaceMoniker Id="6874f3e4-0208-4482-8f0f-47d880db2901" LastKnownName="IDictionary" />
-            <elementDefinition Id="872e4f56-8b44-494e-bf89-86576f17c856" />
-          </dependency>
-        </suppliersInternal>
         <targetEnds>
           <association Id="1e3a512d-a1ff-4743-9158-6d994cf5702d" isDerived="false" sourceEndRoleName="" targetEndRoleName="helper" isLeaf="false" isAbstract="false">
             <classMoniker Id="918d344c-ad6c-467f-ab1b-2c960034aa61" LastKnownName="HelperClass" />
@@ -125,6 +105,32 @@ helper.process(table[newKey]);</body>
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="d7be33c2-0329-4b1b-a597-6f50819ab9f9" />
+          </association>
+          <association Id="09eb1b24-8a35-4f8b-8c98-ae3572dd8413" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <interfaceMoniker Id="6874f3e4-0208-4482-8f0f-47d880db2901" LastKnownName="IDictionary" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0b0a9c29-0f42-4d70-87bf-6ca881b8d526" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="b3a0a4cc-8bd0-4e38-ad2f-5f78eefbaa77" name="Lower" value="*">
+                      <elementDefinition Id="c6c7923f-14a6-4318-80d2-578742e45e06" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="ed274afd-33bd-4c58-8001-a71d0189047a" name="Upper" value="*">
+                      <elementDefinition Id="1ccb795e-f089-47b9-9c2e-70767626e91b" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="2e984a73-2cf5-4cc7-8a61-47e248bb5ffe" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="42b919c6-1344-4bd9-927e-8a7038ef970e" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3f844720-c56d-45d3-88fd-6f9e64d3e028" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="3e14ca76-6a7f-4c93-a1f4-aae37a5cae2c" />
           </association>
         </targetEnds>
         <ownedAttributesInternal>
@@ -183,5 +189,19 @@ helper.process(table[newKey]);</body>
   </packagedElements>
   <package Id="522d415e-59dd-4197-8f8f-694f9fd575f2" name="Interfaces-Models">
     <elementDefinition Id="649a7f09-e696-40fc-819a-31f3c2dabca0" />
+    <profileInstances>
+      <packageHasProfileInstances Id="a13bcfd5-fd88-4f1a-afad-c4c0b239547c">
+        <profileInstance Id="2fa300b4-4439-475c-8e7f-f4ffbe9483a2" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="f0475887-7700-436a-a591-e44b2cf2a0b9">
+        <profileInstance Id="d518c36d-a639-4d98-84bd-44331de6ec6a" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </logicalClassDesignerModel>

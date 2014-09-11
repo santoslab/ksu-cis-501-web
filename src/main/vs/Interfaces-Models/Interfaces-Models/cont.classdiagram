@@ -19,20 +19,6 @@ return new Object(ok);</body>
       </annotatedElements>
     </comment>
   </ownedCommentsInternal>
-  <profileInstances>
-    <packageHasProfileInstances Id="d3e8ac43-cd6e-49fe-94cc-9d6e66ed59a7">
-      <profileInstance Id="c931ccb4-4924-4ece-83a8-2fef74d2010d" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="1f3c1d7a-944a-41ae-bf41-9ca5494efee0">
-      <profileInstance Id="f664b0d8-7dbd-4258-9eb6-7690ed36d91b" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <logicalClassDesignerModelHasTypes>
       <Interface Id="22fc7a8f-58e8-45a8-af85-7cad57a74f30" name="UserInterface" isAbstract="false" isLeaf="false">
@@ -201,10 +187,6 @@ return new Object(ok);</body>
             <interfaceMoniker Id="ba8a3c64-a270-4051-b5e4-e01e1c47020e" LastKnownName="ControllerInterface" />
             <elementDefinition Id="ef4479eb-d5c1-4d92-933b-516cc1d8ea5c" />
           </interfaceRealization>
-          <dependency Id="fc315d48-6201-4c84-ae5c-310a80200e33">
-            <interfaceMoniker Id="22fc7a8f-58e8-45a8-af85-7cad57a74f30" LastKnownName="UserInterface" />
-            <elementDefinition Id="297d5f0c-f93d-4124-8853-0eda12b9cb52" />
-          </dependency>
         </suppliersInternal>
         <targetEnds>
           <association Id="783a0425-4beb-4b94-959e-e615831dbc98" isDerived="false" sourceEndRoleName="" targetEndRoleName="engine" isLeaf="false" isAbstract="false">
@@ -222,6 +204,22 @@ return new Object(ok);</body>
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="e21fc550-a3f7-4361-bd97-97eb871a6c2d" />
+          </association>
+          <association Id="a8c01bc5-4587-4e2d-b351-9324e1d446df" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <interfaceMoniker Id="22fc7a8f-58e8-45a8-af85-7cad57a74f30" LastKnownName="UserInterface" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="86c0ce51-119c-42e3-9f8e-723cca788de5" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9f0bdea0-cea0-44de-a6d0-06781a281eb1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2600edd5-070c-40a6-9a8e-909a6f7f41dd" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="4d89a300-373c-411d-8b70-4d2a10055881" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="6a78d718-a5ff-4d13-800f-66e5faa1e6d7" />
           </association>
         </targetEnds>
         <ownedAttributesInternal>
@@ -265,12 +263,24 @@ return new Object(ok);</body>
     <logicalClassDesignerModelHasTypes>
       <class Id="81db4f73-bee7-4bcc-be0f-bbcd10801025" name="Translator" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="4c42c023-5414-4387-9e72-dbf71140c3be" />
-        <suppliersInternal>
-          <dependency Id="b82420e1-7749-417e-b2e7-aafcaa4cd7d6">
+        <targetEnds>
+          <association Id="09cdf5a5-2f6b-4f3e-af50-f89eddc392dc" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
             <interfaceMoniker Id="f2652cd5-1b4e-4e44-ae0d-f20e7b15266d" LastKnownName="Database" />
-            <elementDefinition Id="ce1acc48-2b75-43f9-b9f4-98ff1e392977" />
-          </dependency>
-        </suppliersInternal>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="dbc1a5fc-feaa-4619-96f1-079542b26fc7" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e261706a-9bc7-4233-b6bf-e75bb0503445" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8b908a83-34f3-4606-a842-24a122fcc565" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="2bc0a15b-44d5-46cf-8d7a-9994504a2aa1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="65703cbf-3783-4243-be1e-730637676a54" />
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property Id="f65e3a0f-a62e-4a29-b894-30493adc636b" name="db" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="5f4122f8-648a-4a9f-ac8f-e0664ca5b47a" />
@@ -320,5 +330,19 @@ return new Object(ok);</body>
   </packagedElements>
   <package Id="e9022ce8-b921-411f-badb-a56cdce06d7b" name="Interfaces-Models">
     <elementDefinition Id="649a7f09-e696-40fc-819a-31f3c2dabca0" />
+    <profileInstances>
+      <packageHasProfileInstances Id="d3e8ac43-cd6e-49fe-94cc-9d6e66ed59a7">
+        <profileInstance Id="c931ccb4-4924-4ece-83a8-2fef74d2010d" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="1f3c1d7a-944a-41ae-bf41-9ca5494efee0">
+        <profileInstance Id="f664b0d8-7dbd-4258-9eb6-7690ed36d91b" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </logicalClassDesignerModel>
