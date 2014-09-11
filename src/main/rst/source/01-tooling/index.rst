@@ -1511,7 +1511,8 @@ The complete notation is overwhelming. We will use these parts:
 
 We will use these forms of associations (but there are many more!):
 
-* Dependency (coupling): "A refers to B", or "A needs B to compile correctly".
+* Dependency (coupling, or **association/dependency** in Visual Studio): 
+  "A refers to B", or "A needs B to compile correctly".
   Say we write a ``class Form1``, and it depends on a ``class Clock``, which
   we also coded.
   (Perhaps, when its button is pressed, the ``Form1`` asks ``Clock`` for

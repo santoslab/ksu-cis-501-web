@@ -48,11 +48,11 @@ Schedule
      - :ref:`storage-object-diagrams` [`X4 <https://online.ksu.edu/COMS/player/content/CIS_501_ROBBY/content/Modules/Exercises/04-Storage-Object-Diagrams.zip?ext=.zip>`__]
      - 
    * - 3. T: Sep 9
-     - :ref:`class-diagrams`
+     - :ref:`class-diagrams` [`X5 <https://online.ksu.edu/COMS/player/content/CIS_501_ROBBY/content/Modules/Exercises/05-Class-Diagram.zip?ext=.zip>`__]
      -  
    * - 3. U: Sep 11
      - :ref:`interfaces`
-     - 
+     - *Guest Lecturer:* `Dr. Venkatesh-Prasad Ranganath <http://people.cis.ksu.edu/~rvprasad>`__
    * - 4. T: Sep 16
      - :ref:`interfaces`
      - **Assignment 2: due on Sep 26**, *Instructor Travel*,
