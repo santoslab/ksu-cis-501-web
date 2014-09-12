@@ -54,7 +54,7 @@ Schedule
      - :ref:`interfaces`
      - *Guest Lecturer:* `Dr. Venkatesh-Prasad Ranganath <http://people.cis.ksu.edu/~rvprasad>`__
    * - 4. T: Sep 16
-     - :ref:`interfaces`
+     - :ref:`interfaces` [`X6 <https://online.ksu.edu/COMS/player/content/CIS_501_ROBBY/content/Modules/Exercises/06-Interfaces.zip?ext=.zip>`__]
      - **Assignment 2: due on Sep 26**, *Instructor Travel*,
        *Lecturer:* `Ana Stanescu <http://anakstate.wix.com/anakstate>`__
    * - 4. U: Sep 18
