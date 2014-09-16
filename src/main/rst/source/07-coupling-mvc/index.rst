@@ -658,7 +658,7 @@ This class is "about" the concept of a playing card:
      public override string ToString() { return count + " of " + suit; }
    }
 
-In generate, a cohesive class will manage one data structure, along with a few
+In general, a cohesive class will manage one data structure, along with a few
 primitive variables related to the structure:
 
 .. code-block:: c#
