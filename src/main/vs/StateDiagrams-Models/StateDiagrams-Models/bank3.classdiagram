@@ -1,15 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="a474eea0-a391-4229-8439-d3b2c57338b2" name="bank3" linkedPackageId="dfe5b76a-9ffb-4afd-a7cc-3b689dc43eed" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="a474eea0-a391-4229-8439-d3b2c57338b2" name="bank3" linkedPackageId="dfe5b76a-9ffb-4afd-a7cc-3b689dc43eed" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <packagedElements>
     <logicalClassDesignerModelHasTypes>
       <class Id="9ccd98a1-e991-4b08-b1ad-d1981a8f3e38" name="ATMForm" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="7727c120-35da-4d70-9717-9cf992b0a3cf" />
-        <suppliersInternal>
-          <dependency Id="fcfba89d-927a-497d-9a4c-1dd514adaecc">
-            <enumerationMoniker Id="0f2598f8-54f9-4bd3-8ff1-85160d540fa8" LastKnownName="Status" />
-            <elementDefinition Id="df711c28-1b44-47c0-9513-6ce99f8fe2c2" />
-          </dependency>
-        </suppliersInternal>
         <targetEnds>
           <association Id="fc22f8ed-57af-4d4c-aaaf-7784b14eeb6f" isDerived="false" sourceEndRoleName="" targetEndRoleName="controller" isLeaf="false" isAbstract="false">
             <classMoniker Id="b1bfabb5-92fb-48de-a5db-813a490f67fd" LastKnownName="Control" />
@@ -26,6 +20,22 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="5e173de2-d93a-42cb-9755-14d74fd2af9e" />
+          </association>
+          <association Id="8f959e2d-cda1-460c-8d8e-d04372b14a0d" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <enumerationMoniker Id="0f2598f8-54f9-4bd3-8ff1-85160d540fa8" LastKnownName="Status" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="db4dd573-766d-4420-b08c-0e601640e53f" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="6586b03f-d176-4087-ad4f-c3cea7dab27a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2a4d348f-44c2-41e9-af38-c7a9faafd1c1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="73e2172c-b367-44e3-a4e1-754060ef3647" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="6883ebf7-186d-4200-95a1-8288c4c38b61" />
           </association>
         </targetEnds>
         <ownedAttributesInternal>
@@ -124,12 +134,6 @@
     <logicalClassDesignerModelHasTypes>
       <class Id="b1bfabb5-92fb-48de-a5db-813a490f67fd" name="Control" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="94b8cde4-33fb-4341-9680-68878d897dae" />
-        <suppliersInternal>
-          <dependency Id="9ee48955-bee3-46d8-a6d9-0ae3c2502818">
-            <enumerationMoniker Id="0f2598f8-54f9-4bd3-8ff1-85160d540fa8" LastKnownName="Status" />
-            <elementDefinition Id="9575f953-69cf-4e08-a0f8-892279354e65" />
-          </dependency>
-        </suppliersInternal>
         <targetEnds>
           <association Id="2b74a66f-f3db-48b1-b6fa-3f1e05905a6c" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
             <interfaceMoniker Id="de36e03c-1795-4a34-8477-135f1d9c0888" LastKnownName="BankDatabase" />
@@ -172,6 +176,22 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="d9ebc19f-c2a2-47a0-bb5f-f7dfc989e61d" />
+          </association>
+          <association Id="573b6f65-8ff0-4372-b4f7-00870857c8dd" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <enumerationMoniker Id="0f2598f8-54f9-4bd3-8ff1-85160d540fa8" LastKnownName="Status" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="94308598-0c8a-4429-96e4-a202cdbda557" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="480af57c-7802-449a-96f2-54a5e8afa139" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b95dcf71-d672-4faa-b385-6ebeae5a2013" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="514b0a18-49dc-4221-8d29-53f9fce7c752" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="1c7d222e-beb7-4ab6-a09b-af08d200d376" />
           </association>
         </targetEnds>
         <ownedAttributesInternal>
