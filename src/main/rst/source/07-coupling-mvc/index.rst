@@ -162,6 +162,8 @@ We extract the control code from the event-handler method
 and place it in its own class.
 Also, the model is not owned by any other assembly:
 
+.. image:: V2.png
+
 *This is better.*
 When you implement this architecture in Visual Studio, construct and connect the
 ``InputView``, ``Controller``, and ``Model`` objects in the ``Main`` method of
