@@ -227,7 +227,7 @@ Now we study the first version of the Model-View-Controller (MVC) architecture.
 This version works well when there is just *one controller object that handles
 all input events and does all model updates*:
 
-.. image:: V3a.png
+.. image:: V3.png
 
 The key(s) are the delegate declarations.
 (Recall that a delegate is an "interface/data-type that specifies a single
