@@ -43,20 +43,6 @@ update method with the Model's registry.</body>
       </annotatedElements>
     </comment>
   </ownedCommentsInternal>
-  <profileInstances>
-    <packageHasProfileInstances Id="e7a756bd-b6db-41d3-a178-39292a38adf7">
-      <profileInstance Id="6ce0fa04-2b0a-4cc4-ac5f-c247ae8f940b" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="ad2d9edb-c24b-48b8-bfe3-7f761f7b5200">
-      <profileInstance Id="e7bda26f-62b2-42c5-86b7-97219b1fb840" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <logicalClassDesignerModelHasTypes>
       <class Id="61f76de9-f9bf-4765-8e5e-5f164fce485d" name="Model" isAbstract="false" isLeaf="false" isActiveClass="false">
@@ -131,10 +117,10 @@ update method with the Model's registry.</body>
       <class Id="47eaa498-e4a0-4d35-a1a9-65ab12b62736" name="Controller" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="a611c24b-303b-4f5e-b1b6-c5799ef1ef1b" />
         <suppliersInternal>
-          <interfaceRealization Id="18f5090f-ba4b-4c89-94a8-c04144fb2f84">
+          <dependency Id="f5c17e12-5e6c-4d88-97e9-f20f83f9e25e">
             <interfaceMoniker Id="c6a0a84c-de40-4f54-a378-d77d49f7594d" LastKnownName="InputHandler" />
-            <elementDefinition Id="505a82ba-cdd2-4e7e-ad7b-2762d8eebb7d" />
-          </interfaceRealization>
+            <elementDefinition Id="81af0a11-d691-4771-bd4c-9fd17b8cd377" />
+          </dependency>
         </suppliersInternal>
         <targetEnds>
           <association Id="bd415c71-b2e7-46eb-b988-39a68937986e" isDerived="false" sourceEndRoleName="" targetEndRoleName="model" isLeaf="false" isAbstract="false">
@@ -179,5 +165,19 @@ update method with the Model's registry.</body>
   </packagedElements>
   <package Id="6a545d29-dfe1-4d61-b05c-ac6382227d13" name="CouplingMVC-Models">
     <elementDefinition Id="30debc33-8d00-47cf-9f3e-e8a242e73dd1" />
+    <profileInstances>
+      <packageHasProfileInstances Id="e7a756bd-b6db-41d3-a178-39292a38adf7">
+        <profileInstance Id="6ce0fa04-2b0a-4cc4-ac5f-c247ae8f940b" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="ad2d9edb-c24b-48b8-bfe3-7f761f7b5200">
+        <profileInstance Id="e7bda26f-62b2-42c5-86b7-97219b1fb840" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </logicalClassDesignerModel>

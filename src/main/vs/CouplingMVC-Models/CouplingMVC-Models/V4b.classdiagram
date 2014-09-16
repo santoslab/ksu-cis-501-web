@@ -16,20 +16,6 @@
       </annotatedElements>
     </comment>
   </ownedCommentsInternal>
-  <profileInstances>
-    <packageHasProfileInstances Id="73cee2cf-5f93-48fe-92ac-22f48b0b8baa">
-      <profileInstance Id="9bbc06a1-e21e-45ae-8616-3f0a275ebeac" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="2993ee5e-a568-4838-bb8b-22915d4da67c">
-      <profileInstance Id="c2e52095-fd35-4623-bb2c-39f82b2bc415" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <logicalClassDesignerModelHasTypes>
       <class Id="cc3e2c0c-8080-4992-adf6-10515153854c" name="ObservedModel" isAbstract="false" isLeaf="false" isActiveClass="false">
@@ -125,5 +111,19 @@
   </packagedElements>
   <package Id="33c71da5-c14e-49cd-906d-86145277e102" name="CouplingMVC-Models">
     <elementDefinition Id="30debc33-8d00-47cf-9f3e-e8a242e73dd1" />
+    <profileInstances>
+      <packageHasProfileInstances Id="73cee2cf-5f93-48fe-92ac-22f48b0b8baa">
+        <profileInstance Id="9bbc06a1-e21e-45ae-8616-3f0a275ebeac" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="2993ee5e-a568-4838-bb8b-22915d4da67c">
+        <profileInstance Id="c2e52095-fd35-4623-bb2c-39f82b2bc415" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </logicalClassDesignerModel>

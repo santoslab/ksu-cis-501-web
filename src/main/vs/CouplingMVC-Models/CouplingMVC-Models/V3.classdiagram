@@ -50,10 +50,10 @@ The system's Main procedure constructs the model, controller, and views, and the
       <class Id="50e0c3bf-9a43-4108-a4c0-e07c20725d08" name="OutputViewForm" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="ad01b754-d543-42b3-afcb-e6194d1a7f23" />
         <suppliersInternal>
-          <interfaceRealization Id="da8a90a6-7531-4542-81a7-01c395967859">
+          <dependency Id="82b33a11-824d-4ff2-a2df-c51a828fe1a7">
             <interfaceMoniker Id="dc80c64a-a8de-4fb0-b0b9-9426907ebc00" LastKnownName="Observer" />
-            <elementDefinition Id="6bdf245c-8fa6-4c29-8036-bf1a6a7869d6" />
-          </interfaceRealization>
+            <elementDefinition Id="96f85242-ca74-4bf5-8992-c98a2cdf2226" />
+          </dependency>
         </suppliersInternal>
         <targetEnds>
           <association Id="bbd15053-fc7f-4a5a-a986-6afd1d71e52b" isDerived="false" sourceEndRoleName="" targetEndRoleName="model" isLeaf="false" isAbstract="false">
@@ -155,13 +155,13 @@ The system's Main procedure constructs the model, controller, and views, and the
       <class Id="a2da0dfa-2561-4188-a21d-976aef26a5a2" name="Controller" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="84ae4640-a012-4768-91fe-62d77cfceada" />
         <suppliersInternal>
-          <interfaceRealization Id="915a52b4-3440-4328-badc-1cf5f51d54a0">
-            <interfaceMoniker Id="655f75ce-9af3-4aa5-a34d-40c3daa52fcc" LastKnownName="InputHandler" />
-            <elementDefinition Id="0da6272b-e1a4-4240-a6b6-a2879144828e" />
-          </interfaceRealization>
           <dependency Id="dbce7fa6-b84b-46ee-9454-5b10fbc1b7ad">
             <interfaceMoniker Id="dc80c64a-a8de-4fb0-b0b9-9426907ebc00" LastKnownName="Observer" />
             <elementDefinition Id="c3d28a29-b693-47dc-995e-0ec99346b04b" />
+          </dependency>
+          <dependency Id="95a29466-8924-4364-873c-af513139be64">
+            <interfaceMoniker Id="655f75ce-9af3-4aa5-a34d-40c3daa52fcc" LastKnownName="InputHandler" />
+            <elementDefinition Id="23b91160-430b-48c2-87c4-8638826ca9a6" />
           </dependency>
         </suppliersInternal>
         <targetEnds>

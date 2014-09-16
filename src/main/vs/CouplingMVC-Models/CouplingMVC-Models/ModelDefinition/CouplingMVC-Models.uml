@@ -644,13 +644,13 @@ update method with the Model's registry.</body>
         isLeaf="false"
         isActiveClass="false">
         <suppliersInternal>
-          <interfaceRealization
-            Id="6bdf245c-8fa6-4c29-8036-bf1a6a7869d6">
+          <dependency
+            Id="96f85242-ca74-4bf5-8992-c98a2cdf2226">
             <interfaceMoniker
               Id="9c154869-a009-4e78-a5de-0a4e058100ae"
               LastKnownName="Observer"
               LastKnownLocation="CouplingMVC-Models.uml" />
-          </interfaceRealization>
+          </dependency>
         </suppliersInternal>
         <targetEnds>
           <association
@@ -840,18 +840,18 @@ update method with the Model's registry.</body>
         isLeaf="false"
         isActiveClass="false">
         <suppliersInternal>
-          <interfaceRealization
-            Id="0da6272b-e1a4-4240-a6b6-a2879144828e">
-            <interfaceMoniker
-              Id="e8d39e3a-6b48-4058-b2f2-4c8140407c12"
-              LastKnownName="InputHandler"
-              LastKnownLocation="CouplingMVC-Models.uml" />
-          </interfaceRealization>
           <dependency
             Id="c3d28a29-b693-47dc-995e-0ec99346b04b">
             <interfaceMoniker
               Id="9c154869-a009-4e78-a5de-0a4e058100ae"
               LastKnownName="Observer"
+              LastKnownLocation="CouplingMVC-Models.uml" />
+          </dependency>
+          <dependency
+            Id="23b91160-430b-48c2-87c4-8638826ca9a6">
+            <interfaceMoniker
+              Id="e8d39e3a-6b48-4058-b2f2-4c8140407c12"
+              LastKnownName="InputHandler"
               LastKnownLocation="CouplingMVC-Models.uml" />
           </dependency>
         </suppliersInternal>
@@ -1068,13 +1068,13 @@ update method with the Model's registry.</body>
         isLeaf="false"
         isActiveClass="false">
         <suppliersInternal>
-          <interfaceRealization
-            Id="505a82ba-cdd2-4e7e-ad7b-2762d8eebb7d">
+          <dependency
+            Id="81af0a11-d691-4771-bd4c-9fd17b8cd377">
             <interfaceMoniker
               Id="671333c1-baae-4b91-b5dd-d4888902291e"
               LastKnownName="InputHandler"
               LastKnownLocation="CouplingMVC-Models.uml" />
-          </interfaceRealization>
+          </dependency>
         </suppliersInternal>
         <targetEnds>
           <association
