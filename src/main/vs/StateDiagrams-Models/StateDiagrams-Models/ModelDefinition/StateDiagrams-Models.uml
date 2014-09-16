@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="6895c48d-2948-4a5e-a536-a2b5f89af2bb"
   name="StateDiagrams-Models" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -25,15 +25,6 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
-        <suppliersInternal>
-          <dependency
-            Id="df711c28-1b44-47c0-9513-6ce99f8fe2c2">
-            <enumerationMoniker
-              Id="426a1e5e-744e-4144-9e67-8aa73cc87297"
-              LastKnownName="Status"
-              LastKnownLocation="StateDiagrams-Models.uml" />
-          </dependency>
-        </suppliersInternal>
         <targetEnds>
           <association
             Id="5e173de2-d93a-42cb-9755-14d74fd2af9e"
@@ -63,6 +54,43 @@
                 <memberEnd
                   Id="6ba6a745-42c7-43a6-a7af-62705e142248"
                   name="controller"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="6883ebf7-186d-4200-95a1-8288c4c38b61"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <enumerationMoniker
+              Id="426a1e5e-744e-4144-9e67-8aa73cc87297"
+              LastKnownName="Status"
+              LastKnownLocation="StateDiagrams-Models.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6586b03f-d176-4087-ad4f-c3cea7dab27a"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="73e2172c-b367-44e3-a4e1-754060ef3647"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -250,15 +278,6 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
-        <suppliersInternal>
-          <dependency
-            Id="9575f953-69cf-4e08-a0f8-892279354e65">
-            <enumerationMoniker
-              Id="426a1e5e-744e-4144-9e67-8aa73cc87297"
-              LastKnownName="Status"
-              LastKnownLocation="StateDiagrams-Models.uml" />
-          </dependency>
-        </suppliersInternal>
         <targetEnds>
           <association
             Id="ebcd3808-f625-48dd-95b9-e953e386190d"
@@ -337,6 +356,43 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="51cbca46-840d-4bac-8008-5c2d6cbb9013"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="1c7d222e-beb7-4ab6-a09b-af08d200d376"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <enumerationMoniker
+              Id="426a1e5e-744e-4144-9e67-8aa73cc87297"
+              LastKnownName="Status"
+              LastKnownLocation="StateDiagrams-Models.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="480af57c-7802-449a-96f2-54a5e8afa139"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="514b0a18-49dc-4221-8d29-53f9fce7c752"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
