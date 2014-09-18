@@ -11,7 +11,7 @@ This course is about designing and implementing component-based software systems
 using blueprints and architectural design patterns.
 
 ======================  =============================================
-**Lectures**            T U 3:45-5pm, Nichols Hall, N 021     
+**Lectures**            T U 2:30-3:45pm, Nichols Hall, N 021     
 **Instructor**          `Robby <http://people.cis.ksu.edu/~robby>`__,
                         Office:       324B Nichols Hall,
                         Office Hours: T U 3:45-5pm (or by appointment),
