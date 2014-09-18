@@ -59,13 +59,13 @@ Schedule
        *Instructor Travel*,
        *Lecturer:* `Ana Stanescu <http://anakstate.wix.com/anakstate>`__
    * - 4. U: Sep 18
-     - :ref:`coupling-mvc`
+     - :ref:`coupling-mvc` [`X7 <https://online.ksu.edu/COMS/player/content/CIS_501_ROBBY/content/Modules/Exercises/07-Coupling-MVC.zip?ext=.zip>`__]
      - 
    * - 5. T: Sep 23
      - :ref:`coupling-mvc`
      - 
    * - 5. U: Sep 25
-     - TBA
+     - *No Lecture*
      - **Assignment 3: due on Oct 9**
    * - 6. T: Sep 30
      - *No Lecture*
