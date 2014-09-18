@@ -14,7 +14,7 @@ using blueprints and architectural design patterns.
 **Lectures**            T U 3:45-5pm, Nichols Hall, N 021     
 **Instructor**          `Robby <http://people.cis.ksu.edu/~robby>`__,
                         Office:       324B Nichols Hall,
-                        Office Hours: T U 1:30-2:30pm (or by appointment),
+                        Office Hours: T U 3:45-5pm (or by appointment),
                         E-mail:       ``robby at ksu.edu``
 **Teaching Assistant**  `Ana Stanescu <http://anakstate.wix.com/anakstate>`__,
                         Office:       227H Nichols Hall,
