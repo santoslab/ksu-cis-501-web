@@ -155,10 +155,6 @@ The system's Main procedure constructs the model, controller, and views, and the
       <class Id="a2da0dfa-2561-4188-a21d-976aef26a5a2" name="Controller" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="84ae4640-a012-4768-91fe-62d77cfceada" />
         <suppliersInternal>
-          <dependency Id="dbce7fa6-b84b-46ee-9454-5b10fbc1b7ad">
-            <interfaceMoniker Id="dc80c64a-a8de-4fb0-b0b9-9426907ebc00" LastKnownName="Observer" />
-            <elementDefinition Id="c3d28a29-b693-47dc-995e-0ec99346b04b" />
-          </dependency>
           <dependency Id="95a29466-8924-4364-873c-af513139be64">
             <interfaceMoniker Id="655f75ce-9af3-4aa5-a34d-40c3daa52fcc" LastKnownName="InputHandler" />
             <elementDefinition Id="23b91160-430b-48c2-87c4-8638826ca9a6" />
@@ -180,6 +176,32 @@ The system's Main procedure constructs the model, controller, and views, and the
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="30b467e4-4504-4210-9ec1-52b34ac938bd" />
+          </association>
+          <association Id="63755207-355a-41cd-860f-8989dec80ddc" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <interfaceMoniker Id="dc80c64a-a8de-4fb0-b0b9-9426907ebc00" LastKnownName="Observer" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d4a62b05-fd3a-42ac-91e8-162eaeb13531" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="6054bcee-d5c9-4465-8a71-17f2cecc0536" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f2749f72-da58-4408-b9d6-7abf91bd96ac" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="cf68e79a-b817-4dec-97f6-fff863d441c7" name="Lower" value="*">
+                      <elementDefinition Id="96f6cd1e-a0fb-4bc3-a2d5-5803ba5e94eb" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="d441fd83-9515-4c13-9559-d24bae2889b4" name="Upper" value="*">
+                      <elementDefinition Id="b6dcd4f2-e13d-40c7-bc17-1c7615f661ae" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="020c83c7-0925-48e4-98f3-9988535998fb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d6e8f1c8-7dbe-4f66-8a00-ebfcabf445da" />
           </association>
         </targetEnds>
         <ownedAttributesInternal>

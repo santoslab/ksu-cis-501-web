@@ -47,12 +47,34 @@ update method with the Model's registry.</body>
     <logicalClassDesignerModelHasTypes>
       <class Id="61f76de9-f9bf-4765-8e5e-5f164fce485d" name="Model" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="f6b1d4d1-4af2-470a-9b1c-50c42101fd16" />
-        <suppliersInternal>
-          <dependency Id="398b8732-7d1f-4754-bc66-9e83750a5b69">
+        <targetEnds>
+          <association Id="0f299be6-5ce1-4197-9c53-015beb8ea840" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
             <interfaceMoniker Id="384ebc48-a722-4685-bd58-3200ea6283f0" LastKnownName="Observer" />
-            <elementDefinition Id="e63d32c0-7d3a-4b81-8bc0-a768a0f2b7c2" />
-          </dependency>
-        </suppliersInternal>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="50228e39-577f-419f-8398-b6b6aaf15a1e" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="b20aa418-90f7-4e25-a189-829532a89710" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="45b6a6c7-9f57-42fa-8a01-1481a96059f1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="a7f3d24e-30e5-430b-91ed-5cbe70772bbd" name="Lower" value="*">
+                      <elementDefinition Id="aa6981c8-86df-46eb-9004-68184297617b" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="128648d8-8e01-44f1-8e6e-3906f39f1774" name="Upper" value="*">
+                      <elementDefinition Id="657d34bf-114e-4c24-855d-b3153fbfece4" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="aa5fa7e2-6636-40e1-a822-0a2f763f311a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="ccf95603-287b-4a0b-a92f-5b9f2cb3ee21" />
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property Id="5bb844af-4c97-4948-a12d-f34c2fdd3174" name="registry" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="d9347129-3041-4dad-a70b-cfef5659bfa1" />

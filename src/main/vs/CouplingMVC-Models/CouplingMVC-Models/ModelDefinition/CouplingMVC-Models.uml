@@ -841,13 +841,6 @@ update method with the Model's registry.</body>
         isActiveClass="false">
         <suppliersInternal>
           <dependency
-            Id="c3d28a29-b693-47dc-995e-0ec99346b04b">
-            <interfaceMoniker
-              Id="9c154869-a009-4e78-a5de-0a4e058100ae"
-              LastKnownName="Observer"
-              LastKnownLocation="CouplingMVC-Models.uml" />
-          </dependency>
-          <dependency
             Id="23b91160-430b-48c2-87c4-8638826ca9a6">
             <interfaceMoniker
               Id="e8d39e3a-6b48-4058-b2f2-4c8140407c12"
@@ -891,6 +884,56 @@ update method with the Model's registry.</body>
                   isDerivedUnion="false"
                   aggregation="None"
                   isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="d6e8f1c8-7dbe-4f66-8a00-ebfcabf445da"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="9c154869-a009-4e78-a5de-0a4e058100ae"
+              LastKnownName="Observer"
+              LastKnownLocation="CouplingMVC-Models.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6054bcee-d5c9-4465-8a71-17f2cecc0536"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="020c83c7-0925-48e4-98f3-9988535998fb"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="96f6cd1e-a0fb-4bc3-a2d5-5803ba5e94eb"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="b6dcd4f2-e13d-40c7-bc17-1c7615f661ae"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
@@ -940,15 +983,58 @@ update method with the Model's registry.</body>
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
-        <suppliersInternal>
-          <dependency
-            Id="e63d32c0-7d3a-4b81-8bc0-a768a0f2b7c2">
+        <targetEnds>
+          <association
+            Id="ccf95603-287b-4a0b-a92f-5b9f2cb3ee21"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
             <interfaceMoniker
               Id="21f51d57-910f-4f8c-8426-2afab851ba2b"
               LastKnownName="Observer"
               LastKnownLocation="CouplingMVC-Models.uml" />
-          </dependency>
-        </suppliersInternal>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b20aa418-90f7-4e25-a189-829532a89710"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="aa5fa7e2-6636-40e1-a822-0a2f763f311a"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="aa6981c8-86df-46eb-9004-68184297617b"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="657d34bf-114e-4c24-855d-b3153fbfece4"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="d9347129-3041-4dad-a70b-cfef5659bfa1"
@@ -1153,15 +1239,59 @@ update method with the Model's registry.</body>
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
-        <suppliersInternal>
-          <dependency
-            Id="0b956108-83af-43de-911a-f5bbc0c13ebf">
+        <targetEnds>
+          <association
+            Id="25161820-ff85-4681-97f2-ebd52493f8df"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName="registry"
+            isLeaf="false"
+            isAbstract="false">
             <interfaceMoniker
               Id="caa528fc-7be9-4c1b-a66e-0f8e73383af4"
               LastKnownName="Observer"
               LastKnownLocation="CouplingMVC-Models.uml" />
-          </dependency>
-        </suppliersInternal>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5ddbbd45-ace2-4e05-a289-36b01c6d9ed7"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="00f75024-59d6-43f5-94eb-bc77686342c7"
+                  name="registry"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="19e37b4b-5fac-45fd-874c-5c69c3c09806"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="eedf773a-4416-4eca-bc05-27f189d56ab2"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedOperationsInternal>
           <operation
             Id="1ef4d54d-7c01-4cf6-b4e0-22cc13e9fd57"

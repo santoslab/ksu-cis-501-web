@@ -20,12 +20,34 @@
     <logicalClassDesignerModelHasTypes>
       <class Id="cc3e2c0c-8080-4992-adf6-10515153854c" name="ObservedModel" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="d7dee6d7-e8b6-4dd1-9e8d-95ce886d49ec" />
-        <suppliersInternal>
-          <dependency Id="6d998ffb-cbe7-4336-970b-4af807ea998c">
+        <targetEnds>
+          <association Id="7ecff55c-91c7-46ea-b203-63beee47ad49" isDerived="false" sourceEndRoleName="" targetEndRoleName="registry" isLeaf="false" isAbstract="false">
             <interfaceMoniker Id="e2026a58-6e71-4c7f-8a6f-dd1e975439dd" LastKnownName="Observer" />
-            <elementDefinition Id="0b956108-83af-43de-911a-f5bbc0c13ebf" />
-          </dependency>
-        </suppliersInternal>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="568b38e6-8c48-4c08-9d49-b59279dabee5" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="5ddbbd45-ace2-4e05-a289-36b01c6d9ed7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1df832dd-b591-476c-bc9b-749c499b96a8" name="registry" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="d47a355d-fe2f-4130-9e36-5c59658d6910" name="Lower" value="*">
+                      <elementDefinition Id="19e37b4b-5fac-45fd-874c-5c69c3c09806" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="907b4d5f-b211-4c2a-b2ff-cd00a5bd7c48" name="Upper" value="*">
+                      <elementDefinition Id="eedf773a-4416-4eca-bc05-27f189d56ab2" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="00f75024-59d6-43f5-94eb-bc77686342c7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="25161820-ff85-4681-97f2-ebd52493f8df" />
+          </association>
+        </targetEnds>
         <ownedOperationsInternal>
           <operation Id="df8005a1-30cd-4ee6-8db6-2094ce77061d" name="register" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="1ef4d54d-7c01-4cf6-b4e0-22cc13e9fd57" />
