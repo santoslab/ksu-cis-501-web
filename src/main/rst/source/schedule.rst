@@ -62,7 +62,7 @@ Schedule
      - :ref:`coupling-mvc` [`X7 <https://online.ksu.edu/COMS/player/content/CIS_501_ROBBY/content/Modules/Exercises/07-Coupling-MVC.zip?ext=.zip>`__]
      - 
    * - 5. T: Sep 23
-     - :ref:`coupling-mvc`
+     - :ref:`coupling-mvc` [`X7b <https://online.ksu.edu/COMS/player/content/CIS_501_ROBBY/content/Modules/Exercises/07-Coupling-MVC-B.zip?ext=.zip>`__]
      - 
    * - 5. U: Sep 25
      - *No Lecture*
