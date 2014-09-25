@@ -66,7 +66,7 @@ Schedule
      - 
    * - 5. U: Sep 25
      - *No Lecture*
-     - **Assignment 3: due on Oct 9**
+     - **Assignment 3: due on Oct 9** [`A3 <https://online.ksu.edu/COMS/player/content/CIS_501_ROBBY/content/Modules/Assignments/A3-Todo.html?ext=.html>`__]
    * - 6. T: Sep 30
      - *No Lecture*
      - 1-on-1 meeting, *Instructor Travel*
@@ -74,12 +74,12 @@ Schedule
      - *No Lecture*
      - 1-on-1 meeting, *Instructor Travel*
    * - 7. T: Oct 7
-     - :ref:`use-cases`
+     - :ref:`use-cases` [`X8 <https://online.ksu.edu/COMS/player/content/CIS_501_ROBBY/content/Modules/Exercises/08-Use-Cases.zip?ext=.zip>`__]
      - *Instructor Travel*,
        *Lecturer:* `Ana Stanescu <http://anakstate.wix.com/anakstate>`__
    * - 7. U: Oct 9
-     - :ref:`state-diagrams`
-     - **Assignment 4: due on Oct 17**, *Instructor Travel*,
+     - :ref:`state-diagrams` [`X9 <https://online.ksu.edu/COMS/player/content/CIS_501_ROBBY/content/Modules/Exercises/09-State-Diagrams.zip?ext=.zip>`__]
+     - **Assignment 4: due on Oct 17** [`A4 <https://online.ksu.edu/COMS/player/content/CIS_501_ROBBY/content/Modules/Assignments/Othello.zip?ext=.zip>`__], *Instructor Travel*,
        *Guest Lecturer:* `Dr. Venkatesh-Prasad Ranganath <http://people.cis.ksu.edu/~rvprasad>`__
    * - 8. T: Oct 14
      - :ref:`multi-threaded`
