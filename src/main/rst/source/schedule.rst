@@ -82,7 +82,7 @@ Schedule
      - **Assignment 4: due on Oct 17** [`A4 <https://online.ksu.edu/COMS/player/content/CIS_501_ROBBY/content/Modules/Assignments/Othello.zip?ext=.zip>`__], *Instructor Travel*,
        *Guest Lecturer:* `Dr. Venkatesh-Prasad Ranganath <http://people.cis.ksu.edu/~rvprasad>`__
    * - 8. T: Oct 14
-     - :ref:`multi-threaded`
+     - :ref:`multi-threaded` [`X10 <https://online.ksu.edu/COMS/player/content/CIS_501_ROBBY/content/Modules/Exercises/10-Multi-Threaded.zip?ext=.zip>`__]
      - 
    * - 8. U: Oct 16
      - :ref:`multi-threaded`
