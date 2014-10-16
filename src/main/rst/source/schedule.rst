@@ -85,7 +85,7 @@ Schedule
      - :ref:`multi-threaded` [`X10 <https://online.ksu.edu/COMS/player/content/CIS_501_ROBBY/content/Modules/Exercises/10-Multi-Threaded.zip?ext=.zip>`__]
      - 
    * - 8. U: Oct 16
-     - :ref:`multi-threaded`
+     - :ref:`multi-threaded` [`X10b <https://online.ksu.edu/COMS/player/content/CIS_501_ROBBY/content/Modules/Exercises/10-Multi-Threaded-B.zip?ext=.zip>`__]
      - **Assignment 5: due on: Nov 4**
    * - 9. T: Oct 21
      - *No Lecture*
