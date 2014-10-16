@@ -16,12 +16,12 @@ namespace Deadlock
         {
             Fork fork1 = new Fork();
             Fork fork2 = new Fork();
-            new Thread(() => Run("Red", fork1, fork2)).Start();
-            new Thread(() => Run("Blue", fork2, fork1)).Start();
+            new Thread(() => Philosopher("Red", fork1, fork2)).Start();
+            new Thread(() => Philosopher("Blue", fork2, fork1)).Start();
             Console.ReadLine();
         }
 
-        static void Run(String id, Fork left, Fork right)
+        static void Philosopher(String id, Fork left, Fork right)
         {
             Thread.Sleep(new Random().Next(0, 11));
             lock (left)
