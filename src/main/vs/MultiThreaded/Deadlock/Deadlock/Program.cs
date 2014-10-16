@@ -24,13 +24,13 @@ namespace Deadlock
         static void Run(String id, Fork left, Fork right)
         {
             Thread.Sleep(new Random().Next(0, 11));
-            Console.WriteLine(id + " takes left fork");
             lock (left)
             {
+                Console.WriteLine(id + " takes left fork");
                 Thread.Sleep(new Random().Next(0, 11));
-                Console.WriteLine(id + " takes right fork");
                 lock (right)
                 {
+                    Console.WriteLine(id + " takes right fork");
                     Thread.Sleep(new Random().Next(0, 11));
                     Console.WriteLine(id + " thinks/eats");
                 }
