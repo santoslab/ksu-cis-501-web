@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="4be8c189-2bee-4c51-8bf6-f7089036072d" name="start4" linkedPackageId="27bc76b6-622d-4e2c-a2d2-f8dd650ece19" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="92d9981f-3c90-4b82-8e44-6487aa1ec950">
+      <elementDefinition Id="ca991c3d-248a-4067-bc12-7f6f06394725" />
+      <body>Helper h = mgr.requestHelp();
+h.doWork();
+h.finished();</body>
+      <annotatedElements>
+        <classMoniker Id="3907f095-77cf-4a39-9c68-4cab541bdf8a" LastKnownName="Client" />
+      </annotatedElements>
+    </comment>
+    <comment Id="562a9630-00d6-47dc-a4d3-2e21ec91c2f8">
+      <elementDefinition Id="1357620d-67b9-4c84-bfab-b79de8db6b8f" />
+      <body>done(this);</body>
+      <annotatedElements>
+        <classMoniker Id="a0535308-8bf1-4b19-9b4f-e50a6e0e3400" LastKnownName="Helper" />
+      </annotatedElements>
+    </comment>
+    <comment Id="ab00e7c6-20ca-4bf0-b630-108c43d2ea96">
+      <elementDefinition Id="daa122f4-4e14-4dba-9d68-b794852e240f" />
+      <body>active.Remove(h);
+h.Finalize();</body>
+      <annotatedElements>
+        <classMoniker Id="5fc34483-c478-4a68-a424-7e33126bef5b" LastKnownName="Manager" />
+      </annotatedElements>
+    </comment>
+    <comment Id="a1a79fcc-891e-4b17-bdf5-ffd51a40dfe4">
+      <elementDefinition Id="68be6e1f-37d1-42da-a74d-e99cfe618f39" />
+      <body>Helper h = new Helper(this);
+active.Add(h); return h;</body>
+      <annotatedElements>
+        <classMoniker Id="5fc34483-c478-4a68-a424-7e33126bef5b" LastKnownName="Manager" />
+      </annotatedElements>
+    </comment>
+    <comment Id="5a2443dd-323e-4ce5-aaa4-c79a703c0ec1">
+      <elementDefinition Id="5431ca0e-d9cb-4464-b51c-5a20a2f8e0a0" />
+      <body>delegate</body>
+      <annotatedElements>
+        <interfaceMoniker Id="adb24382-a09a-48e1-ad1b-200dbbf872fb" LastKnownName="RemoveMethod" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <referencedType Id="4629baeb-833d-4d5a-934e-206d05dc7c40" name="List&lt;Helper&gt;" isAbstract="false" isLeaf="false" cachedFullName="List&lt;Helper&gt;">
+        <elementDefinition Id="d386387a-c597-48f6-bff6-40b674d1c301" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="5b655143-2f38-42b5-bcd2-e3bc2b451884" name="Helper" isAbstract="false" isLeaf="false" cachedFullName="DesignPatterns-Prelude::Helper">
+        <elementDefinition Id="48851c21-f80b-42db-acd1-c8202d24e72e" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="3907f095-77cf-4a39-9c68-4cab541bdf8a" name="Client" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="1152ffd3-f647-4b63-b430-3017776575b7" />
+        <suppliersInternal>
+          <dependency Id="8c39091c-be29-45b0-876f-eaa032c8dfd9">
+            <classMoniker Id="a0535308-8bf1-4b19-9b4f-e50a6e0e3400" LastKnownName="Helper" />
+            <elementDefinition Id="776d1015-e1aa-4fe5-9398-bddbcfbf3a9f" />
+          </dependency>
+        </suppliersInternal>
+        <targetEnds>
+          <association Id="37fa9de5-daeb-457b-b961-94adfecb86e8" isDerived="false" sourceEndRoleName="" targetEndRoleName="mgr" isLeaf="false" isAbstract="false">
+            <classMoniker Id="5fc34483-c478-4a68-a424-7e33126bef5b" LastKnownName="Manager" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3cfc0a13-4e52-424b-a4f3-b9bd65b5fe3f" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="405a89ae-efd1-42b9-9e98-e69dd5cf74c5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b359f6ef-e4e6-406d-b68c-c84dbf3b0db6" name="mgr" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ef73bfbb-b0a6-4977-a574-dfd524da5e6e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="5858e47c-e3dd-442a-b888-caaebcd5130d" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="6a2fe817-02a8-47e8-8fec-c18add4c3e37" name="work" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f4de2816-5fc5-4c20-95ff-bef1a03f4629" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="5fc34483-c478-4a68-a424-7e33126bef5b" name="Manager" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="c216822c-fd92-40a4-85b6-020574f8321c" />
+        <suppliersInternal>
+          <dependency Id="04d08af5-5970-46d2-b54e-9058599d7064">
+            <interfaceMoniker Id="adb24382-a09a-48e1-ad1b-200dbbf872fb" LastKnownName="RemoveMethod" />
+            <elementDefinition Id="b6cb772f-8e9c-41df-95fc-da3f79d305cf" />
+          </dependency>
+        </suppliersInternal>
+        <targetEnds>
+          <association Id="0d5dd706-8e96-49af-b57d-19d317de3a58" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <classMoniker Id="a0535308-8bf1-4b19-9b4f-e50a6e0e3400" LastKnownName="Helper" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cab26f9a-b171-4d5e-a084-4f5c7d63de7d" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="4f66b169-22a4-459d-8c90-91dde0874292" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e4e4da8b-0034-4c15-9049-199c0c3d7e65" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <lowerValueInternal>
+                    <literalString Id="a3b69b17-a5f5-4bb4-b031-4fb0f6ea745e" name="Lower" value="*">
+                      <elementDefinition Id="5e6ed3ae-6a29-494b-88b0-e2b813cb3d54" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="b722d59e-70dc-413f-974f-20377b9954cf" name="Upper" value="*">
+                      <elementDefinition Id="128e282c-a78d-4365-ba02-75bff0241919" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="8a5e0b7c-d0ae-4adc-9da6-54392e9fab6a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="cfd1eaa0-0d3f-46f7-96e3-30975a7510f8" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="0a78bfb1-d4d0-461b-b4c8-95920ab3987d" name="active" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="823590e4-5b48-40f7-bbec-2e4f70d7ac50" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="4629baeb-833d-4d5a-934e-206d05dc7c40" LastKnownName="List&lt;Helper&gt;" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="8d90a3fa-4a99-440f-9156-74b6537e1cf9" name="requestHelp" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a057329a-d089-4513-95fa-811404705220" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="1809a352-f920-4628-bd68-36bd9cefb064" direction="Return" isUnique="false">
+                  <elementDefinition Id="f807d187-66d1-4197-84a5-1382b97e75a1" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="5b655143-2f38-42b5-bcd2-e3bc2b451884" LastKnownName="Helper" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="896cd32c-4e97-4242-9e2a-2723cf6ac7c4" name="remove" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c0b3d9e3-0026-43c9-a7d6-3bad75b76840" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="df9995e2-7e4f-47fa-b7ba-d28da61b6f54" name="h" direction="In" isUnique="false">
+                  <elementDefinition Id="f2393b70-1b52-43c1-b83e-587eee2907e2" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="5b655143-2f38-42b5-bcd2-e3bc2b451884" LastKnownName="Helper" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="a0535308-8bf1-4b19-9b4f-e50a6e0e3400" name="Helper" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="efdf5266-4475-416f-8a0b-6a0d677935fb" />
+        <targetEnds>
+          <association Id="793196d8-2b03-473c-9a12-3f302fefe5c6" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <interfaceMoniker Id="adb24382-a09a-48e1-ad1b-200dbbf872fb" LastKnownName="RemoveMethod" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d3556c4c-0f80-4df5-bf5f-25c7877e889e" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e3a7db4a-ce99-4a13-9ba1-99ea7a53094a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8b5741be-05fd-4886-913d-09db2ec0c385" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="09723f6a-632e-4249-8856-0b12e07a3122" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="8d3f2c61-d1fa-4c6a-92c2-4209503c7806" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="11021753-96be-4a8f-9965-2e8aac8bf923" name="done" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="2fb363a2-b1a3-4623-a585-8fea57a72658" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="004d85a7-40d0-420b-b16e-e3c91df8584d" LastKnownName="RemoveMethod" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="d786697c-93a2-4807-a2fe-71e85de3d8a0" name="Helper" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="43cb736d-4683-4e40-bbe1-0165599394a2" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="c038cd38-6946-4aa7-aee7-fd554d3c937e" name="done" direction="In" isUnique="false">
+                  <elementDefinition Id="d64ae8eb-4835-4f2f-9945-f0f0e0b9af3c" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="004d85a7-40d0-420b-b16e-e3c91df8584d" LastKnownName="RemoveMethod" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="36551c58-0174-4f1c-8536-55eff7c1cd57" name="doWork" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e351ed86-2c18-454b-9956-c139ae385fdf" />
+          </operation>
+          <operation Id="62e77f7e-64f0-48dc-a26e-d99fcc38ad3b" name="finished" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f20263b7-08d1-4ec2-8ae1-95d1c07ca0c9" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="adb24382-a09a-48e1-ad1b-200dbbf872fb" name="RemoveMethod" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="62c58a10-c78d-4435-87d3-d39c387e0c09" />
+        <ownedOperations>
+          <operation Id="078ea546-16e3-4de4-805a-4fe8d20384a4" name="remove" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="70723b97-44b6-460a-8f6a-33372d14122e" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="c77b6d1a-9b56-4e63-aa43-56c081556973" name="h" direction="In" isUnique="false">
+                  <elementDefinition Id="131f47ab-530b-49a6-9a99-46c7781f4439" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="5b655143-2f38-42b5-bcd2-e3bc2b451884" LastKnownName="Helper" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="004d85a7-40d0-420b-b16e-e3c91df8584d" name="RemoveMethod" isAbstract="false" isLeaf="false" cachedFullName="DesignPatterns-Prelude::RemoveMethod">
+        <elementDefinition Id="62c58a10-c78d-4435-87d3-d39c387e0c09" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="27bc76b6-622d-4e2c-a2d2-f8dd650ece19" name="DesignPatterns-Prelude">
+    <elementDefinition Id="7bd4b2ec-d5fe-4456-9cca-c2ec9fba4f01" />
+    <profileInstances>
+      <packageHasProfileInstances Id="564ed8e4-2108-4475-9ec2-50e59e00d283">
+        <profileInstance Id="3e22624f-8385-4fbc-9beb-6b8a71af5431" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="de16c573-0cd6-4b7c-abf5-c6989bac78f1">
+        <profileInstance Id="00c264d6-0844-40b5-b33c-5f6571156be4" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>
