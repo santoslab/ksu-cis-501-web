@@ -25,6 +25,12 @@ Course Notes
    08-use-cases/index.rst
    09-state-diagrams/index.rst
    10-multi-threaded/index.rst
+   11-design-patterns-prelude/index.rst
+   12-design-patterns-factories-iterators/index.rst
+   13-design-patterns-proxies/index.rst
+   14-design-patterns-wrappers/index.rst
+   15-design-patterns-layered-dt/index.rst
+   16-design-patterns-postlude/index.rst
       
 ---- 
 
