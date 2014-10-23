@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="001f74c9-f78e-472b-a34d-e47fce704ee1" name="adapt1" linkedPackageId="c00adfbc-b365-4a58-b7f3-3f0dba4d8e79" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="5d2844da-9f00-4b74-85f4-5cc9fae233b9">
+      <elementDefinition Id="59d84ebc-e32a-4521-9e88-6906e8e721c2" />
+      <body>float f = myutility.compute(...);</body>
+      <annotatedElements>
+        <classMoniker Id="1808996c-eab3-47ac-ab9a-85170b181e0f" LastKnownName="ImperialClient" />
+      </annotatedElements>
+    </comment>
+    <comment Id="04736127-6c20-4979-9bbd-132514113afb">
+      <elementDefinition Id="dcbd5ae0-1836-4298-b89b-48937ee1c645" />
+      <body>float m = metricToImperial(i);
+float ans = util.compute(m);
+return imperialToMetric(ans);</body>
+      <annotatedElements>
+        <classMoniker Id="35291a65-a72b-48b1-80e6-38b2a45d5619" LastKnownName="ClientToUtilityAdapter" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="6e946d94-636f-4ff4-83c1-05856895d64d">
+      <profileInstance Id="a60ebc24-526f-4427-a76b-ea21984d0c47" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="86335c00-19c2-4268-87e7-59e226b756ed">
+      <profileInstance Id="1a6ad7b6-2e23-4de4-a8a6-03ccec889959" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="1808996c-eab3-47ac-ab9a-85170b181e0f" name="ImperialClient" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="014dce4c-6fb5-4960-9df1-23c63c8e2ee4" />
+        <targetEnds>
+          <association Id="479643a5-c6a5-4b59-be95-30f901137521" isDerived="false" sourceEndRoleName="" targetEndRoleName="myutility" isLeaf="false" isAbstract="false">
+            <classMoniker Id="35291a65-a72b-48b1-80e6-38b2a45d5619" LastKnownName="ClientToUtilityAdapter" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cbf07eb1-086b-49d1-a9a3-55048c73cb51" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a7f654e3-98b0-4f7a-b7c5-7e267e4b9bca" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9b214a1f-4505-440d-96ec-452a90a4ed14" name="myutility" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="4f32065a-5d47-4b23-b2f5-00e0d7e4b762" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="b6591cbe-e424-4d1f-93cc-1b455c744885" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="35291a65-a72b-48b1-80e6-38b2a45d5619" name="ClientToUtilityAdapter" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="73aae9a6-a147-497b-b193-7c08e736b4bf" />
+        <targetEnds>
+          <association Id="b7d67fc8-bd79-41a3-9b07-bec3b6d210b7" isDerived="false" sourceEndRoleName="" targetEndRoleName="util" isLeaf="false" isAbstract="false">
+            <classMoniker Id="13eb4a7a-d4f0-4f47-9059-2c98061040af" LastKnownName="MetricUtility" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="48fd2ae9-bfe6-4c2a-8c56-2a47caccb9a3" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="f83009f0-6008-4eac-98ad-4f78410eb700" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0a479215-5024-4b30-a012-423542093970" name="util" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <elementDefinition Id="3df60a03-0944-4261-b863-b1786c150a3a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="4cbaca10-0966-4cee-9856-538e83b3e346" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="3f9845e7-7c86-4492-bf36-905400f98a89" name="imperialToMetric" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e1386820-185d-458f-ae63-8b526b5d6d86" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="90d9f9c6-723d-46b4-9f9a-eda378b27da1" name="i" direction="In" isUnique="false">
+                  <elementDefinition Id="aa3a55d0-55ab-4111-8f35-500f3bc34e8d" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7d87fdde-510e-4aed-a166-4df85baa8153" LastKnownName="Float" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="08fada0d-c057-4a65-9f57-31f1062fb773" direction="Return" isUnique="false">
+                  <elementDefinition Id="4f98d902-f751-4450-a4ef-e2f4b36f450e" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7d87fdde-510e-4aed-a166-4df85baa8153" LastKnownName="Float" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="594942e0-719c-42e9-af8c-33a955aa1935" name="metricToImperial" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d9fc0466-6b8e-4da9-af35-0e69dce42554" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="ab5287fe-30e5-4f8f-ad2f-918ab7eda422" name="m" direction="In" isUnique="false">
+                  <elementDefinition Id="4d4c4778-029d-47fa-84dd-b0025ea47533" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7d87fdde-510e-4aed-a166-4df85baa8153" LastKnownName="Float" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="81f20757-dac8-4252-a8f3-3cea73b7c547" direction="Return" isUnique="false">
+                  <elementDefinition Id="6bb05ca0-bbd0-4d55-b83f-514d45a63432" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7d87fdde-510e-4aed-a166-4df85baa8153" LastKnownName="Float" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="3678c80e-19b7-49d3-a0b1-5b4cc882bd9e" name="compute" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="483059d4-2d72-4ddf-a035-318965ae73d2" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="90b30c95-c911-4f3b-9efa-017f552d17e3" name="i" direction="In" isUnique="false">
+                  <elementDefinition Id="9396a5f6-be1b-45f3-832a-23422eac394c" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7d87fdde-510e-4aed-a166-4df85baa8153" LastKnownName="Float" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="ba5359f5-dbd7-442a-a088-6f7e77eee41a" direction="Return" isUnique="false">
+                  <elementDefinition Id="b2a99c5a-8c98-483e-8997-6d036171dced" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7d87fdde-510e-4aed-a166-4df85baa8153" LastKnownName="Float" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="13eb4a7a-d4f0-4f47-9059-2c98061040af" name="MetricUtility" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="302c3232-3ec0-4d47-a9dc-1fc6ef4eb024" />
+        <ownedOperationsInternal>
+          <operation Id="4c5aa9f1-9d46-487d-a5d7-abecc21fcb31" name="compute" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="990ba625-3458-437f-a32f-a76ee9bb215f" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="8a0be66e-f596-473f-b3b2-0e7fc4a89930" name="m" direction="In" isUnique="false">
+                  <elementDefinition Id="b9ffab43-20b0-4054-98ce-6f12bac7ba72" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7d87fdde-510e-4aed-a166-4df85baa8153" LastKnownName="Float" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="392ef258-b054-4c55-807d-95412fa2f2d5" direction="Return" isUnique="false">
+                  <elementDefinition Id="4ca5a3ee-72b1-46ce-8ca1-492ad23f36d9" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7d87fdde-510e-4aed-a166-4df85baa8153" LastKnownName="Float" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="7d87fdde-510e-4aed-a166-4df85baa8153" name="Float" isAbstract="false" isLeaf="false" cachedFullName="Float">
+        <elementDefinition Id="b8f2d8c7-f576-4fc2-9c6c-ba06157eee3e" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="c00adfbc-b365-4a58-b7f3-3f0dba4d8e79" name="DesignPatterns-Wrappers">
+    <elementDefinition Id="71e5176f-f930-4cab-a7bf-2d56387409f9" />
+  </package>
+</logicalClassDesignerModel>

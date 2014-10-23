@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="30a6ad26-0ca5-4472-b2a2-56688dae8d47" name="comp2" linkedPackageId="2ddf1a5f-7617-424e-88ae-155ecc3864a4" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="9197e6f4-1cc0-4b23-bc94-a3e0a0e79979">
+      <profileInstance Id="693bfa6a-8fa7-4c08-9a55-279cf329d102" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="44bdaae9-d656-46a0-bc62-3fc4233e27bd">
+      <profileInstance Id="3f01fab4-580d-43a6-95ec-b32c546d3cf2" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="d279d478-df95-4312-897d-9ca152b8d01d" name="Area" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d6133d31-0f2b-49aa-9df4-c01b5e4746a1" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="c7eef2d8-5cd4-483c-8340-8e293af38aad" name="Room" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="c827d900-f966-47bb-8c0a-bca6dc227a84" />
+        <generalsInternal>
+          <generalization Id="3528e2fc-0375-40d8-a0af-77d1734bfa70" isSubstitutable="false">
+            <classMoniker Id="d279d478-df95-4312-897d-9ca152b8d01d" LastKnownName="Area" />
+            <elementDefinition Id="c2763c06-6307-4fdd-a85b-276df97cae75" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="2195440d-9bc1-4de9-96fd-621e93316dae" isDerived="false" sourceEndRoleName="" targetEndRoleName="door" isLeaf="false" isAbstract="false">
+            <classMoniker Id="d279d478-df95-4312-897d-9ca152b8d01d" LastKnownName="Area" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b88865a8-0a88-42ee-b3a3-46dcac37fe10" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="4284209f-e02a-402d-8d6e-9d3eff733a8d" name="Lower" value="0">
+                      <elementDefinition Id="e0236b0c-0b6a-40a9-bb85-c6e51b84c9f7" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="2c444ce1-e6de-4657-9d3b-15229ce9c7d3" name="Upper" value="1">
+                      <elementDefinition Id="4c927c0f-9012-4a8f-8097-7d96e2f71bab" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="7fc4c398-fb88-444a-b344-6135ce1ef877" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e0ed4bb6-5fc8-4d5d-9589-8792f1d20125" name="door" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="2d2ad595-53df-4225-954e-a90073c3f015" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="056725ad-95d0-434a-bdb9-61156163e186" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="74c8e03f-c60d-4e7b-9e28-f0f20e440b9f" name="p" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="289199c9-9167-43dc-91ec-f3efcd57ad25" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="a141d2fc-ff59-4b9d-a865-81dd36928749" LastKnownName="Prize" />
+            </type_NamedElement>
+          </property>
+          <property Id="3ddcf3ed-ed0e-4cef-83d6-10c1f864c1ec" name="b" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b7968cee-42d2-4081-942d-25bd7898e2da" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="e91faee1-5aaa-47c6-9400-5806f5f6c013" LastKnownName="Bomb" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="0dfb0729-26c9-48f7-9b31-d981306a80f3" name="BlackHole" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="8f8479e0-2b7a-4cf9-82ed-15ad4c836bb2" />
+        <generalsInternal>
+          <generalization Id="818f08e0-1f33-4785-9ee5-0434ea7134b3" isSubstitutable="false">
+            <classMoniker Id="d279d478-df95-4312-897d-9ca152b8d01d" LastKnownName="Area" />
+            <elementDefinition Id="6dd67b28-b1db-45a6-a5f6-0a1230800c44" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="65158459-ce3e-4bed-b215-4ee59e14090e" name="Nirvana" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="9a650b34-2c90-440b-80af-579e02759655" />
+        <generalsInternal>
+          <generalization Id="f84e77b8-a32c-4574-8042-bc9e1e40c61a" isSubstitutable="false">
+            <classMoniker Id="d279d478-df95-4312-897d-9ca152b8d01d" LastKnownName="Area" />
+            <elementDefinition Id="4521d389-c013-48dc-aef4-2218da430dc5" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="bfb2e949-d440-45e7-899b-2902e28fb997" name="PassageWay" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="4e34e957-5187-4ff5-8dc6-735d89f199f3" />
+        <generalsInternal>
+          <generalization Id="d20412bb-6ff0-4aeb-be6f-1a1d1ab99358" isSubstitutable="false">
+            <classMoniker Id="d279d478-df95-4312-897d-9ca152b8d01d" LastKnownName="Area" />
+            <elementDefinition Id="68f11a60-e433-467b-8493-0f64de95f93e" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="315232a5-9516-485d-bbf8-23ccc8ae3db2" isDerived="false" sourceEndRoleName="" targetEndRoleName="- { doors }" isLeaf="false" isAbstract="false">
+            <classMoniker Id="d279d478-df95-4312-897d-9ca152b8d01d" LastKnownName="Area" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f116f2e2-e586-462a-9173-3f3cd2d69936" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="9f1086c7-ef59-4478-bd4b-11a30769a188" name="Lower" value="*">
+                      <elementDefinition Id="ab8a8f2c-a3bf-42aa-b480-a4d369714c87" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="4c3f91d0-47e8-4769-8ae9-969cf7f86986" name="Upper" value="*">
+                      <elementDefinition Id="80d77009-b70c-47eb-83de-c0f4522ffd5c" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="03a4fca8-81ce-4b7f-b26f-62f25e0a6480" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f515ce86-dc54-4125-ae5e-41b8b9d6279f" name="- { doors }" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="8085f4b1-49a3-4df8-8d5f-18b9c692d85d" name="Lower" value="*">
+                      <elementDefinition Id="18cd6093-67af-4fe0-b592-00727ba3ad93" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="10525bbf-a2a0-4aec-86d0-4fa6091d8906" name="Upper" value="*">
+                      <elementDefinition Id="95e366dc-b938-4e41-ad43-0052586e6dd4" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="b6c90feb-6830-4b12-863b-d94943115324" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="07e2b896-62e9-41fc-ade0-1733a8044861" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="a141d2fc-ff59-4b9d-a865-81dd36928749" name="Prize" isAbstract="false" isLeaf="false" cachedFullName="Prize">
+        <elementDefinition Id="dd5c63b4-1ca6-4467-896f-bd185c38bbbf" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="e91faee1-5aaa-47c6-9400-5806f5f6c013" name="Bomb" isAbstract="false" isLeaf="false" cachedFullName="Bomb">
+        <elementDefinition Id="88cab9dc-3bb0-44c7-ad5c-b06d486d977f" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="2ddf1a5f-7617-424e-88ae-155ecc3864a4" name="DesignPatterns-Layered-DT">
+    <elementDefinition Id="a2772dcb-40f2-47a5-a19c-2622c95301e7" />
+  </package>
+</logicalClassDesignerModel>
