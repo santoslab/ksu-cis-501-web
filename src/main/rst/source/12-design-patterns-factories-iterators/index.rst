@@ -71,7 +71,7 @@ file only when the file's ``status`` is ``available``.
 
 This state diagram defines the protocol enforced by the ``FileController``:
 
-.. image:: fm.png
+.. image:: fm.jpg
 
 In the previous class diagram, notice the delegate, ``CloseOp`` --- it is used
 to solve a technical problem: the ``FileController`` must be told when a 
@@ -416,7 +416,7 @@ The class ``File`` "manufactures" the singleton object like this:
    }
 
 
-It is *illegal* to say:
+It is *invalid* to say:
 
 .. code-block:: c#
 
