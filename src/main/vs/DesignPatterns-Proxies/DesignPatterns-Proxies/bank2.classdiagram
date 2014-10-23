@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="2281933d-484e-4884-be3f-8fd9643cc7cd" name="bank2" linkedPackageId="8bbf30af-71e6-4d78-904a-22bb18d0b805" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="a66022e5-83e8-42b4-891a-60a98bb2a22d">
+      <profileInstance Id="8906c1e3-30ac-4a4a-ab9f-9bc99cd48719" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="b2cf9576-6597-47c8-869a-8bb2fc97877f">
+      <profileInstance Id="c49726e6-cc9f-464d-85b2-b27b6e671e9d" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <referencedType Id="817012e1-a7de-4f30-98d3-a8c1497b745a" name="Button[]" isAbstract="false" isLeaf="false" cachedFullName="Button[]">
+        <elementDefinition Id="475402f9-a15a-42d7-9561-e49d8da29e9f" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="f5f918d7-aee1-4ffb-8d4e-5f49277527c9" name="TextBox" isAbstract="false" isLeaf="false" cachedFullName="TextBox">
+        <elementDefinition Id="6449ec6a-5ca8-48a4-9cd0-9ff0dd1e35d4" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="d98ec69b-bae8-4406-abad-9a47a721d491" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="2468a524-be1a-4402-9fae-afc35c763f0f" name="Boolean" isAbstract="false" isLeaf="false" cachedFullName="Boolean">
+        <elementDefinition Id="8943dc84-709e-4f62-b15a-a3273aa6f165" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="cc5a03aa-1715-4864-80d9-1016adb2e326" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="7fe6afc0-2396-4096-b75f-df641d546b93" name="ATMForm" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="79f00ad3-0523-46cc-827e-f6fa3064643a" />
+        <targetEnds>
+          <association Id="8e3f8116-d5be-465c-98bc-7e1afd72405b" isDerived="false" sourceEndRoleName="" targetEndRoleName="c" isLeaf="false" isAbstract="false">
+            <classMoniker Id="d8594548-d313-4bb7-8159-793bc13275d8" LastKnownName="ATMController" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ebb7526c-386b-4c37-b788-b51933cb73fc" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="b9e4baea-3ab9-4c7e-a904-0ca57bc010fc" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4292c5f5-b2de-4c64-b3bc-4b27c20fe4c0" name="c" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="eb3facd1-1f19-4709-879c-15b8a3e9bbda" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9e8c1898-eee6-4624-95d1-d7409b582d52" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="3f1adbdb-fca5-41cb-8e5d-dfac31c0aae3" name="keypad" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="39faa0b7-a519-4995-94fc-405cbf8c7505" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="817012e1-a7de-4f30-98d3-a8c1497b745a" LastKnownName="Button[]" />
+            </type_NamedElement>
+          </property>
+          <property Id="e4655070-c223-4d56-801f-b31d1f0b1d21" name="display" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="6c7057e8-9730-49d1-808e-290f7bbe20b6" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="f5f918d7-aee1-4ffb-8d4e-5f49277527c9" LastKnownName="TextBox" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="d8594548-d313-4bb7-8159-793bc13275d8" name="ATMController" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="0a814ab6-1035-458d-bc03-8609dcb8bb55" />
+        <targetEnds>
+          <association Id="9dc7b663-491e-4df1-bee7-c0b72055989e" isDerived="false" sourceEndRoleName="" targetEndRoleName="myAccount" isLeaf="false" isAbstract="false">
+            <interfaceMoniker Id="9b33f6ad-f928-4cd3-aeb8-ddb510c36fb4" LastKnownName="IAcct" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2866fb45-9fdd-41f6-b4bf-fe5f22dc1f4a" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d9b4467b-cae5-4e27-bcf5-7d526f381845" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b6aa0e58-7586-4ac8-b459-53b0e80b10f7" name="myAccount" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="3bcb0d60-680e-4f10-9397-748de13e2e04" name="Lower" value="0">
+                      <elementDefinition Id="d7708121-fa8c-4ea5-9d36-fb96aa60d1be" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="2c28eea5-70c8-41ff-8db7-af786f84dca2" name="Upper" value="1">
+                      <elementDefinition Id="f16313a2-d417-4147-92fa-b59825c00de0" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="f555992d-17f4-4fee-9e84-ee0bad0f1254" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="4c95af94-47b7-4fcb-bd96-17410097cfce" />
+          </association>
+          <association Id="9e05e855-07ed-4dac-9f31-d47518b3fdf9" isDerived="false" sourceEndRoleName="" targetEndRoleName="database" isLeaf="false" isAbstract="false">
+            <interfaceMoniker Id="4f66b212-f189-4958-90bc-29976f2284af" LastKnownName="IDB" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2f919467-1a56-4d51-9d07-9960b8554b1d" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e2d601e1-98b5-4bae-872f-af26dcdac20a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5411ce03-26c4-480c-81de-c8ef9d9a4d26" name="database" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="2df3dde0-ce3a-48cb-b00e-eac7ac213263" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="6269d4cd-a42f-483b-93e7-9ee8a8757c9a" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="f74a1274-f96c-4c40-a01a-28d500626f76" name="handleLogin" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="cf217a41-7fa4-4616-817e-75868b8b1a2a" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="328cf2e9-f296-4686-9668-eaf8c49cf031" name="accountID" direction="In" isUnique="false">
+                  <elementDefinition Id="d4780a46-d98f-469f-bbdc-54ba3fce4ec8" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="d98ec69b-bae8-4406-abad-9a47a721d491" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="36798ff0-ec92-4d80-a4c0-5c0134e455df" direction="Return" isUnique="false">
+                  <elementDefinition Id="ae253632-0327-49c3-8bdf-b11978db079c" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="2468a524-be1a-4402-9fae-afc35c763f0f" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="d29d971c-9af7-499a-b2b4-d99bea43b483" name="handleBalanceRequest" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="34f1f9b7-8d98-47b0-863f-daa481080e74" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="cdf252d8-22ac-43c5-a0da-2be24335c0e3" direction="Return" isUnique="false">
+                  <elementDefinition Id="1bb6dfe2-dbf6-4d54-938f-ce81a4153825" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="cc5a03aa-1715-4864-80d9-1016adb2e326" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="2c539228-c0a8-43ac-9183-54f7c187c7ef" name="handleWithdrawal" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="024e07e7-d2ea-4add-9000-b3ffd24ef5e0" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="8e5f9a34-efb8-421d-8772-b879d60d4959" name="amount" direction="In" isUnique="false">
+                  <elementDefinition Id="76becd8d-60f2-432d-be58-e88957400961" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="cc5a03aa-1715-4864-80d9-1016adb2e326" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="a1451861-5dea-4c52-9a73-0e7fbb67a979" direction="Return" isUnique="false">
+                  <elementDefinition Id="ff597c2a-3ff9-4341-863e-79db3c0b5c1e" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="2468a524-be1a-4402-9fae-afc35c763f0f" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="632d07a8-532b-47cb-b8e8-7222787a18d2" name="handleLogout" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="eafe2e3a-19e1-48ae-80f7-be992fa3c55c" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="4f66b212-f189-4958-90bc-29976f2284af" name="IDB" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="34d79866-c39c-41ec-86ad-25c736475487" />
+        <suppliersInternal>
+          <dependency Id="1df2ace7-e990-4600-b451-5f0280df8331">
+            <interfaceMoniker Id="9b33f6ad-f928-4cd3-aeb8-ddb510c36fb4" LastKnownName="IAcct" />
+            <elementDefinition Id="8975090a-9f33-45a9-8728-a6e1a58a6749" />
+          </dependency>
+        </suppliersInternal>
+        <ownedOperations>
+          <operation Id="34928fcb-6c44-4780-af26-acfafaa80da4" name="login" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="285f506a-28e8-414f-ad84-03b29e596a5f" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="1e9aa022-1557-42a4-84ca-469f8b49185c" name="accountID" direction="In" isUnique="false">
+                  <elementDefinition Id="126158e6-8793-4d73-a35e-b54712f726aa" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="d98ec69b-bae8-4406-abad-9a47a721d491" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="2c966e37-cee1-45ae-a998-b50da6e0b6cc" direction="Return" isUnique="false">
+                  <elementDefinition Id="c01e13cf-d2a5-4f40-94e2-07b014ae0bf9" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="21fff28d-c68d-4c05-9e83-193abf25a998" LastKnownName="IAcct" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="c9fd2395-6d50-4bc9-974b-dbac8132ac11" name="logout" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="7cc31697-0c5e-4f6b-8fa6-dd9c1a21955a" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="c0d80484-b018-4bc4-ba72-7eb2b220e9e6" name="a" direction="In" isUnique="false">
+                  <elementDefinition Id="b00f86e9-9215-47c7-8e47-4fa7c3bd7883" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="21fff28d-c68d-4c05-9e83-193abf25a998" LastKnownName="IAcct" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="9b33f6ad-f928-4cd3-aeb8-ddb510c36fb4" name="IAcct" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f2e56ab7-3968-482d-ba92-fa4364a7fb39" />
+        <ownedOperations>
+          <operation Id="7b24685c-4e34-4492-9605-ef6485fdbad1" name="getBalance" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="902b7434-2b6c-4da3-b2f5-44300ce3b0f2" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="d59b3c4c-59d1-4593-9705-b1c95532ba8b" direction="Return" isUnique="false">
+                  <elementDefinition Id="88606eb9-c987-435e-a779-ed54a0c04549" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="cc5a03aa-1715-4864-80d9-1016adb2e326" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="f71b7949-383d-4b58-96db-87e3ffa4934f" name="withdraw" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="4dba5abe-9068-4a75-9d4c-74ebb491f85c" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="2ec3772e-4e01-4d63-8a4a-38e67e7fdf68" name="amount" direction="In" isUnique="false">
+                  <elementDefinition Id="bea0b864-303d-484b-a184-c034103b13e0" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="cc5a03aa-1715-4864-80d9-1016adb2e326" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="ca256a83-ff9d-4316-a660-d942bba3a3d8" direction="Return" isUnique="false">
+                  <elementDefinition Id="6c40b122-f731-469e-8392-ebcf6667c9da" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="2468a524-be1a-4402-9fae-afc35c763f0f" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="21fff28d-c68d-4c05-9e83-193abf25a998" name="IAcct" isAbstract="false" isLeaf="false" cachedFullName="DesignPatterns-Proxies::IAcct">
+        <elementDefinition Id="f2e56ab7-3968-482d-ba92-fa4364a7fb39" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="8bbf30af-71e6-4d78-904a-22bb18d0b805" name="DesignPatterns-Proxies">
+    <elementDefinition Id="375b440b-8b5b-4200-b2a8-3dbb8df71b7e" />
+  </package>
+</logicalClassDesignerModel>
