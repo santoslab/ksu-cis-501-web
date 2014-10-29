@@ -3,19 +3,19 @@
 Schedule
 ########
 
-.. |D0| replace:: TBA
+.. |D0| replace:: :ref:`design-patterns-prelude`
 
-.. |D1| replace:: TBA
+.. |D1| replace:: :ref:`design-patterns-factories-iterators`
 
-.. |D2| replace:: TBA
+.. |D2| replace:: :ref:`design-patterns-proxies`
 
-.. |D3| replace:: TBA
+.. |D3| replace:: :ref:`design-patterns-wrappers`
 
-.. |D4| replace:: TBA
+.. |D4| replace:: :ref:`design-patterns-layered-dt`
 
-.. |FinishDP| replace:: TBA
+.. |FinishDP| replace:: :ref:`design-patterns-postlude`
 
-.. |SATalk| replace:: TBA
+.. |SATalk| replace:: Software Architecture Concepts
 
 .. raw:: html
 
@@ -85,7 +85,7 @@ Schedule
      - :ref:`multi-threaded` [`X10 <https://online.ksu.edu/COMS/player/content/CIS_501_ROBBY/content/Modules/Exercises/10-Multi-Threaded.zip?ext=.zip>`__]
      - 
    * - 8. U: Oct 16
-     - :ref:`multi-threaded` [`X10b <https://online.ksu.edu/COMS/player/content/CIS_501_ROBBY/content/Modules/Exercises/10-Multi-Threaded-B.zip?ext=.zip>`__]
+     - :ref:`multi-threaded`, `Deadlock: Dining Philosphers <https://online.ksu.edu/COMS/player/content/CIS_501_ROBBY/content/Modules/Slides/CIS%20501%20Multi-threaded%20Execution%20Part%202.pdf?ext=.pdf>`__ [`X10b <https://online.ksu.edu/COMS/player/content/CIS_501_ROBBY/content/Modules/Exercises/10-Multi-Threaded-B.zip?ext=.zip>`__]
      - 
    * - 9. T: Oct 21
      - *No Lecture*
@@ -97,14 +97,14 @@ Schedule
      - **Mid-term Exam**
      - 
    * - 10. U: Oct 30
-     - |D0|
+     - `Client-Server using WebSocket <https://online.ksu.edu/COMS/player/content/CIS_501_ROBBY/content/Modules/Slides/CIS%20501%20Client-Server%20Using%20WebSocket.pdf?ext=.pdf>`__ [`XW <https://online.ksu.edu/COMS/player/content/CIS_501_ROBBY/content/Modules/Exercises/Websocket.zip?ext=.zip>`__]
      - 
    * - 11. T: Nov 4
-     - |D2|
+     - More on Testing
      - 
    * - 11. U: Nov 6
-     - |D2|
-     - **Project: design due on Nov 13, implementation due on Dec 9**
+     - |D0|
+     - **Project: design due on Nov 13, implementation due on Dec 8**
    * - 12. T: Nov 11
      - |D1|
      - 
@@ -124,13 +124,13 @@ Schedule
      - *No Lecture*
      - **Thanksgiving Break**
    * - 14. T: Dec 2
-     - |D3|
+     - |D2|
      -
    * - 14. U: Dec 4
-     - |FinishDP|
+     - |D2|
      - 
    * - 15. T: Dec 9
-     - TBA
+     - |D3|, |FinishDP|
      -
    * - 15. U: Dec 11
      - |SATalk|
