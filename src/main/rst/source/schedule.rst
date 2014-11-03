@@ -89,7 +89,7 @@ Schedule
      - 
    * - 9. T: Oct 21
      - *No Lecture*
-     - 1-on-1 meeting **Assignment 5: due on: Nov 4** [`A5 <https://online.ksu.edu/COMS/player/content/CIS_501_ROBBY/content/Modules/Assignments/A5-Othello.html?ext=.html>`__]
+     - 1-on-1 meeting **Assignment 5: due on: Nov 5** [`A5 <https://online.ksu.edu/COMS/player/content/CIS_501_ROBBY/content/Modules/Assignments/A5-Othello.html?ext=.html>`__]
    * - 9. U: Oct 23
      - *No Lecture*
      - 1-on-1 meeting
@@ -100,7 +100,7 @@ Schedule
      - `Client-Server using WebSocket <https://online.ksu.edu/COMS/player/content/CIS_501_ROBBY/content/Modules/Slides/CIS%20501%20Client-Server%20Using%20WebSocket.pdf?ext=.pdf>`__ [`XW <https://online.ksu.edu/COMS/player/content/CIS_501_ROBBY/content/Modules/Exercises/Websocket.zip?ext=.zip>`__]
      - 
    * - 11. T: Nov 4
-     - More on Testing
+     - *No Lecture*
      - 
    * - 11. U: Nov 6
      - |D0|
