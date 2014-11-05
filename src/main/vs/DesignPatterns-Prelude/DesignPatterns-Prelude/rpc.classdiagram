@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="63b51bc9-cb00-4da9-9dd1-4c50213a264b" name="rpc" linkedPackageId="6c913668-2b1a-4fec-8ff0-a215cddf4dc8" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="b268214f-b16a-4cd2-8890-94ee3e7e2074">
+      <elementDefinition Id="b328e6a4-2c88-4d9a-99e3-e997e60e8f67" />
+      <body>delegate</body>
+      <annotatedElements>
+        <interfaceMoniker Id="13ed1f44-0bc5-4e75-a5b3-77678ff16e7c" LastKnownName="GetData" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="fc0986b5-1e90-49fc-adf6-ce91bf87f47c">
+      <profileInstance Id="893dedc9-dd48-4471-89a9-264e6441323d" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="cbb364cd-7513-4c63-8689-c192ab4a7292">
+      <profileInstance Id="d82ffb01-37a9-4528-9f7b-fa439796844c" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="36386652-b322-407b-abfa-4dc2073ba96b" name="Controller" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="9cb3eab0-085b-4455-958e-8a5d5d886e03" />
+        <targetEnds>
+          <association Id="aeaaae8b-944a-4539-886a-63ad95a460f2" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <interfaceMoniker Id="13ed1f44-0bc5-4e75-a5b3-77678ff16e7c" LastKnownName="GetData" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="345fa8ff-7250-4fb1-b00a-0f174613a707" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="25cc3081-60f8-4691-831f-f5f294d2618b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2ea055b4-dd77-4119-ba67-a185596411a8" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a7097a00-0ab6-40ee-9c38-e059ff1389a6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7844cbf8-507d-4616-bb2b-e081d23a538e" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="faf9bc4a-0c56-4fc9-b9bc-b44f05e6857b" name="gd" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="50862d6f-a744-4f7d-b68d-5b2375f30794" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="19a06256-d2b6-4bb3-892d-8d28e8c7c844" LastKnownName="GetData" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="254e1752-31cc-4b20-9bc3-43037c11e7d6" name="Controller" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="14bf9959-3939-461c-bdb4-2a620dbeffbc" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="fa3b9c2a-17fe-4fdc-b038-3497a12b8298" name="gd" direction="In" isUnique="false">
+                  <elementDefinition Id="57f47ba3-194c-495a-aa16-d86c29772851" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="19a06256-d2b6-4bb3-892d-8d28e8c7c844" LastKnownName="GetData" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="13ed1f44-0bc5-4e75-a5b3-77678ff16e7c" name="GetData" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d5e14f8e-70e9-448b-a975-ba7fa5fb0c68" />
+        <ownedOperations>
+          <operation Id="8c4dcf97-e0a7-4daf-938e-0f941770ccce" name="GetData" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="dc434325-16bc-4c18-a9ff-023794bb3a6f" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="24c040e1-4e6f-4ec9-a04c-017ea1231468" name="key" direction="In" isUnique="false">
+                  <elementDefinition Id="2b29809a-5986-4146-89ae-a1824c9f6eec" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="80d113f1-bd8c-4c4f-9b4d-e6a2440edc0f" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="95324704-2eea-4839-a7bc-a56ddc128fa9" direction="Return" isUnique="false">
+                  <elementDefinition Id="a3fbc428-3182-4e32-b8df-f3b17207c646" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="80d113f1-bd8c-4c4f-9b4d-e6a2440edc0f" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="80d113f1-bd8c-4c4f-9b4d-e6a2440edc0f" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="19a06256-d2b6-4bb3-892d-8d28e8c7c844" name="GetData" isAbstract="false" isLeaf="false" cachedFullName="DesignPatterns-Prelude::GetData">
+        <elementDefinition Id="d5e14f8e-70e9-448b-a975-ba7fa5fb0c68" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="112bb05d-20f1-4177-8d49-239be7ae9fbd" name="GetDataRPC" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="ec9f550c-be31-4726-b54e-b25aff51d78c" />
+        <suppliersInternal>
+          <dependency Id="9235d066-d1e4-463a-a928-1ee9b4150a6f">
+            <interfaceMoniker Id="13ed1f44-0bc5-4e75-a5b3-77678ff16e7c" LastKnownName="GetData" />
+            <elementDefinition Id="f7646994-5910-4aee-b7a5-047ede51167b" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property Id="ac5989a5-dedd-4687-9952-ba26c60f96ff" name="ws" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="80db1ae3-729b-4f9d-be03-b251005f7c07" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="ad087c53-528a-4c13-878c-1b04d41e063f" LastKnownName="WebSocket" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="42ea8026-336b-4546-ae75-0dd30a58d3e2" name="GetData" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="de1771d5-d32c-4456-8b6e-6291de54f6c0" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="d69a66a3-a01a-4edc-bd07-d52abc5b547f" name="key" direction="In" isUnique="false">
+                  <elementDefinition Id="b046d0da-bce8-457a-8d4d-b699a7b4bc0d" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="80d113f1-bd8c-4c4f-9b4d-e6a2440edc0f" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="2e7b6308-1965-448c-8389-2d5ed9167cfa" direction="Return" isUnique="false">
+                  <elementDefinition Id="e54a20e1-1506-4dce-ae1e-6bde56927724" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="80d113f1-bd8c-4c4f-9b4d-e6a2440edc0f" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="ad087c53-528a-4c13-878c-1b04d41e063f" name="WebSocket" isAbstract="false" isLeaf="false" cachedFullName="DesignPatterns-Prelude::WebSocket">
+        <elementDefinition Id="43040be2-8a49-4d99-8602-fdb4836d3f9f" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="f6896390-41ed-4e15-a559-af862a03fbd3" name="Server" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="35c8b0f0-bf9a-4f51-a1ab-6c5967347cf8" />
+        <suppliersInternal>
+          <dependency Id="e4d5e689-96ec-4bd1-80ad-f52f41b3a1f7">
+            <classMoniker Id="689709df-bc53-466e-86b3-52300b3bb790" LastKnownName="DataService" />
+            <elementDefinition Id="25c7d387-fe4c-43ce-8133-e2761dc8c449" />
+          </dependency>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="add5e34f-eee4-4601-b103-a741d6db6332" name="main" isLeaf="false" isStatic="true" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c3c02f59-5520-449b-b511-57739ec77fea" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="fc303f8f-8bbb-43ba-bd05-25c4cee27537" name="args" direction="In" isUnique="false">
+                  <elementDefinition Id="0c2ffa21-ff4c-4c02-a699-ebd9fb311d66" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="2d7b073e-df02-4565-94f4-4925dc4ce868" LastKnownName="String[]" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="689709df-bc53-466e-86b3-52300b3bb790" name="DataService" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="bb006bb5-5de0-49cb-bb12-156816bf1f78" />
+        <generalsInternal>
+          <generalization Id="c6ac597f-b5a8-463f-a8a3-b5bb565116c9" isSubstitutable="false">
+            <classMoniker Id="8b416e42-bb44-40f1-91f6-f6f927566794" LastKnownName="WebSocketBehavior" />
+            <elementDefinition Id="53db6d5d-8d68-4b08-93ea-22d37f304817" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="66e30912-a411-4d52-891e-4ebb37c95a8a" name="GetData" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="95fcb198-d6d6-444f-b6a4-5b2891fd08a9" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="58e34d60-5199-45e4-ae17-e35fccabcd03" name="k" direction="In" isUnique="false">
+                  <elementDefinition Id="fc8a9fed-ca2e-41b2-844c-fed58cbcbce1" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="80d113f1-bd8c-4c4f-9b4d-e6a2440edc0f" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="f8dd23a3-11f5-40ba-8240-b016c77670f3" direction="Return" isUnique="false">
+                  <elementDefinition Id="dfb2068f-1913-494f-b456-d38ae5fe6c71" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="80d113f1-bd8c-4c4f-9b4d-e6a2440edc0f" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="2d7b073e-df02-4565-94f4-4925dc4ce868" name="String[]" isAbstract="false" isLeaf="false" cachedFullName="String[]">
+        <elementDefinition Id="23615e54-f112-4b9a-b292-dc9a9bafcc26" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="8b416e42-bb44-40f1-91f6-f6f927566794" name="WebSocketBehavior" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="b8e76669-f6a1-47fe-9c2c-a2c5401d4095" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="6c913668-2b1a-4fec-8ff0-a215cddf4dc8" name="DesignPatterns-Prelude">
+    <elementDefinition Id="7bd4b2ec-d5fe-4456-9cca-c2ec9fba4f01" />
+  </package>
+</logicalClassDesignerModel>

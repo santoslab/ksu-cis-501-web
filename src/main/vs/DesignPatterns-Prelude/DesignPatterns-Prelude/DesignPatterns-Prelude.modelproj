@@ -36,6 +36,41 @@
       <SubType>Content</SubType>
       <DependentUpon>card2.classdiagram</DependentUpon>
     </Content>
+    <Content Include="chat-ws-refactored-test.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="chat-ws-refactored-test.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>chat-ws-refactored-test.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="chat-ws-refactored.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="chat-ws-refactored.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>chat-ws-refactored.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="chat-ws.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="chat-ws.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>chat-ws.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="chat.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="chat.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>chat.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="client-server-ws-refactored-test.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="client-server-ws-refactored-test.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>client-server-ws-refactored-test.classdiagram</DependentUpon>
+    </Content>
     <Content Include="filecontroller0.classdiagram">
       <SubType>Content</SubType>
     </Content>
@@ -49,6 +84,34 @@
     <Content Include="mvc0.classdiagram.layout">
       <SubType>Content</SubType>
       <DependentUpon>mvc0.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="rpc.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="rpc.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>rpc.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="server-ws-refactored-test.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="server-ws-refactored-test.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>server-ws-refactored-test.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="server-ws-refactored.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="server-ws-refactored.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>server-ws-refactored.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="server-ws.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="server-ws.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>server-ws.classdiagram</DependentUpon>
     </Content>
     <Content Include="start0.classdiagram">
       <SubType>Content</SubType>
