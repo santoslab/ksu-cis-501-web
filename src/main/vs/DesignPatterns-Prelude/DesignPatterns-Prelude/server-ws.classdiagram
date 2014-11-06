@@ -7,11 +7,6 @@
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <referencedType Id="f9e46e1e-3f43-48f0-b587-bd2ff53e49b2" name="server::WebSocketSessionManager" isAbstract="false" isLeaf="false" cachedFullName="server::WebSocketSessionManager">
-        <elementDefinition Id="83a5cc6c-8514-4681-b971-93a7cce621e5" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
       <referencedType Id="b5bf44eb-ef25-4abf-8426-adccaf01119f" name="MessageEventArgs" isAbstract="false" isLeaf="false" cachedFullName="MessageEventArgs">
         <elementDefinition Id="93550a7c-e2b0-45a6-9b06-a1ede20e62b8" />
       </referencedType>
@@ -77,7 +72,7 @@
           <property Id="7a1b675e-540b-4d6c-ba08-e862f376c8a4" name="Sessions" visibility="Protected" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="8d43b714-7fc0-4206-8a5e-c79e69852482" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="f9e46e1e-3f43-48f0-b587-bd2ff53e49b2" LastKnownName="server::WebSocketSessionManager" />
+              <referencedTypeMoniker Id="b3515499-2631-4833-a2ad-01bf8db3d254" LastKnownName="WebSocketSessionManager" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
@@ -180,6 +175,11 @@
     <packageHasNamedElement>
       <referencedType Id="56097001-3ac9-4678-b102-e5d0edebf77b" name="List&lt;string&gt;" isAbstract="false" isLeaf="false" cachedFullName="List&lt;string&gt;">
         <elementDefinition Id="b0f10a4f-e2bd-46db-85a3-43f5a89350f0" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="b3515499-2631-4833-a2ad-01bf8db3d254" name="WebSocketSessionManager" isAbstract="false" isLeaf="false" cachedFullName="DesignPatterns-Prelude::WebSocketSessionManager">
+        <elementDefinition Id="15c502e2-d42d-433e-814d-617f312cccc4" />
       </referencedType>
     </packageHasNamedElement>
   </packagedElements>

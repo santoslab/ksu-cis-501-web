@@ -4865,9 +4865,9 @@ public void Broadcast(string m) {  MessageReceived(m); }</body>
             aggregation="None"
             isComposite="false">
             <type_NamedElement>
-              <undefinedTypeMoniker
-                Id="83a5cc6c-8514-4681-b971-93a7cce621e5"
-                LastKnownName="server::WebSocketSessionManager"
+              <classMoniker
+                Id="15c502e2-d42d-433e-814d-617f312cccc4"
+                LastKnownName="WebSocketSessionManager"
                 LastKnownLocation="DesignPatterns-Prelude.uml" />
             </type_NamedElement>
           </property>

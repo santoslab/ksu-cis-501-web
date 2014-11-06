@@ -31,7 +31,7 @@
         <classShapeMoniker Id="e652a4fb-c5f7-4dd7-825a-f80916a51e1a" />
       </nodes>
     </generalizationConnector>
-    <dependencyConnector edgePoints="[(4.625 : 4.40624999006589); (5.75 : 4.40624999006589)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black">
+    <dependencyConnector edgePoints="[(4.625 : 4.40624999006589); (5.75 : 4.40624999006589)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="Black">
       <dependencyMoniker Id="85f77c55-c87c-4f4a-b20c-9a6d3f8b94d2" />
       <relativeChildShapes />
       <nodes>
@@ -54,7 +54,7 @@
         <classShapeMoniker Id="6a1cb91c-ed60-4c08-b862-dd282d1493c7" />
       </nodes>
     </associationConnector>
-    <dependencyConnector edgePoints="[(8 : 4.56640623509884); (10.3125 : 4.56640623509884); (10.3125 : 2.93749998013178)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black">
+    <dependencyConnector edgePoints="[(8 : 4.56640623509884); (10.3125 : 4.56640623509884); (10.3125 : 2.93749998013178)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="Black">
       <dependencyMoniker Id="a58366d3-12a7-486a-8b04-e5146a733f47" />
       <relativeChildShapes />
       <nodes>
