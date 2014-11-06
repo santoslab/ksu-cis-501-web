@@ -390,19 +390,19 @@ so on. It is tedious to write this kind of code:
 .. code-block:: c#
 
    public void squareAll(int[] r) {
-     for(int i = 0; i < r.Length, i++) {
+     for(int i = 0; i < r.Length; i++) {
        r[i] = r[i] * r[i];
      }
    }
 
    public void incrementAll(int[] r) {
-     for(int i = 0; i < r.Length, i++) {
+     for(int i = 0; i < r.Length; i++) {
        r[i] = r[i] + 1;
      }
    }
 
    public void zeroAll(int[] r) {
-     for(int i = 0; i < r.Length, i++) {
+     for(int i = 0; i < r.Length; i++) {
        r[i] = 0;
      }
    }
@@ -416,7 +416,7 @@ We define ``f`` as a delegate and write this useful tool, named ``mapAll``:
    delegate int ElementOp(int n);
 
    public void mapAll(int[] r, ElementOp f) {
-     for (int i = 0; i < r.Length, i++) {
+     for (int i = 0; i < r.Length; i++) {
        r[i] = f(r[i]);
      }
    }
