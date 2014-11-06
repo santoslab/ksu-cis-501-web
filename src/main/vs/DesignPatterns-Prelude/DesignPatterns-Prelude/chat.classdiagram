@@ -1,19 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="81931fe3-8dd1-49d0-a1e9-ab6309dcf1ae" name="chat" linkedPackageId="ed488fe2-8a9b-4371-8d90-9c4dcef8d9fd" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
-  <profileInstances>
-    <packageHasProfileInstances Id="184a6482-fc92-4da5-9072-7cb6fa6e1e90">
-      <profileInstance Id="48009993-1ea8-46bb-a9d0-952af3799933" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="00d484c5-4287-4e4d-a112-6af846ac19e8">
-      <profileInstance Id="19879b07-5c2a-4007-8479-27b53b74dad0" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
+  <ownedCommentsInternal>
+    <comment Id="d58f86f8-3495-44ee-a8d6-8f6967ae3c7b">
+      <elementDefinition Id="69823c40-47d5-4c73-ac35-52c9c2f6990a" />
+      <body>delegate</body>
+      <annotatedElements>
+        <interfaceMoniker Id="d32d295a-c96c-43c4-9860-e80382ed1b7b" LastKnownName="Message" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
   <packagedElements>
     <packageHasNamedElement>
       <referencedType Id="ed3cd40c-eaf6-4ea9-a2ce-fafeab9e5849" name="ListBox" isAbstract="false" isLeaf="false" cachedFullName="ListBox">
@@ -235,5 +230,19 @@
   </packagedElements>
   <package Id="ed488fe2-8a9b-4371-8d90-9c4dcef8d9fd" name="DesignPatterns-Prelude">
     <elementDefinition Id="7bd4b2ec-d5fe-4456-9cca-c2ec9fba4f01" />
+    <profileInstances>
+      <packageHasProfileInstances Id="184a6482-fc92-4da5-9072-7cb6fa6e1e90">
+        <profileInstance Id="48009993-1ea8-46bb-a9d0-952af3799933" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="00d484c5-4287-4e4d-a112-6af846ac19e8">
+        <profileInstance Id="19879b07-5c2a-4007-8479-27b53b74dad0" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </logicalClassDesignerModel>
