@@ -82,11 +82,13 @@ So, when the ``FileReader`` object is constructed, a handle to
 When the ``ReaderThread`` calls ``close()`` in the ``FileReader``,
 this activates a call to ``closeRead()``, too!
 
-Here are the relevant classes; study the factory methods, ``makeReader`` and
-``makeWriter``, and the use of ``CloseOp`` to force a call to ``closeRead``
-within the ``close`` method of ``FileReader``.
+.. commented out
 
-.. code-block:: c#
+   Here are the relevant classes; study the factory methods, ``makeReader`` and
+   ``makeWriter``, and the use of ``CloseOp`` to force a call to ``closeRead``
+   within the ``close`` method of ``FileReader``.
+
+.. commented out code-block:: c#
 
    // type of method that tells the controller that file has been closed:
    public delegate void CloseOp;
