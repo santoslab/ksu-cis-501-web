@@ -106,7 +106,7 @@ Schedule
      - |D0| [`Slides <https://online.ksu.edu/COMS/player/content/CIS_501_ROBBY/content/Modules/Slides/CIS%20501%20Design%20Patterns%20Prelude%20-%20Interfaces%20and%20Delegates.pdf?ext=.pdf>`__]
      - [`Project <https://online.ksu.edu/COMS/player/content/CIS_501_ROBBY/content/Modules/Assignments/project.pdf?ext=.pdf>`__] **design is due on Nov 14, implementation is due on Dec 7**
    * - 12. T: Nov 11
-     - |D1|
+     - |D1| [`X12 <https://online.ksu.edu/COMS/player/content/CIS_501_ROBBY/content/Modules/Exercises/12-DesignPatterns-Factories-Iterators.zip?ext=.zip>`__]
      - 
    * - 12. U: Nov 13
      - |D4|
