@@ -384,7 +384,7 @@ constructed from it. (The key is the ``private`` constructor method!)
 .. code-block:: c#
 
    // constructs a single object for writing to a text file (list of strings)
-   public class FileWriter
+   public class FileWriter {
      // IMPORTANT: holds the handle to the "singleton" FileWriter object:
      private static FileWriter writerOb = new FileWriter();
 
@@ -412,7 +412,7 @@ The class ``File`` "manufactures" the singleton object like this:
 
 .. code-block:: c#
 
-   public makeWriter() {
+   public FileWriter makeWriter() {
      reset();
      return FileWriter.newWriter(this); 
    }

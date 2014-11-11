@@ -427,7 +427,7 @@ Now, when we have some operation, e.g.,
 
 .. code-block:: c#
 
-   public int square(int n) { return n * n; )
+   public int square(int n) { return n * n; }
 
 We use it with ``mapAll`` like this: ``mapAll(r, square)``. 
 Note: in C#, it is possible to do the previous line without naming method 
