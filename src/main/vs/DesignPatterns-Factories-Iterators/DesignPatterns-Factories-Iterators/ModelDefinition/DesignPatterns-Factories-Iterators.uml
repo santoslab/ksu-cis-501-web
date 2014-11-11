@@ -99,6 +99,37 @@ while (it.more()) { Item i = it.next(); ... }</body>
           LastKnownLocation="DesignPatterns-Factories-Iterators.uml" />
       </annotatedElements>
     </comment>
+    <comment
+      Id="540f8e46-a595-4cf8-ba17-94e460f854e3">
+      <body>delegate</body>
+      <annotatedElements>
+        <interfaceMoniker
+          Id="f47c7868-cb01-4b0f-8e49-91dfa0b456fc"
+          LastKnownName="FactoryMethod"
+          LastKnownLocation="DesignPatterns-Factories-Iterators.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="581f3fb8-5f04-4c9a-ae8b-75b5bd921354">
+      <body>delegate
+</body>
+      <annotatedElements>
+        <interfaceMoniker
+          Id="ff597d9f-aaf2-4d0d-bdfb-e0ed557f9560"
+          LastKnownName="FactoryMethod"
+          LastKnownLocation="DesignPatterns-Factories-Iterators.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="b522d638-4c8f-4116-bf5b-817e135c6038">
+      <body>delegate</body>
+      <annotatedElements>
+        <interfaceMoniker
+          Id="073237da-b070-4e17-8691-9813e6149de8"
+          LastKnownName="FactoryMethod"
+          LastKnownLocation="DesignPatterns-Factories-Iterators.uml" />
+      </annotatedElements>
+    </comment>
   </ownedCommentsInternal>
   <profileInstances>
     <packageHasProfileInstances

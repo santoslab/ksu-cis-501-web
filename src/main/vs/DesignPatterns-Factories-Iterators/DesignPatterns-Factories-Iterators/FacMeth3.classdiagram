@@ -1,19 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="9bdd97d1-e16e-4168-9364-0fca3ada0100" name="FacMeth3" linkedPackageId="23072601-c8cc-4579-b4af-bd40515acdc4" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
-  <profileInstances>
-    <packageHasProfileInstances Id="10a91a7e-d254-458d-bfea-3b4f2e2d91b7">
-      <profileInstance Id="bd85d5ff-c9c0-4361-a15e-70f59212f3a3" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="c2bddb90-8884-497a-b8d8-5d58ee7f91a3">
-      <profileInstance Id="66efd5ae-1ac5-4b4f-9c5c-bb9723ec9f22" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="9bdd97d1-e16e-4168-9364-0fca3ada0100" name="FacMeth3" linkedPackageId="23072601-c8cc-4579-b4af-bd40515acdc4" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="72f9fb7d-1905-4e0b-ab12-96dbc230b6e2">
+      <elementDefinition Id="b522d638-4c8f-4116-bf5b-817e135c6038" />
+      <body>delegate</body>
+      <annotatedElements>
+        <interfaceMoniker Id="374410d7-af61-45f7-8475-cf4a09eaffb7" LastKnownName="FactoryMethod" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
   <packagedElements>
     <packageHasNamedElement>
       <referencedType Id="36d78988-570c-422f-93fd-9716947435b4" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
@@ -175,5 +170,19 @@
   </packagedElements>
   <package Id="23072601-c8cc-4579-b4af-bd40515acdc4" name="DesignPatterns-Factories-Iterators">
     <elementDefinition Id="a2667245-48a6-4761-8e4a-6698b1fa1e85" />
+    <profileInstances>
+      <packageHasProfileInstances Id="10a91a7e-d254-458d-bfea-3b4f2e2d91b7">
+        <profileInstance Id="bd85d5ff-c9c0-4361-a15e-70f59212f3a3" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="c2bddb90-8884-497a-b8d8-5d58ee7f91a3">
+        <profileInstance Id="66efd5ae-1ac5-4b4f-9c5c-bb9723ec9f22" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </logicalClassDesignerModel>
