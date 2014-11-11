@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="5aa0fea4-8a32-45fc-ae1b-e2b3060e89d4" name="fm00" linkedPackageId="6068a2e2-9002-45d5-86e8-359d9f0b3deb" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="5aa0fea4-8a32-45fc-ae1b-e2b3060e89d4" name="fm00" linkedPackageId="6068a2e2-9002-45d5-86e8-359d9f0b3deb" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <ownedCommentsInternal>
     <comment Id="ed102c22-5701-4ea1-bb5c-510a9ead3f9a">
       <elementDefinition Id="cf10c6f5-5ab0-4940-9645-32b1b684fd73" />
@@ -26,20 +26,6 @@ if (myReader != null) {
       </annotatedElements>
     </comment>
   </ownedCommentsInternal>
-  <profileInstances>
-    <packageHasProfileInstances Id="7914cf70-edd8-4404-9357-6d14ad81e62c">
-      <profileInstance Id="d5b8302a-013a-4e0e-8c51-b4a5bfda6f82" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="0aab5909-809c-4ff2-bf14-7b3fa8efb87c">
-      <profileInstance Id="c2eb9a9f-c16b-46d6-96ee-d43bad81cfd9" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <packageHasNamedElement>
       <referencedType Id="d020ed37-233b-4a57-b8e4-1e44de61b2d8" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
@@ -128,10 +114,10 @@ if (myReader != null) {
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
-          <operation Id="ad0435d7-47de-4cfe-8288-cff8e7b7d6af" name="closeRead" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+          <operation Id="ad0435d7-47de-4cfe-8288-cff8e7b7d6af" name="closeRead" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="0fe24ecd-64f3-495d-ae34-68d20df7e648" />
           </operation>
-          <operation Id="4a633372-ae94-4c39-883e-0ed625d2be89" name="closeWrite" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+          <operation Id="4a633372-ae94-4c39-883e-0ed625d2be89" name="closeWrite" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="1923c96b-5776-48b5-95fb-f4241d73d09c" />
           </operation>
         </ownedOperationsInternal>
@@ -338,6 +324,16 @@ if (myReader != null) {
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="57954d8b-0e06-4e0e-92fa-9b93d11c06e5" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="f0964717-f142-4b82-8be1-5be95fb5a1fe" name="Lower" value="0">
+                      <elementDefinition Id="a93e6fdf-beaa-4e0d-ad7f-99ca92c1c0db" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="e89dcdf1-b65b-4cce-bd90-5b08d96acdea" name="Upper" value="1">
+                      <elementDefinition Id="f6113889-a352-43cd-a1b0-0bdb0d92b445" />
+                    </literalString>
+                  </upperValueInternal>
                   <elementDefinition Id="c73c5355-1ad9-4819-84a8-486cb34a4b11" />
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -395,6 +391,16 @@ if (myReader != null) {
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="608944be-fda0-4f10-8222-131efab2d7b2" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="62cb55ab-1b5b-4e08-b6ed-b0092478d4f7" name="Lower" value="*">
+                      <elementDefinition Id="84782fa1-0bf0-4897-9dda-e7ca03b68f79" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="b5a718da-2a2d-4a1a-b89d-5f66c91926ee" name="Upper" value="*">
+                      <elementDefinition Id="4842c102-1747-412a-9cce-18af1fdb2e66" />
+                    </literalString>
+                  </upperValueInternal>
                   <elementDefinition Id="5dbdf77d-ac10-4b04-9e08-028821282dac" />
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -473,6 +479,16 @@ if (myReader != null) {
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="b8bb0aaf-a5cf-4530-8370-e70539d7e905" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="a308d048-313a-460d-91e9-4df58529ce45" name="Lower" value="0">
+                      <elementDefinition Id="998e514e-7cdf-47f2-bddb-db67ee7b5e7f" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="c6922bfc-59ee-41ba-a400-0c58c39af038" name="Upper" value="1">
+                      <elementDefinition Id="7b5aa1be-682b-46e6-8dff-77db88af7a1f" />
+                    </literalString>
+                  </upperValueInternal>
                   <elementDefinition Id="d7e71178-0206-42d8-acca-f38f79a97b12" />
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -533,5 +549,19 @@ if (myReader != null) {
   </packagedElements>
   <package Id="6068a2e2-9002-45d5-86e8-359d9f0b3deb" name="DesignPatterns-Factories-Iterators">
     <elementDefinition Id="a2667245-48a6-4761-8e4a-6698b1fa1e85" />
+    <profileInstances>
+      <packageHasProfileInstances Id="7914cf70-edd8-4404-9357-6d14ad81e62c">
+        <profileInstance Id="d5b8302a-013a-4e0e-8c51-b4a5bfda6f82" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="0aab5909-809c-4ff2-bf14-7b3fa8efb87c">
+        <profileInstance Id="c2eb9a9f-c16b-46d6-96ee-d43bad81cfd9" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </logicalClassDesignerModel>
