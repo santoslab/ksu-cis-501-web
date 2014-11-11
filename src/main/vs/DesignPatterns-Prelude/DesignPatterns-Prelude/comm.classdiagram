@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="3adba4ad-3824-4a1c-9167-d708b9a2f7b4" name="comm" linkedPackageId="25952b87-6308-40a6-b1b0-d8a7d3785eed" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="b144805c-2305-44ee-afc7-ae7f2d22f8ea">
+      <elementDefinition Id="2003416e-3900-4a0f-ba4f-472e0583d13f" />
+      <body>public void Transmit(m : ClientMessage)
+{
+  Transmit(ToJson(m));
+}
+
+</body>
+    </comment>
+    <comment Id="d55b3270-2128-46e4-9fa2-f389fbfb805e">
+      <elementDefinition Id="f50366c0-20d5-4ccd-a08b-1079bd88aff0" />
+      <body>protected override void OnMessage(MessageEventArgs e)
+{
+  ProcessMessage(FromJson&lt;ClientMessage&gt;(e.Data));
+}
+
+public void ProcessMessage(m : ClientMessage)
+{
+  iif (m is LoginMessage) { ... }
+  else if (m is ChatMessage) { ... }
+  else if (m is LogoutMEssage) { ... }
+}
+</body>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="0a103e0c-fdcb-4cb9-8505-388edb0d5ce1">
+      <profileInstance Id="d3b7b95c-6d60-4141-8224-186bafa98c9c" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="06ce989e-53c6-4a95-b738-88877b46aa60">
+      <profileInstance Id="fac4ab47-763b-4096-a74b-a4b3eea4c1d5" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <referencedType Id="3ff9fd18-805e-485f-85c6-b9905b05ed55" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="03a41f0f-b1fe-4d49-8cd1-489cbd9b5c4f" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="2f68ac2c-257b-46af-b85f-87bc36739c6c" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="6f250b11-77b5-45d2-90fb-63a97c5d6935" name="ClientMessage" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1976e9e7-9dfe-411c-a425-02b2706578d2" />
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="675bd610-260d-43a7-ac1f-8a376aa30a13" name="ChatMessage" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="0f6cb161-3680-4327-9ff5-b9bc851bf4a1" />
+        <suppliersInternal>
+          <interfaceRealization Id="d25c7d7f-388b-478e-85d9-2ea065a0d1ae">
+            <interfaceMoniker Id="6f250b11-77b5-45d2-90fb-63a97c5d6935" LastKnownName="ClientMessage" />
+            <elementDefinition Id="6949dbb0-fb7a-4fcc-a9bd-59451e0d2dc4" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property Id="826b5a3e-ea34-4c62-8e39-d8f1a4aaa4c8" name="Message" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="15e5ecd0-eefb-4c1f-9bee-8705246ff4d0" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="3ff9fd18-805e-485f-85c6-b9905b05ed55" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="6cddab84-fb5a-4c4c-b9f0-34c8d918d19f" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="3e2cc98d-b52d-49f1-80cf-f055f3e3406c" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="03a41f0f-b1fe-4d49-8cd1-489cbd9b5c4f" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="559eb039-9d67-4d38-b6e5-0b7f5d6c5a50" name="LoginMessage" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="ffb4b394-ea0c-4bfd-a53a-168fbb1bde30" />
+        <suppliersInternal>
+          <interfaceRealization Id="6097e3b4-da94-478f-be30-e63ca3b7dfd4">
+            <interfaceMoniker Id="6f250b11-77b5-45d2-90fb-63a97c5d6935" LastKnownName="ClientMessage" />
+            <elementDefinition Id="52057ddc-c031-423a-b9e3-01541956e87e" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property Id="31f30223-9e32-41cc-8023-9151189ab205" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="9dcef929-a546-4379-b905-c9234ca29a75" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="03a41f0f-b1fe-4d49-8cd1-489cbd9b5c4f" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="6e592c3c-0534-4e77-b108-43cb6805dd3d" name="Password" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a3d402f9-b50d-4710-b445-675147ac1587" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="2f68ac2c-257b-46af-b85f-87bc36739c6c" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="abb63eb9-cc1a-49fe-a704-6cbc88ab7e4a" name="LogoutMessage" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="a9987a1f-2f1f-41cf-b3e9-0dd54e05180f" />
+        <suppliersInternal>
+          <interfaceRealization Id="0576ebc7-732d-4abf-85c2-8331d77f2751">
+            <interfaceMoniker Id="6f250b11-77b5-45d2-90fb-63a97c5d6935" LastKnownName="ClientMessage" />
+            <elementDefinition Id="12d185df-6ae2-41fb-bd4b-94fdba3cab65" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property Id="cebc480d-cfdc-4421-8da4-f58024a26bbc" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a1dadacb-9a51-489f-b2b1-39c246f79e7c" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="03a41f0f-b1fe-4d49-8cd1-489cbd9b5c4f" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="25952b87-6308-40a6-b1b0-d8a7d3785eed" name="DesignPatterns-Prelude">
+    <elementDefinition Id="7bd4b2ec-d5fe-4456-9cca-c2ec9fba4f01" />
+  </package>
+</logicalClassDesignerModel>

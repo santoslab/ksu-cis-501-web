@@ -71,6 +71,13 @@
       <SubType>Content</SubType>
       <DependentUpon>client-server-ws-refactored-test.classdiagram</DependentUpon>
     </Content>
+    <Content Include="comm.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="comm.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>comm.classdiagram</DependentUpon>
+    </Content>
     <Content Include="filecontroller0.classdiagram">
       <SubType>Content</SubType>
     </Content>

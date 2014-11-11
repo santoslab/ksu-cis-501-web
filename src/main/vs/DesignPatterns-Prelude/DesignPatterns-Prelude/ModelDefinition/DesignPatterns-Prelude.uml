@@ -168,7 +168,7 @@ cc.MessageEntered("Hello");</body>
       <annotatedElements>
         <classMoniker
           Id="f7603384-e3c2-483b-94a6-a7b09089c8e4"
-          LastKnownName="WebSocketMock"
+          LastKnownName="MockWebSocket"
           LastKnownLocation="DesignPatterns-Prelude.uml" />
       </annotatedElements>
     </comment>
@@ -248,6 +248,30 @@ public void Broadcast(string m) {  MessageReceived(m); }</body>
           LastKnownName="MockWebSocket"
           LastKnownLocation="DesignPatterns-Prelude.uml" />
       </annotatedElements>
+    </comment>
+    <comment
+      Id="2003416e-3900-4a0f-ba4f-472e0583d13f">
+      <body>public void Transmit(m : ClientMessage)
+{
+  Transmit(ToJson(m));
+}
+
+</body>
+    </comment>
+    <comment
+      Id="f50366c0-20d5-4ccd-a08b-1079bd88aff0">
+      <body>protected override void OnMessage(MessageEventArgs e)
+{
+  ProcessMessage(FromJson&lt;ClientMessage&gt;(e.Data));
+}
+
+public void ProcessMessage(m : ClientMessage)
+{
+  iif (m is LoginMessage) { ... }
+  else if (m is ChatMessage) { ... }
+  else if (m is LogoutMEssage) { ... }
+}
+</body>
     </comment>
   </ownedCommentsInternal>
   <profileInstances>
@@ -4670,7 +4694,7 @@ public void Broadcast(string m) {  MessageReceived(m); }</body>
     <packageHasNamedElement>
       <class
         Id="f7603384-e3c2-483b-94a6-a7b09089c8e4"
-        name="WebSocketMock"
+        name="MockWebSocket"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -7463,6 +7487,163 @@ public void Broadcast(string m) {  MessageReceived(m); }</body>
           </operation>
         </ownedOperations>
       </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="1976e9e7-9dfe-411c-a425-02b2706578d2"
+        name="ClientMessage"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="0f6cb161-3680-4327-9ff5-b9bc851bf4a1"
+        name="ChatMessage"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="6949dbb0-fb7a-4fcc-a9bd-59451e0d2dc4">
+            <interfaceMoniker
+              Id="1976e9e7-9dfe-411c-a425-02b2706578d2"
+              LastKnownName="ClientMessage"
+              LastKnownLocation="DesignPatterns-Prelude.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="15e5ecd0-eefb-4c1f-9bee-8705246ff4d0"
+            name="Message"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="DesignPatterns-Prelude.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="3e2cc98d-b52d-49f1-80cf-f055f3e3406c"
+            name="Name"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="DesignPatterns-Prelude.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="ffb4b394-ea0c-4bfd-a53a-168fbb1bde30"
+        name="LoginMessage"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="52057ddc-c031-423a-b9e3-01541956e87e">
+            <interfaceMoniker
+              Id="1976e9e7-9dfe-411c-a425-02b2706578d2"
+              LastKnownName="ClientMessage"
+              LastKnownLocation="DesignPatterns-Prelude.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="9dcef929-a546-4379-b905-c9234ca29a75"
+            name="Name"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="DesignPatterns-Prelude.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="a3d402f9-b50d-4710-b445-675147ac1587"
+            name="Password"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="DesignPatterns-Prelude.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="a9987a1f-2f1f-41cf-b3e9-0dd54e05180f"
+        name="LogoutMessage"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="12d185df-6ae2-41fb-bd4b-94fdba3cab65">
+            <interfaceMoniker
+              Id="1976e9e7-9dfe-411c-a425-02b2706578d2"
+              LastKnownName="ClientMessage"
+              LastKnownLocation="DesignPatterns-Prelude.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="a1dadacb-9a51-489f-b2b1-39c246f79e7c"
+            name="Name"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="DesignPatterns-Prelude.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

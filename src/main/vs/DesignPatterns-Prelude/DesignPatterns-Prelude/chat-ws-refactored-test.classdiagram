@@ -17,13 +17,13 @@ cc.MessageEntered("Hello");</body>
   MessageReceived(m); return true;
 }</body>
       <annotatedElements>
-        <classMoniker Id="a2b347ed-93fc-4584-a14b-d465cc4cb32f" LastKnownName="WebSocketMock" />
+        <classMoniker Id="a2b347ed-93fc-4584-a14b-d465cc4cb32f" LastKnownName="MockWebSocket" />
       </annotatedElements>
     </comment>
   </ownedCommentsInternal>
   <packagedElements>
     <logicalClassDesignerModelHasTypes>
-      <class Id="a2b347ed-93fc-4584-a14b-d465cc4cb32f" name="WebSocketMock" isAbstract="false" isLeaf="false" isActiveClass="false">
+      <class Id="a2b347ed-93fc-4584-a14b-d465cc4cb32f" name="MockWebSocket" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="f7603384-e3c2-483b-94a6-a7b09089c8e4" />
         <suppliersInternal>
           <interfaceRealization Id="4ae7fe7f-0055-4a25-a42b-ec0f813230e5">
