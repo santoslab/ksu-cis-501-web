@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="6de2ec5a-19e5-4e40-8b95-b4d256a648d9" name="whyinterface" linkedPackageId="dd33643b-076c-4755-ac6d-c2aac23a2b7a" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="0db594d7-0ba9-4b2d-b176-22c0bcd41a0a">
+      <elementDefinition Id="f2981b15-17c3-4201-8221-8272f98c1f33" />
+      <body>public void DoSomething(b : B) {
+  B.Process();
+}</body>
+      <annotatedElements>
+        <classMoniker Id="24e74ae2-4bec-4ac5-ba27-8010a46ee182" LastKnownName="AImpl" />
+      </annotatedElements>
+    </comment>
+    <comment Id="81780cd8-c9e3-435a-ac4b-085a1a61ba4c">
+      <elementDefinition Id="a6a34256-28a6-4228-b1f1-8910a5d479bc" />
+      <body>public void DoSomething(b : B) {
+  if (b is B2) {
+    ((B2) b).MoreEfficientProcess();
+  } else {
+    b.Process();
+  }
+}</body>
+      <annotatedElements>
+        <classMoniker Id="6b6b8e5a-b920-4900-b32e-7d47d4a10381" LastKnownName="EfficientAImpl" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="f10b3ed6-a5b2-4388-9d8f-308ccba26bfa">
+      <profileInstance Id="8cb7298d-8d2c-4b75-add6-67fe52e7ee58" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="2d6aec3b-ac0d-44bd-9954-34f8804cedc2">
+      <profileInstance Id="1b1aae43-9b15-4b3c-9afe-0d91f6332bfa" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="24568f90-6e45-46aa-83ef-74fdd74e883f" name="A" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="971ec788-ca6e-4e8e-add2-efa79b110ec1" />
+        <suppliersInternal>
+          <dependency Id="61fe9758-49a0-4918-8d48-56fc6a645be1">
+            <interfaceMoniker Id="3d2fae83-8902-42bc-8a04-fa1bcb53b1c8" LastKnownName="B" />
+            <elementDefinition Id="fbadefc8-6e2d-41b4-ac8d-de032666138d" />
+          </dependency>
+        </suppliersInternal>
+        <ownedOperations>
+          <operation Id="13309e0e-f7d6-4d1e-b616-5befbce198b3" name="DoSomething" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="19606744-b2e2-4650-af67-2ddc0777710f" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="22af2185-cae2-4a84-a3af-d2b690e64b5e" name="b" direction="In" isUnique="false">
+                  <elementDefinition Id="66e88613-a23f-4867-a12d-998dfd53ab37" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a4fe7986-70d2-49dd-85ca-96512629f2f5" LastKnownName="B" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="3d2fae83-8902-42bc-8a04-fa1bcb53b1c8" name="B" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f6e46bd3-443a-4dc8-879b-079fb433a4d2" />
+        <ownedOperations>
+          <operation Id="8bc3dff9-7734-40db-9f43-ff66684ce151" name="Process" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e812af75-74cb-4851-998c-01c62956b42d" />
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="a4fe7986-70d2-49dd-85ca-96512629f2f5" name="B" isAbstract="false" isLeaf="false" cachedFullName="DesignPatterns-Prelude::B">
+        <elementDefinition Id="f6e46bd3-443a-4dc8-879b-079fb433a4d2" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="2d5642b7-d99b-4db9-97cb-1ddcbf737a7d" name="B2" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="fbacdfaa-4741-4da6-afa0-fcb3593099c1" />
+        <generalsInternal>
+          <generalization Id="0fca171f-d4ef-4ff5-a489-17a86dfa3079" isSubstitutable="false">
+            <interfaceMoniker Id="3d2fae83-8902-42bc-8a04-fa1bcb53b1c8" LastKnownName="B" />
+            <elementDefinition Id="bb052d39-0095-4c30-8e31-0be09eee9ccd" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperations>
+          <operation Id="25259581-9497-4468-ab74-178e54efa59c" name="MoreEfficientProcess" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="fbea70d1-920c-478f-890f-9fd0264e1f95" />
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="01c23996-84f3-4134-81bb-141d3c6f593d" name="BImpl" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="7acc38cb-3c57-48be-bcfe-fd7399bb7d29" />
+        <suppliersInternal>
+          <interfaceRealization Id="3e497a56-2334-42df-ac5e-e8b4bc986474">
+            <interfaceMoniker Id="3d2fae83-8902-42bc-8a04-fa1bcb53b1c8" LastKnownName="B" />
+            <elementDefinition Id="b8d8ce0c-f3b4-4bdc-b0a9-41c5e621c52d" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="fdd803eb-ad4c-4a46-b314-f763112ae9af" name="Process" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b48c193e-8bfb-4d98-8b9b-f9524806ab73" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="18597342-22d8-45a5-a75f-3e474cb1852b" name="B2Impl" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="8750a063-1b02-4f08-b683-5cfc80b5df31" />
+        <suppliersInternal>
+          <interfaceRealization Id="e975c4f9-95a6-4455-8e4b-cfa0cfc645c9">
+            <interfaceMoniker Id="2d5642b7-d99b-4db9-97cb-1ddcbf737a7d" LastKnownName="B2" />
+            <elementDefinition Id="a47ba6b7-b987-4892-9ff3-c33aa396a993" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="cdb28ea8-94a1-4240-b09f-186ca8b8c1d3" name="MoreEfficientProcess" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="48bbdc7e-4e06-4174-91ec-4880f7a63212" />
+          </operation>
+          <operation Id="8adca409-d7a4-455b-add0-46dc26eb44eb" name="Process" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="7c5865d3-5549-4d25-8545-73ddbf014c3e" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="24e74ae2-4bec-4ac5-ba27-8010a46ee182" name="AImpl" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="9decdcab-b616-4f11-b8ea-8672933600ff" />
+        <suppliersInternal>
+          <interfaceRealization Id="ed4784a1-cd70-4180-9c2f-1b03517be2a2">
+            <interfaceMoniker Id="24568f90-6e45-46aa-83ef-74fdd74e883f" LastKnownName="A" />
+            <elementDefinition Id="b6ffbf9e-66bf-40e1-b2ea-73a567adfbfd" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="416daf7d-19d0-4863-89e5-303cef19fd10" name="DoSomething" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d73051ef-94cb-47bf-b9e5-698fa2024481" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="8a899526-a645-4e66-9c5e-73607407d889" name="b" direction="In" isUnique="false">
+                  <elementDefinition Id="4b61e62f-8e5b-4bf5-a744-b915ac95e0a8" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a4fe7986-70d2-49dd-85ca-96512629f2f5" LastKnownName="B" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="6b6b8e5a-b920-4900-b32e-7d47d4a10381" name="EfficientAImpl" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="4e18d385-dd6b-496f-96e8-fed17f127a29" />
+        <suppliersInternal>
+          <interfaceRealization Id="cfe85105-5216-43d5-b090-598fc5370209">
+            <interfaceMoniker Id="24568f90-6e45-46aa-83ef-74fdd74e883f" LastKnownName="A" />
+            <elementDefinition Id="4e5b4d65-a91c-473f-8084-64dbf83752d7" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="b6876cd3-d012-4583-9398-9ff4dff85e1f" name="DoSomething" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="2edb0008-1fa6-45fe-8844-b562792e47da" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="283e075e-a39d-4e08-90cd-cc7b74d4f5b8" name="b" direction="In" isUnique="false">
+                  <elementDefinition Id="65a56cf8-1a91-4c3f-9f4f-127e35e92e18" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a4fe7986-70d2-49dd-85ca-96512629f2f5" LastKnownName="B" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="dd33643b-076c-4755-ac6d-c2aac23a2b7a" name="DesignPatterns-Prelude">
+    <elementDefinition Id="7bd4b2ec-d5fe-4456-9cca-c2ec9fba4f01" />
+  </package>
+</logicalClassDesignerModel>

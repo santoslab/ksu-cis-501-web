@@ -155,6 +155,13 @@
       <SubType>Content</SubType>
       <DependentUpon>start4.classdiagram</DependentUpon>
     </Content>
+    <Content Include="whyinterface.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="whyinterface.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>whyinterface.classdiagram</DependentUpon>
+    </Content>
     <Folder Include="ModelDefinition\" />
     <Content Include="ModelDefinition\DesignPatterns-Prelude.uml">
       <SubType>Content</SubType>
