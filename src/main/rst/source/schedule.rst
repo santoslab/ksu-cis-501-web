@@ -109,7 +109,7 @@ Schedule
      - |D1| [`X12 <https://online.ksu.edu/COMS/player/content/CIS_501_ROBBY/content/Modules/Exercises/12-DesignPatterns-Factories-Iterators.zip?ext=.zip>`__]
      - 
    * - 12. U: Nov 13
-     - |D4|
+     - |D4| [`X15 <https://online.ksu.edu/COMS/player/content/CIS_501_ROBBY/content/Modules/Exercises/15-DesignPatterns-Composites.zip?ext=.zip>`__]
      - 
    * - 13. T: Nov 18
      - *No Lecture*
