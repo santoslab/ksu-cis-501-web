@@ -49,7 +49,7 @@ you will need to use K-State VPN software
 Online Resources
 ================
 
-Use the web site www.dotnetperls.com as your "reference text" when you use 
+Use the web site http://www.dotnetperls.com as your "reference text" when you use 
 Visual Studio to develop C# programs.
 It is an easy-to-consume, example-driven introduction to the useful parts of
 C#.
@@ -96,9 +96,9 @@ assignments.
 
 We will be using
 `Visual Studio Git integration <http://msdn.microsoft.com/en-us/library/hh850437.aspx>`__
-with a very simple and specific Git workflow to sync your private repository with 
-the instructor's GitHub repository; in-class exercise and assignment submissions
-will be done by simply committing/pushing your work to your private repository.
+with a very simple and specific Git workflow (see below);
+in-class exercise and assignment submissions will be done by simply
+committing/pushing your work to your private repository.
 
 Git/GitHub Workflow
 ===================
@@ -112,7 +112,7 @@ Git local repository, work on the exercise/assignment, and commit/push your
 changes (as often as you want). At the specified deadline for the 
 exercise/assignment, we will clone your private repository and grade your work.
   
-Here is the workflow step-by-step when working on an exercise or assignment:
+Here is the simple workflow when working on an exercise or assignment:
 
 1. Clone your GitHub private repository (do this only once per machine).
 
@@ -1196,7 +1196,7 @@ article).
 Useful C# Concepts
 ******************
 
-You will find additional helpful material at www.dotnetperls.com.
+You will find additional helpful material at http://www.dotnetperls.com.
 
 Below are three data structures that are hugely useful in practice.
 

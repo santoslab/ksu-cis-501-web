@@ -89,7 +89,7 @@ Schedule
      - 
    * - 9. T: Oct 21
      - *No Lecture*
-     - 1-on-1 meeting **Assignment 5: due on: Nov 5** [`A5 <https://online.ksu.edu/COMS/player/content/CIS_501_ROBBY/content/Modules/Assignments/A5-Othello.html?ext=.html>`__]
+     - 1-on-1 meeting, **Assignment 5: due on: Nov 5** [`A5 <https://online.ksu.edu/COMS/player/content/CIS_501_ROBBY/content/Modules/Assignments/A5-Othello.html?ext=.html>`__]
    * - 9. U: Oct 23
      - *No Lecture*
      - 1-on-1 meeting
