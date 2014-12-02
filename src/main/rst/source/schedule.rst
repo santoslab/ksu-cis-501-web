@@ -124,7 +124,7 @@ Schedule
      - *No Lecture*
      - **Thanksgiving Break**
    * - 14. T: Dec 2
-     - |D2|
+     - |D2| [`X13 <https://online.ksu.edu/COMS/player/content/CIS_501_ROBBY/content/Modules/Exercises/13-DesignPatterns-VirtualProxies.zip?ext=.zip>`__]
      -
    * - 14. U: Dec 4
      - |D2|
