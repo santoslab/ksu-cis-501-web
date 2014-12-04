@@ -127,7 +127,7 @@ Schedule
      - |D2| [`X13 <https://online.ksu.edu/COMS/player/content/CIS_501_ROBBY/content/Modules/Exercises/13-DesignPatterns-VirtualProxies.zip?ext=.zip>`__]
      -
    * - 14. U: Dec 4
-     - |D2|
+     - |D2| [`X13b <https://online.ksu.edu/COMS/player/content/CIS_501_ROBBY/content/Modules/Exercises/13-DesignPatterns-RemoteProxies.zip?ext=.zip>`__]
      - 
    * - 15. T: Dec 9
      - |D3|, |FinishDP|
