@@ -135,7 +135,7 @@ Schedule
    * - 15. U: Dec 11
      - |D3|, |FinishDP|
      - 
-   * - 16. T: Dec 16
+   * - 16. U: Dec 18
      - **Final Exam**
      - **Time:** 9:40am - 11:30am
    
